@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="h-full flex flex-col">
+    <!-- Map Area -->
+    <div class="flex-1 relative">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=12.9716,77.5946&zoom=14&size=400x600&maptype=roadmap&key=YOUR_API_KEY" alt="Map" class="w-full h-full object-cover">
+        
+        <!-- Car Icon -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FFD700" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+        </div>
+        
+        <!-- Open Google Maps Button -->
+        <div class="absolute bottom-4 right-4">
+            <button class="btn btn-sm bg-neutral text-secondary rounded-full px-4">
+                Open Google Maps
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Find Rides Button -->
+    <div class="p-4 bg-white shadow-lg">
+        <button onclick="showRideRequest()" class="btn btn-primary w-full text-white">Find Rides</button>
+    </div>
+</div>
+
+<!-- Ride Request Modal -->
+<div id="ride-request-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg w-5/6 max-w-md">
+        <div class="p-4 flex flex-col">
+            <!-- Timer -->
+            <div class="flex justify-center mb-4">
+                <div class="radial-progress text-primary" style="--value:100; --size:3rem;">
+                    <span class="text-sm">58s</span>
+                </div>
+            </div>
+            
+            <p class="text-gray-500 text-center mb-1">New Request at 1km away</p>
+            <h2 class="text-2xl font-bold text-center mb-4">10km Ride!</h2>
+            
+            <div class="divider my-2"></div>
+            
+            <!-- Pickup Location -->
+            <div class="flex items-start gap-3 mb-2">
+                <div class="mt-1">
+                    <div class="w-4 h-4 rounded-full bg-primary"></div>
+                </div>
+                <div>
+                    <p class="font-medium">34/1, Jakkasandra, Koramangala...</p>
+                </div>
+            </div>
+            
+            <!-- Dotted Line -->
+            <div class="flex items-center gap-3 ml-2">
+                <div class="border-l-2 border-dashed border-gray-300 h-6"></div>
+            </div>
+            
+            <!-- Dropoff Location -->
+            <div class="flex items-start gap-3 mb-4">
+                <div class="mt-1">
+                    <div class="w-4 h-4 rounded-full bg-red-500"></div>
+                </div>
+                <div>
+                    <p class="font-medium">Juspay Technologies, Koramang...</p>
+                </div>
+            </div>
+            
+            <div class="divider my-2"></div>
+            
+            <!-- Pricing -->
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-500">Base Price</span>
+                <span class="font-bold">₹ 165</span>
+            </div>
+            
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-500">Add Extra</span>
+                <div class="flex items-center gap-2">
+                    <button class="btn btn-sm btn-circle btn-outline">-</button>
+                    <span class="w-8 text-center">10</span>
+                    <button class="btn btn-sm btn-circle btn-outline">+</button>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-gray-500">Total Ask</span>
+                <span class="font-bold text-lg">₹ 175</span>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="flex gap-4">
+                <button onclick="hideRideRequest()" class="btn flex-1 btn-outline">Decline</button>
+                <button onclick="acceptRide()" class="btn flex-1 btn-primary text-white">Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showRideRequest() {
+        document.getElementById('ride-request-modal').classList.remove('hidden');
+    }
+    
+    function hideRideRequest() {
+        document.getElementById('ride-request-modal').classList.add('hidden');
+    }
+    
+    function acceptRide() {
+        window.location.href = '/ride-details';
+    }
+</script>
+{% endblock %}

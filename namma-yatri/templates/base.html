@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Yatri</title>
+    <!-- Tailwind CSS and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        secondary: '#FFB800',
+                        accent: '#1FB2A6',
+                        neutral: '#2A323C',
+                        'base-100': '#FFFFFF',
+                        'base-200': '#F9FAFB',
+                        'base-300': '#D1D5DB',
+                    }
+                }
+            },
+            daisyui: {
+                themes: ["light"],
+            },
+        }
+    </script>
+    <style>
+        .phone-container {
+            width: 430px;
+            aspect-ratio: 9 / 16;
+            max-height: 90vh;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 h-screen w-screen flex items-center justify-center relative">
+
+    <!-- Background Image -->
+    <img src="https://media.istockphoto.com/id/509242466/vector/india-vector-illustration.jpg?s=612x612&w=0&k=20&c=BRQFcFkPz0a5kN1cdOSpaLA9U1Z3CEAqjNFDhV8cmk0="
+    alt="Background" class="absolute inset-0 w-full h-full object-cover z-0">
+
+    <!-- Phone Frame Container -->
+    <div class="phone-container bg-white relative z-10">
+        <!-- Content Block -->
+            {% block content %}
+            {% endblock %}
+        <!-- Navigation Block -->
+        <div class="p-4">
+            {% block navbar %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="h-full flex flex-col bg-black text-white relative">
+    <!-- Background Map (Dimmed) -->
+    <div class="absolute inset-0 opacity-10">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=12.9716,77.5946&zoom=13&size=400x800&maptype=roadmap&key=YOUR_API_KEY" alt="Map Background" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Logo and Tagline -->
+    <div class="flex-1 flex flex-col items-center justify-center z-10">
+        <div class="mb-4">
+            <div class="flex items-center">
+                <span class="text-8xl font-bold text-secondary">n</span>
+                <div class="text-white text-5xl font-bold ml-1">
+                    amma<br>
+                    yatri
+                </div>
+            </div>
+            <p class="text-gray-400 text-center mt-2">India's first ever Open Mobility App</p>
+        </div>
+    </div>
+
+    <!-- Connecting Text (will be animated via JS) -->
+    <div id="connecting-text" class="flex-1 flex flex-col items-center justify-center z-10">
+        <h1 class="text-4xl font-bold text-white">Connecting</h1>
+        <h2 class="text-4xl font-bold text-secondary" id="dynamic-text">happy drivers</h2>
+    </div>
+
+    <!-- Footer -->
+    <div class="p-6 z-10">
+        <div class="flex flex-col gap-4 mb-8">
+            <button onclick="location.href='/home'" class="btn btn-primary text-white">Find Riders</button>
+            <button onclick="location.href='/leaderboard'" class="btn btn-outline text-white border-white">View Leaderboard</button>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+            <p class="text-gray-400">Backed by</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Juspay_logo.svg/2560px-Juspay_logo.svg.png" alt="JUSPAY" class="h-8">
+            
+            <p class="text-gray-400 mt-4">Part of</p>
+            <img src="https://ondc.org/image/ONDC%20Visual%20Identity%20Horizontal%20Logo%20with%20Descriptor.png" alt="ONDC NETWORK" class="h-8">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Animation for connecting text
+    const phrases = [
+        "happy drivers",
+        "eager riders",
+        "urban mobility",
+        "safe journeys"
+    ];
+    let currentIndex = 0;
+    const textElement = document.getElementById('dynamic-text');
+    
+    // Initially hide the connecting text
+    document.getElementById('connecting-text').style.display = 'none';
+    
+    // Show logo for 2 seconds, then start the animation
+    setTimeout(() => {
+        document.getElementById('connecting-text').style.display = 'flex';
+        
+        // Change text every 2 seconds
+        setInterval(() => {
+            textElement.style.opacity = 0;
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % phrases.length;
+                textElement.textContent = phrases[currentIndex];
+                textElement.style.opacity = 1;
+            }, 500);
+        }, 2000);
+    }, 2000);
+</script>
+{% endblock %}
