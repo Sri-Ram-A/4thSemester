@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    ::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<div class="px-4 py-3 flex items-center border-b border-gray-200">
+    <a href="/" class="mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </a>
+    <h1 class="text-2xl font-bold">Booking Preferences</h1>
+</div>
+
+<!-- Main Content -->
+<div class="p-4 space-y-4 overflow-y-auto h-[calc(100%-64px)]">
+    <!-- Your Vehicle Section -->
+    <div class="section-card">
+        <div class="text-gray-500 mb-1">Your Vehicle</div>
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold">Auto</h2>
+            <div class="vehicle-number">KA02AE2307</div>
+        </div>
+        
+        <div class="auto-card mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="auto-image">
+                <g transform="translate(0 -952.36)">
+                    <path d="M33.393 1020.4l-6.061-9.596h45.455l-6.061 9.596z" fill="#444"/>
+                    <path d="M16.903 1010.9l35.356-26.767L87.615 1010.9z" fill="#f0c808"/>
+                    <path d="M16.903 1010.9h70.712v6.061H16.903z" fill="#f0c808"/>
+                    <circle cx="27.273" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="27.273" cy="1020.4" r="6.061" fill="#222"/>
+                    <circle cx="72.727" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="72.727" cy="1020.4" r="6.061" fill="#222"/>
+                    <circle cx="50" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="50" cy="1020.4" r="6.061" fill="#222"/>
+                    <path d="M26.464 984.15h47.072v22.728H26.464z" fill="#006400"/>
+                    <path d="M26.464 984.15h47.072l-23.536-15.758z" fill="#f0c808"/>
+                </g>
+            </svg>
+            <div class="auto-info">
+                <span class="auto-title">Auto</span>
+                <span class="auto-capacity">3 people</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Namma Yatri Rate Card -->
+    <div class="rate-card">
+        <div class="flex items-center">
+            <div class="bg-blue-500 text-white rounded-full p-2 mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+            </div>
+            <span class="text-lg font-medium">Namma Yatri Rate Card</span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+        </svg>
+    </div>
+    
+    <!-- Ride Preferences -->
+    <div class="section-card">
+        <h2 class="text-xl font-semibold mb-2">Ride preferences</h2>
+        <p class="text-gray-500 mb-4">Choose what type of rides you want to take.</p>
+        
+        <div class="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+            <div class="flex flex-col items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="text-lg font-medium mt-1">Rental</span>
+            </div>
+            
+            <div class="flex justify-center mt-2">
+                <label class="toggle-switch">
+                    <input type="checkbox" />
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="auto-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="auto-image">
+                <g transform="translate(0 -952.36)">
+                    <path d="M33.393 1020.4l-6.061-9.596h45.455l-6.061 9.596z" fill="#444"/>
+                    <path d="M16.903 1010.9l35.356-26.767L87.615 1010.9z" fill="#f0c808"/>
+                    <path d="M16.903 1010.9h70.712v6.061H16.903z" fill="#f0c808"/>
+                    <circle cx="27.273" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="27.273" cy="1020.4" r="6.061" fill="#222"/>
+                    <circle cx="72.727" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="72.727" cy="1020.4" r="6.061" fill="#222"/>
+                    <circle cx="50" cy="1020.4" r="9.091" fill="#444"/>
+                    <circle cx="50" cy="1020.4" r="6.061" fill="#222"/>
+                    <path d="M26.464 984.15h47.072v22.728H26.464z" fill="#006400"/>
+                    <path d="M26.464 984.15h47.072l-23.536-15.758z" fill="#f0c808"/>
+                </g>
+            </svg>
+            <div class="auto-info flex-1">
+                <div class="flex items-center justify-between">
+                    <span class="auto-title">Auto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                </div>
+                <span class="auto-capacity">Easy Commute</span>
+            </div>
+            <label class="blue-toggle-switch ml-auto">
+                <input type="checkbox" checked />
+                <span class="blue-toggle-slider"></span>
+            </label>
+        </div>
+    </div>
+</div>
+{% endblock %}

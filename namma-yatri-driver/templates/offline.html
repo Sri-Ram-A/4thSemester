@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{%block style%} <link rel="stylesheet" href="{{ url_for('static', filename='offline.css') }}">{%endblock%}
+    {% block content %}
+
+    <div class="app-container flex flex-col" >
+        <!-- Top Section -->
+        <div class="p-4">
+            <!-- Profile and Mode Selection -->
+            <div class="flex items-center justify-between mb-4">
+                <!-- Profile Circle -->
+                <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                <a href="/profile">Profile</a>
+                <!-- Mode Selector -->
+                <div class="mode-selector flex flex-1 ml-4">
+                    <button class="mode-button active flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                            <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                            <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                            <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+                            <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        </svg>
+                        Offline
+                    </button>
+                    <a href="/online" class="mode-button">Online</a>
+                    
+                </div>
+            </div>
+            
+            <!-- Earnings Card -->
+            <div class="earnings-card flex justify-between items-center">
+                <div class="text-gray-600">Today's Earnings</div>
+                <div class="flex items-center">
+                    <span class="text-xl font-bold mr-1">₹0</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    
+                    <div class="flex items-center ml-4">
+                        <div class="bg-red-500 text-white text-xs px-1 rounded">+</div>
+                        <div class="flex items-center ml-2">
+                            <div class="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <span class="ml-1">45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="flex justify-between px-4 mt-2">
+            <button class="action-button flex-1 mx-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                <span>Add Go-To</span>
+            </button>
+            
+            <button class="action-button flex-1 mx-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="10" r="3"></circle>
+                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"></path>
+                </svg>
+                <span>Hotspots</span>
+            </button>
+            
+            <button class="action-button flex-1 mx-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Add Alt. Number</span>
+            </button>
+        </div>
+        
+        <!-- Promotional Card -->
+        <div class="px-4 mt-8">
+            <div class="card p-4">
+                <div class="flex justify-between items-start">
+                    <div class="flex-1">
+                        <h3 class="text-blue-800 font-semibold text-lg">Drivers experience with Digital Payments!</h3>
+                        <p class="text-gray-600 text-sm mt-1">ಪಾವತಿಗಳಲ್ಲಿ ಚಾಲಕರ ಅನುಭವ</p>
+                    </div>
+                    <div class="ml-4">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAZlBMVEVfJZ////9RAJji2+1XEJu2o9C+rtXv6/Wum8u5qdJaGp1eI5/p5PHSx+JcIJ6QcbqtmMtIAJRkLaLIutvWzOXa0eapksh6Uq3Lv96ljcaWer2dgsF0SaqIZ7V5T61uPqf28/lpNqVFclM3AAABMklEQVRIie3W206DQBAG4OVnKXQHllOlKLbW939JgRlNUMEdrjT2v2KTfoHOgWDMPbqQA2D1DijbNM9ASmeLaM4JWhgzjA5KSXgQ2amlPGxUKitE6EWenU4atCIbr5UHhqnVNgUJy1jdTlQse207DR5ZJgHSLlI/sRwwnbaq5LpkkUomYT6c13vqn6OtXFZ76q+bsFj9r/5lJzQf0/1tNtaM7JBJQW5dNkVO6XS6btSVnMWRf1rPHZFTXP/QjzFWID+X5ZGNQ2bgDn8V7HjA+F2jgK5kyEukgP6VYUrT3tfh0CCXbWirqpXrIOiGrxsVBA3indA3t33QePP5noHQeFyK+a75sVfBsUKAa8hC0473EJFqAJb5SzDZCamZYa6G47IciuJUaj8+JmnHD8Id7l/nDZc2DQQtoLcWAAAAAElFTkSuQmCC" alt="Digital Payments" class="w-20 h-20 object-cover rounded-lg">
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <button class="watch-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Watch Now
+                    </button>
+                    
+                    <div class="dot-indicator">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GO Button -->
+        <div class="flex justify-center my-6">
+            <button class="go-button">GO!</button>
+        </div>
+        
+        <!-- Status Message -->
+        <div class="text-center mt-2">
+            <p class="text-gray-600">You are currently offline.</p>
+            <p class="text-gray-600">To get ride requests, go online now!</p>
+        </div>
+        
+        <!-- Booking Preferences -->
+        <div class="px-4 mt-4">
+            <button class="card p-4 w-full flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-gray-500">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    <a href="/bookingPreferences">
+                    <span class="text-gray-700">Booking Preferences</span>
+                    </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </div>
+            </button>
+        </div>
+        
+{%endblock%}

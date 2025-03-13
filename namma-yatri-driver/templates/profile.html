@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    /* Hide scrollbars */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    body {
+        overflow: hidden;
+    }
+    
+    .phone-container {
+        overflow: hidden !important;
+    }
+    
+    #profileContent {
+        overflow: hidden !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Remove the body tag as it's already in base.html -->
+<!-- Header -->
+<div class="bg-white p-4 border-b border-gray-200 flex justify-between items-center">
+    <div class="flex items-center">
+        <a href="javascript:history.back()" class="mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+        <h1 class="text-2xl font-semibold">My Profile</h1>
+    </div>
+    <a href="#" class="text-blue-500 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        Settings
+    </a>
+</div>
+
+<!-- Content (modified to prevent scrolling) -->
+<div class="p-4 space-y-4 no-scrollbar" id="profileContent">
+    <!-- Default Summary View -->
+    <div id="summaryView">
+        <h2 class="text-xl font-semibold mb-3">Summary</h2>
+                
+        <!-- Earnings Summary -->
+        <div class="bg-blue-50 rounded-xl p-4 grid grid-cols-2 gap-4 mb-4">
+            <div class="text-center">
+                <p class="text-2xl font-bold">₹ 1,69,900</p>
+                <p class="text-gray-500">Earned on NY</p>
+            </div>
+            <div class="text-center border-l border-gray-300">
+                <p class="text-2xl font-bold">₹ 33,930</p>
+                <p class="text-gray-500">Namma Bonus</p>
+            </div>
+        </div>
+        
+        <!-- Rating & Trips -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div class="bg-blue-50 rounded-xl p-4 text-center">
+                <div class="flex justify-center items-center">
+                    <p class="text-3xl font-bold">4.6</p>
+                    <div class="ml-2 flex">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                    </div>
+                </div>
+                <p class="text-gray-500">Rated By 1598 Users</p>
+            </div>
+            <div class="bg-blue-50 rounded-xl p-4 text-center">
+                <p class="text-3xl font-bold">1862</p>
+                <p class="text-gray-500">Trips Completed</p>
+            </div>
+        </div>
+        
+        <!-- Additional Stats -->
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div class="bg-blue-50 rounded-xl p-3 text-center">
+                <p class="flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span class="ml-1 font-semibold">0</span>
+                </p>
+                <p class="text-gray-500 text-sm">Favourites</p>
+            </div>
+            <div class="bg-blue-50 rounded-xl p-3 text-center">
+                <p class="font-semibold">21</p>
+                <p class="text-gray-500 text-sm">Late night trips</p>
+            </div>
+            <div class="bg-blue-50 rounded-xl p-3 text-center">
+                <p class="font-semibold">2 Yrs</p>
+                <p class="text-gray-500 text-sm">on Namma Yatri</p>
+            </div>
+        </div>
+        
+        <!-- Cancellation Rate -->
+        <div class="bg-blue-50 rounded-xl p-4 mb-4">
+            <div class="flex justify-between items-center">
+                <div class="gauge">
+                    <div class="gauge-body"></div>
+                    <div class="gauge-needle"></div>
+                    <div class="gauge-cover"></div>
+                </div>
+                <div class="text-right">
+                    <p class="text-4xl font-bold">18%</p>
+                    <p class="text-gray-500">Cancellation Rate</p>
+                    <a href="#" class="text-blue-500">View More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment Section -->
+        <h2 class="text-xl font-semibold mb-3">Payment</h2>
+        <div class="bg-blue-50 rounded-xl p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <p class="font-medium">QR Code</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <a href="#" class="text-blue-500 font-medium">View</a>
+        </div>
+    </div>
+    
+    <!-- Driver/Vehicle Toggle View (Initially Hidden) -->
+    <div id="detailsView" class="hidden">
+        <!-- Tabs -->
+        <div class="flex rounded-full bg-blue-50 overflow-hidden mb-6">
+            <button id="driverTab" class="flex-1 py-3 px-4 font-medium rounded-full bg-gray-800 text-white" onclick="showTab('driver')">
+                Driver Details
+            </button>
+            <button id="vehicleTab" class="flex-1 py-3 px-4 font-medium rounded-full" onclick="showTab('vehicle')">
+                Vehicle Details
+            </button>
+        </div>
+        
+        <!-- Driver Details Content -->
+        <div id="driverContent" class="space-y-4">
+            <div class="flex justify-center">
+                <div class="bg-blue-50 rounded-full h-24 w-24 flex items-center justify-center">
+                    <img src="https://img.freepik.com/premium-vector/man-character_665280-46970.jpg" alt="Driver" class="h-16 w-16">
+                </div>
+            </div>
+            
+            <!-- Driver info would go here -->
+            <div class="bg-blue-50 rounded-xl p-4">
+                <h3 class="text-lg font-medium">Personal Information</h3>
+                <p class="text-gray-500">Name, contact details, etc.</p>
+            </div>
+        </div>
+        
+        <!-- Vehicle Details Content -->
+        <div id="vehicleContent" class="hidden space-y-4">
+            <div class="flex justify-center mb-4">
+                <div class="bg-blue-50 rounded-full h-24 w-24 flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmPsLd2yYx1V0Z2TbZhJ_YvZHw0Y1D_8RCWQ&s" alt="Auto" class="h-16 w-16">
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://static.vecteezy.com/system/resources/previews/013/923/543/original/car-icon-logo-concept-vehicle-symbol-illustration-automobile-silhouette-auto-transportation-design-black-car-isolated-on-white-background-front-view-of-car-free-png.png" alt="Car" class="h-8 w-12 mr-4">
+                    <span class="text-xl font-medium">KA02AE2307</span>
+                </div>
+                <div class="h-8 w-8 bg-gray-800 rounded-full flex items-center justify-center">
+                    <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+            </div>
+            
+            <a href="booking-preferences.html" class="bg-blue-50 rounded-xl p-4 flex justify-between items-center">
+                <span class="text-lg font-medium">Booking Preferences</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+            
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex justify-center">
+                <button class="text-blue-500 text-lg font-medium">Add Vehicle</button>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-4 flex justify-center">
+                <span class="text-gray-500 text-lg">Manage Vehicles</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle between summary and details views
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show details view instead of summary
+        document.getElementById('summaryView').classList.add('hidden');
+        document.getElementById('detailsView').classList.remove('hidden');
+        
+        // Set the default tab to 'driver'
+        showTab('driver');
+    });
+    
+    function showTab(tab) {
+        // Update tab styling
+        if (tab === 'driver') {
+            document.getElementById('driverTab').classList.add('bg-gray-800', 'text-white');
+            document.getElementById('vehicleTab').classList.remove('bg-gray-800', 'text-white');
+            
+            // Show driver content, hide vehicle content
+            document.getElementById('driverContent').classList.remove('hidden');
+            document.getElementById('vehicleContent').classList.add('hidden');
+        } else {
+            document.getElementById('vehicleTab').classList.add('bg-gray-800', 'text-white');
+            document.getElementById('driverTab').classList.remove('bg-gray-800', 'text-white');
+            
+            // Show vehicle content, hide driver content
+            document.getElementById('vehicleContent').classList.remove('hidden');
+            document.getElementById('driverContent').classList.add('hidden');
+        }
+    }
+</script>
+{% endblock %}
