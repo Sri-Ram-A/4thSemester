@@ -1,5 +1,4 @@
 import eventlet
-# from cost import get_price
 eventlet.monkey_patch()
 from flask import Flask, render_template, request, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -7,7 +6,7 @@ from flask_socketio import SocketIO, emit, join_room
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_cors import CORS  # Import CORS
-
+eventlet.monkey_patch()
 from junctions import gcfa
 
 app = Flask(__name__)
@@ -20,6 +19,114 @@ uri = "mongodb+srv://sriramaai23:sriramaai23@namma-yatri-cluster.o9bxu.mongodb.n
 client = MongoClient(uri, server_api=ServerApi('1'))
 # Global variable to store current ride information
 active_rides = {}
+import requests
+import folium
+from geopy.geocoders import Nominatim
+
+# Your TomTom API Key
+API_KEY = "MexiPby9cseRStOBWLta27NtzUcGwwFV"
+
+def get_coordinates(location):
+    """Convert place names to latitude & longitude."""
+    geolocator = Nominatim(user_agent="geoapi")
+    location_data = geolocator.geocode(location)
+    if location_data:
+        return location_data.latitude, location_data.longitude
+    else:
+        print(f"Could not find coordinates for {location}.")
+        exit()
+
+def get_route(source, destination):
+    """Fetch shortest route & distance using TomTom Routing API."""
+    URL = f"https://api.tomtom.com/routing/1/calculateRoute/{source[0]},{source[1]}:{destination[0]},{destination[1]}/json?key={API_KEY}"
+    
+    response = requests.get(URL)
+    if response.status_code == 200:
+        data = response.json()
+        route_points = [(p["latitude"], p["longitude"]) for leg in data["routes"][0]["legs"] for p in leg["points"]]
+        distance_km = data["routes"][0]["summary"]["lengthInMeters"] / 1000  # Convert meters to km
+        return route_points, distance_km
+    else:
+        print("Error fetching route:", response.status_code)
+        exit()
+
+def get_traffic_density(lat, lon):
+    """Fetch real-time traffic congestion data."""
+    TRAFFIC_URL = f"https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key={API_KEY}&point={lat},{lon}"
+    response = requests.get(TRAFFIC_URL)
+    if response.status_code == 200:
+        data = response.json()
+        free_flow_speed = data["flowSegmentData"]["freeFlowSpeed"]
+        current_speed = data["flowSegmentData"]["currentSpeed"]
+        density = ((free_flow_speed - current_speed) / free_flow_speed) * 100
+        return density
+    else:
+        return None
+
+def calculate_fare(route_points, distance):
+    """Calculate fare based on entire route's traffic conditions."""
+    base_fare = 30  # ₹ Base charge
+    rate_per_km = 15  # ₹ per km
+    
+    # Count route segments based on traffic density
+    blue = green = orange = red = 0
+    
+    for lat, lon in route_points[::100]:  
+        density = get_traffic_density(lat, lon)
+        if density is not None:
+            if density < 25:
+                blue += 1
+            elif density < 50:
+                green += 1
+            elif density < 75:
+                orange += 1
+            else:
+                red += 1
+    
+    total_distance = blue + green + orange + red or 1  # Prevent division by zero
+    multiplier = (blue * 1 + green * 1.2 + orange * 1.5 + red * 2) / total_distance
+    total_fare = base_fare + (distance * rate_per_km * multiplier)
+    
+    return round(total_fare, 2), round(multiplier, 2)
+
+def generate_html(distance, multiplier, fare):
+    """Generate an HTML file to display the fare details."""
+    html_content = f"""
+    <html>
+    <head>
+        <title>Fare Estimation</title>
+        <style>
+            body {{ font-family: Arial, sans-serif; text-align: center; }}
+            .container {{ margin-top: 50px; }}
+            .card {{ display: inline-block; background: #f8f8f8; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }}
+            h2 {{ color: #333; }}
+            p {{ font-size: 18px; }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <h2> Travel Details </h2>
+                <p> Distance: {distance:.2f} km</p>
+                <p> Traffic Multiplier: {multiplier}x</p>
+                <p><strong> Estimated Fare: ₹{fare}</strong></p>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
+    with open("fare.html", "w", encoding="utf-8") as file:
+        file.write(html_content)
+    print("Fare estimation saved as 'fare.html'. Open it in a browser.")
+
+# Get optimized route & distance
+def get_price(source_location, destination_location):
+    source_coords = get_coordinates(source_location)
+    destination_coords = get_coordinates(destination_location)
+    route_points, distance = get_route(source_coords, destination_coords)
+    # Calculate fare based on entire route's traffic conditions
+    fare, surge_multiplier = calculate_fare(route_points, distance)
+    return fare
 
 # Send a ping to confirm a successful connection
 try:
@@ -178,6 +285,7 @@ def intro():
 
 @app.route("/rider/search")
 def search():
+
     return render_template("rider/search.html")
 
 
@@ -187,6 +295,7 @@ def confirm_location():
     rider_id = None
     pickup = ""
     destination = ""
+    predicted_fare=0
 
     # 🟡 Step 1: Get the logged-in rider's email from session
     if "user" in session:
@@ -202,8 +311,9 @@ def confirm_location():
         destination = request.form.get('destination')
         print("Pickup:", pickup)
         print("Destination:", destination)
+        predicted_fare=get_price(pickup,destination)
 
-    return render_template('rider/confirm_location.html', pickup=pickup, destination=destination, rider_id=rider_id, pickup_coordinates = gcfa(pickup), drop_coords = gcfa(destination))
+    return render_template('rider/confirm_location.html', pickup=pickup, destination=destination, rider_id=rider_id,predicted_fare=predicted_fare, pickup_coordinates = gcfa(pickup), drop_coords = gcfa(destination))
 
 @app.route("/rider/ride_confirmed")
 def ride_confirmed():
@@ -229,7 +339,7 @@ def ride_confirmed():
                             "vehicle_no": driver.get("vehicle_no", "Unknown"),
                             "phone": driver.get("phone", ""),
                             "profile": driver.get("profile", ""),
-                            "rate": driver.get("rate", "100"),  # Default rate if not provided
+                            "rate": driver.get("rate", "python"),  # Default rate if not provided
                             "rating": "4.83",  # You could calculate this from ratings collection
                         }
     
@@ -381,7 +491,7 @@ def handle_accept_request(data):
                 'vehicle_no': driver.get('vehicle_no', ''),
                 'driver_profile': driver.get('profile', ''),
                 'rider_id': rider_id,
-                'rate': driver.get('rate', '100')  # Include the rate in the response
+                'rate': driver.get('rate', '200')  # Include the rate in the response
             }
             
             # Forward to rider side

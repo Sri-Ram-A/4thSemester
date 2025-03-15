@@ -98,23 +98,16 @@ def generate_html(distance, multiplier, fare):
         file.write(html_content)
     print("Fare estimation saved as 'fare.html'. Open it in a browser.")
 
-# Input locations
-source_location = input("Enter source location: ")
-destination_location = input("Enter destination location: ")
-
-# Get coordinates
-source_coords = get_coordinates(source_location)
-destination_coords = get_coordinates(destination_location)
-
 # Get optimized route & distance
-def get_price(source_coords, destination_coords):
+def get_price(source_location, destination_location):
+    source_coords = get_coordinates(source_location)
+    destination_coords = get_coordinates(destination_location)
     route_points, distance = get_route(source_coords, destination_coords)
-
     # Calculate fare based on entire route's traffic conditions
     fare, surge_multiplier = calculate_fare(route_points, distance)
     return fare
 
-# # Generate fare estimation HTML
-# generate_html(distance, surge_multiplier, fare)
-# final_price.py
-# Displaying final_price.py.
+# pickup='Kengeri'
+# destination='KR Puram'
+# predicted_fare=get_price(pickup,destination)
+# print(predicted_fare)

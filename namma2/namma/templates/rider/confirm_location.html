@@ -1,5 +1,3 @@
-
-
 {% extends "rider/base.html" %}
 
 {% block content %}
@@ -13,79 +11,81 @@
         </svg>
     </a>
     
-    <!-- Green Location Pin -->
-    <div class="absolute top-1/3 left-1/4">
-        <div class="h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
-    </div>
-    
-    <!-- Blue Location Pin -->
-    <div class="absolute right-1/3 bottom-1/3">
-        <div class="h-5 w-5 bg-blue-500 rounded-full border-2 border-white"></div>
-    </div>
-
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
-<div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1Ijoic3JpcmFtYWFpMjMiLCJhIjoiY204YWN4eDI5MGdlNjJqbXgwcTM5ZjNraSJ9.mYoKrMKmtarz5NOmriP5kw';
+    <div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic3JpcmFtYWFpMjMiLCJhIjoiY204YWN4eDI5MGdlNjJqbXgwcTM5ZjNraSJ9.mYoKrMKmtarz5NOmriP5kw';
 
-  const pickup = {{pickup_coordinates }};
-  const drop = {{drop_coords }};
+      // Parse coordinates from Flask template
+      // Make sure coordinates are passed as proper JavaScript arrays
+      const pickup = JSON.parse('{{ pickup_coordinates|tojson }}');
+      const drop = JSON.parse('{{ drop_coords|tojson }}');
 
-  console.log(pickup);
-  console.log(typeof(pickup));
-  console.log(drop);
-  console.log(typeof(drop));
+      console.log("Pickup coordinates:", pickup);
+      console.log("Drop coordinates:", drop);
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: pickup,
-    zoom: 10
-  });
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: pickup,
+        zoom: 10
+      });
 
-  map.addControl(new mapboxgl.NavigationControl());
+      map.addControl(new mapboxgl.NavigationControl());
 
-  map.on('load', async () => {
-    new mapboxgl.Marker({ color: 'green' }).setLngLat(pickup).addTo(map);
-    new mapboxgl.Marker({ color: 'red' }).setLngLat(drop).addTo(map);
+      map.on('load', async () => {
+        new mapboxgl.Marker({ color: 'green' }).setLngLat(pickup).addTo(map);
+        new mapboxgl.Marker({ color: 'red' }).setLngLat(drop).addTo(map);
 
-    const query = await fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[0]},${pickup[1]};${drop[0]},${drop[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`);
-    const json = await query.json();
-    const route = json.routes[0].geometry.coordinates;
+        try {
+          const query = await fetch(
+            `https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[0]},${pickup[1]};${drop[0]},${drop[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+          );
+          const json = await query.json();
+          
+          if (json.routes && json.routes.length > 0) {
+            const route = json.routes[0].geometry.coordinates;
 
-    map.addSource('route', {
-      type: 'geojson',
-      data: {
-        type: 'Feature',
-        properties: {},
-        geometry: {
-          type: 'LineString',
-          coordinates: route
+            map.addSource('route', {
+              type: 'geojson',
+              data: {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                  type: 'LineString',
+                  coordinates: route
+                }
+              }
+            });
+
+            map.addLayer({
+              id: 'route',
+              type: 'line',
+              source: 'route',
+              layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+              },
+              paint: {
+                'line-color': '#1db954',
+                'line-width': 5,
+                'line-opacity': 0.85
+              }
+            });
+
+            const bounds = new mapboxgl.LngLatBounds();
+            route.forEach(coord => bounds.extend(coord));
+            map.fitBounds(bounds, { padding: 60 });
+          } else {
+            console.error('No routes found in the response');
+          }
+        } catch (error) {
+          console.error('Error fetching or processing route:', error);
         }
-      }
-    });
-
-    map.addLayer({
-      id: 'route',
-      type: 'line',
-      source: 'route',
-      layout: {
-        'line-join': 'round',
-        'line-cap': 'round'
-      },
-      paint: {
-        'line-color': '#1db954',
-        'line-width': 5,
-        'line-opacity': 0.85
-      }
-    });
-
-    const bounds = new mapboxgl.LngLatBounds();
-    route.forEach(coord => bounds.extend(coord));
-    map.fitBounds(bounds, { padding: 60 });
-  });
-</script>
+      });
+    </script>
+    
     <!-- Compass -->
     <div class="absolute bottom-4 right-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -111,39 +111,95 @@
         <h2 class="text-3xl font-bold text-gray-800 mb-6">Confirm Pickup Location</h2>
         
         <div class="bg-white border border-gray-200 rounded-xl p-4 flex justify-between items-center mb-6">
-            <div class="flex items-center">
-                <div class="h-6 w-6 bg-green-500 rounded-full mr-3"></div>
-                <span class="text-lg">Details</span>
-                <h2>Pickup:{{pickup}}</h2>
-                <br>
-                <h2>Destination:{{destination}}</h2>
+            <div class="flex-1">
+                <div class="flex items-center mb-2">
+                    <div class="h-6 w-6 bg-green-500 rounded-full mr-3"></div>
+                    <span class="text-lg font-medium">Pickup</span>
+                </div>
+                <p class="text-gray-700">{{ pickup }}</p>
+                
+                <div class="flex items-center mt-4 mb-2">
+                    <div class="h-6 w-6 bg-red-500 rounded-full mr-3"></div>
+                    <span class="text-lg font-medium">Destination</span>
+                </div>
+                <p class="text-gray-700">{{ destination }}</p>
             </div>
             <button class="btn btn-outline btn-sm rounded-full">Edit</button>
         </div>
+        <!-- Driver Options -->
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <!-- Single Driver Option -->
+            <div class="border border-gray-200 rounded-xl p-4 text-center hover:border-yellow-500 cursor-pointer">
+                <div class="flex justify-center mb-3">
+                    <img 
+                        src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=300&q=80" 
+                        alt="Single driver" 
+                        class="w-full h-32 object-cover rounded-lg"
+                    />
+                </div>
+                <h3 class="font-semibold mb-2">Book a Driver</h3>
+                <p class="text-sm text-gray-600 mb-3">Standard ride with one driver</p>
+                <a 
+                    href="/rider/ride_confirmed" 
+                    class="w-full bg-gray-800 text-yellow-500 py-2 rounded-lg flex items-center justify-center"
+                >
+                    <i data-lucide="car" class="mr-2"></i>
+                    {{predicted_fare}}
+                </a>
+            </div>
+
+            <!-- Two Drivers Option -->
+            <div class="border border-gray-200 rounded-xl p-4 text-center hover:border-yellow-500 cursor-pointer">
+                <div class="flex justify-center mb-3">
+                    <img 
+                        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=300&q=80" 
+                        alt="Two drivers" 
+                        class="w-full h-32 object-cover rounded-lg"
+                    />
+                </div>
+                <h3 class="font-semibold mb-2">Take 2 Drivers</h3>
+                <p class="text-sm text-gray-600 mb-3">Premium ride with two drivers</p>
+                <a 
+                    href="/rider/ride_confirmed" 
+                    class="w-full bg-gray-800 text-yellow-500 py-2 rounded-lg flex items-center justify-center"
+                >
+                    <i data-lucide="car" class="mr-2"></i>
+                    Select
+                </a>
+            </div>
+        </div>
         <button onclick="sendRideRequest()">
-        <a href="{{ url_for('ride_confirmed') }}" class="btn bg-gray-800 text-yellow-500 hover:bg-gray-700 w-full py-4 text-lg font-bold rounded-xl">
-            Confirm Location
-        </a>
+            <a href="{{ url_for('ride_confirmed') }}" class="block w-full bg-gray-800 text-yellow-500 py-4 text-lg font-bold rounded-xl hover:bg-gray-700 text-center">
+                Confirm Location
+            </a>
         </button>
+        
         <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
-                            <script>
-                                const socket = io();
-                                socket.emit('register_rider', { rider_id: 'rider001' });
-                        
-                                function sendRideRequest() {
-                                    const data = {
-                                        pickup: "{{pickup}}",
-                                        drop: "{{destination}}",
-                                        rider_id: "{{rider_id}}"
-                                    };
-                                    socket.emit('rider/send_request', data);
-                                }
-                        
-                                socket.on('driver_response', (data) => {
-                                    console.log("Driver responded:", data);
-                                    document.getElementById('response').innerText = "Driver Accepted Ride!";
-                                });
-                            </script>
+        <script>
+            const socket = io();
+            
+            // Register as rider when page loads
+            socket.on('connect', function() {
+                console.log('Connected to server');
+                socket.emit('register_rider', { rider_id: '{{ rider_id }}' });
+            });
+            
+            function sendRideRequest() {
+                const data = {
+                    pickup: "{{ pickup }}",
+                    drop: "{{ destination }}",
+                    rider_id: "{{ rider_id }}",
+                    pickup_coords: pickup,
+                    drop_coords: drop
+                };
+                console.log("Sending ride request:", data);
+                socket.emit('rider/send_request', data);
+            }
+            
+            socket.on('driver_response', (data) => {
+                console.log("Driver response received:", data);
+            });
+        </script>
     </div>
 </div>
 {% endblock %}
