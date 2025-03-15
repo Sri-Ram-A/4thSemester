@@ -167,6 +167,25 @@
                     Select
                 </a>
             </div>
+            <!-- AUTOPOOLING -->
+            <div class="border border-gray-200 rounded-xl p-4 text-center hover:border-yellow-500 cursor-pointer">
+                <div class="flex justify-center mb-3">
+                    <img 
+                        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=300&q=80" 
+                        alt="Two drivers" 
+                        class="w-full h-32 object-cover rounded-lg"
+                    />
+                </div>
+                <h3 class="font-semibold mb-2">Opt Auto Pooling</h3>
+                <p class="text-sm text-gray-600 mb-3">Your Cost={{predicted_fare}}/Total Riders</p>
+                <a 
+                    href="/rider/ride_confirmed" 
+                    class="w-full bg-gray-800 text-yellow-500 py-2 rounded-lg flex items-center justify-center"
+                >
+                    <i data-lucide="car" class="mr-2"></i>
+                    Select
+                </a>
+            </div>
         </div>
         <button onclick="sendRideRequest()">
             <a href="{{ url_for('ride_confirmed') }}" class="block w-full bg-gray-800 text-yellow-500 py-4 text-lg font-bold rounded-xl hover:bg-gray-700 text-center">
