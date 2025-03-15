@@ -1,0 +1,50 @@
+<!-- role.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .role-button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .driver {
+            background-color: #007BFF;
+            color: white;
+        }
+        .user {
+            background-color: #28A745;
+            color: white;
+        }
+        .role-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Role</h1>
+    <div class="container">
+        <a href="/driver/register">
+            <button class="role-button driver">Driver</button>
+        </a>
+        <a href="/rider/register">
+            <button class="role-button user">User</button>
+        </a>
+    </div>
+</body>
+</html>

@@ -56,12 +56,37 @@
         <div class="bg-white border border-gray-200 rounded-xl p-4 flex justify-between items-center mb-6">
             <div class="flex items-center">
                 <div class="h-6 w-6 bg-green-500 rounded-full mr-3"></div>
-                <span class="text-lg">Current Location</span>
+                <span class="text-lg">Details</span>
+                <h2>Pickup:{{pickup}}</h2>
+                <br>
+                <h2>Destination:{{destination}}</h2>
             </div>
             <button class="btn btn-outline btn-sm rounded-full">Edit</button>
         </div>
-        
-        <a href="{{ url_for('ride_confirmed') }}" class="btn bg-gray-800 text-yellow-500 hover:bg-gray-700 w-full py-4 text-lg font-bold rounded-xl">Confirm Location</a>
+        <button onclick="sendRideRequest()">
+        <a href="{{ url_for('ride_confirmed') }}" class="btn bg-gray-800 text-yellow-500 hover:bg-gray-700 w-full py-4 text-lg font-bold rounded-xl">
+            Confirm Location
+        </a>
+        </button>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+                            <script>
+                                const socket = io();
+                                socket.emit('register_rider', { rider_id: 'rider001' });
+                        
+                                function sendRideRequest() {
+                                    const data = {
+                                        pickup: "{{pickup}}",
+                                        drop: "{{destination}}",
+                                        rider_id: "{{rider_id}}"
+                                    };
+                                    socket.emit('rider/send_request', data);
+                                }
+                        
+                                socket.on('driver_response', (data) => {
+                                    console.log("Driver responded:", data);
+                                    document.getElementById('response').innerText = "Driver Accepted Ride!";
+                                });
+                            </script>
     </div>
 </div>
 {% endblock %}

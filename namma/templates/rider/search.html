@@ -10,49 +10,47 @@
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
         </a>
-
-        <div class="flex-1">
-            <div class="flex items-center mb-4">
-                <div class="h-6 w-6 bg-green-500 rounded-full mr-4"></div>
-                <div class="text-lg">Current Location</div>
-            </div>
-
-            <div class="h-10 border-l-2 border-dashed border-gray-500 ml-3"></div>
-
-            <div class="flex items-center">
-                <div class="h-6 w-6 bg-red-500 rounded-full mr-4"></div>
-                <div class="w-full">
-
-                    <input type="text" placeholder="Where to?"
-                        class="w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-white pb-1 text-lg" />
-                            <h1>Rider Dashboard</h1>
-                            <button onclick="sendRideRequest()">Request Ride</button>
-                            <p id="response">Waiting for driver...</p>
-                        
-                            <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
-                            <script>
-                                const socket = io();
-                                socket.emit('register_rider', { rider_id: 'rider001' });
-                        
-                                function sendRideRequest() {
-                                    const data = {
-                                        pickup: "Location A",
-                                        drop: "Location B",
-                                        rider_id: "rider001"
-                                    };
-                                    socket.emit('rider/send_request', data);
-                                }
-                        
-                                socket.on('driver_response', (data) => {
-                                    console.log("Driver responded:", data);
-                                    document.getElementById('response').innerText = "Driver Accepted Ride!";
-                                });
-                            </script>
-
-                        
-            </div>
-        </div>
     </div>
+        <div class="flex">
+            <form action="{{ url_for('confirm_location') }}" method="POST">
+                <div class="flex-1">
+                    <div class="flex items-center mb-4">
+                        <div class="h-6 w-6 bg-green-500 rounded-full mr-4"></div>
+                        <div class="text-lg">Enter Pickup Location</div>
+                    </div>
+            
+                    <div class="mb-4">
+                        <input type="text" name="pickup" id="pickup"
+                            placeholder="Type current location"
+                            class="w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-white pb-1 text-lg" />
+                    </div>
+            
+                    <!-- Use Current Location Button -->
+                    <div class="mb-4">
+                        <button type="button" onclick="getCurrentLocation()"
+                            class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">
+                            Use Current Location
+                        </button>
+                    </div>
+            
+                    <!-- Destination Input -->
+                    <div class="mb-4">
+                        <input type="text" name="destination" id="destination"
+                            placeholder="Type current location"
+                            class="w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-white pb-1 text-lg" />
+                    </div>
+            
+                    <!-- Submit Button -->
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full mt-2">
+                        Request Ride
+                    </button>
+            
+                    <p id="response" class="mt-2 text-gray-400">Waiting for driver...</p>
+                </div>
+            </form>
+            
+        </div>
+ 
 </div>
 
 <!-- Saved Places -->
@@ -125,4 +123,22 @@
         <span class="text-gray-700 text-lg">Select location on map</span>
     </a>
 </div>
+<script>
+    function getCurrentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                // Optional: Use a reverse geocoding API here to convert lat/lng into a human-readable address
+                const locationString = `Latitude: ${lat}, Longitude: ${lng}`;
+                document.getElementById('pickup').value = locationString;
+            }, function (error) {
+                alert("Error fetching location: " + error.message);
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+</script>
+
 {% endblock %}
