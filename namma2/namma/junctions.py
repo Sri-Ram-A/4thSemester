@@ -13,6 +13,12 @@ def get_coordinates_from_address(address):
         return location.latitude, location.longitude
     return None
 
+def gcfa(address):
+    location = geolocator.geocode(address)
+    if location:
+        return list((location.latitude, location.longitude))
+    return None
+
 def distance(coord1, coord2):
     R = 6371.0  
     lat1, lon1 = map(radians, coord1)

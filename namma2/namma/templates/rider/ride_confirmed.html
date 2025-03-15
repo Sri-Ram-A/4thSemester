@@ -3,26 +3,90 @@
 {% block content %}
 <!-- Map With Location -->
 <div class="map-container h-[55vh] relative">
-    <!-- Green Location Pin -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div class="h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
-    </div>
-    
-    <!-- Blue Location Pin -->
-    <div class="absolute right-1/3 top-1/2">
-        <div class="h-5 w-5 bg-blue-500 rounded-full border-2 border-white"></div>
-    </div>
-    
-    <!-- Distance Label -->
-    <div class="absolute top-1/2 left-1/2 transform translate-x-10 -translate-y-1/2">
-        <div class="bg-white rounded px-2 py-1 text-xs shadow">
-            165 m Away
-        </div>
-    </div>
-    
-    <!-- Compass -->
+    <!-- Mapbox CSS -->
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+<!-- Map container -->
+<div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
+
+    <!-- Mapbox JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+    <script>
+    // Replace with your actual token
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3JpcmFtYWFpMjMiLCJhIjoiY204YWN4eDI5MGdlNjJqbXgwcTM5ZjNraSJ9.mYoKrMKmtarz5NOmriP5kw';
+
+    // Pickup and Drop coordinates
+    const pickup = [-122.4194, 37.7749]; // San Francisco
+    const drop = [-122.2711, 37.8044];   // Oakland
+
+    // Initialize map
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: pickup,
+        zoom: 10
+    });
+
+    // Add navigation controls
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // Add route and markers once map is loaded
+    map.on('load', async () => {
+        // Add pickup marker (green)
+        new mapboxgl.Marker({ color: 'green' }).setLngLat(pickup).addTo(map);
+
+        // Add drop marker (red)
+        new mapboxgl.Marker({ color: 'red' }).setLngLat(drop).addTo(map);
+
+        // Get directions from Mapbox Directions API
+        const query = await fetch(
+        `https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[0]},${pickup[1]};${drop[0]},${drop[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+        );
+        const json = await query.json();
+        const route = json.routes[0].geometry.coordinates;
+
+        // Add route as GeoJSON source
+        map.addSource('route', {
+        type: 'geojson',
+        data: {
+            type: 'Feature',
+            properties: {},
+            geometry: {
+            type: 'LineString',
+            coordinates: route
+            }
+        }
+        });
+
+        // Add route as a styled layer
+        map.addLayer({
+        id: 'route',
+        type: 'line',
+        source: 'route',
+        layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        paint: {
+            'line-color': '#1db954',
+            'line-width': 5,
+            'line-opacity': 0.85
+        }
+        });
+
+        // Fit bounds to route
+        const bounds = new mapboxgl.LngLatBounds();
+        route.forEach(coord => bounds.extend(coord));
+        map.fitBounds(bounds, { padding: 60 });
+    });
+    </script>
+
+<!-- Compass (bottom-right) -->
     <div class="absolute bottom-4 right-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
         </svg>
@@ -43,18 +107,26 @@
         
         <div class="flex mt-2 space-x-2">
             <button class="btn btn-outline btn-sm text-white border-white rounded-full text-xs px-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
                 Quick Chats
             </button>
-            <button class="btn btn-outline btn-sm text-white border-white rounded-full text-xs px-3">Are you starting?</button>
-            <button class="btn btn-outline btn-sm text-white border-white rounded-full text-xs px-3">Please come soon</button>
+            <button class="btn btn-outline btn-sm text-white border-white rounded-full text-xs px-3">
+                Are you starting?
+            </button>
+            <button class="btn btn-outline btn-sm text-white border-white rounded-full text-xs px-3">
+                Please come soon
+            </button>
         </div>
     </div>
     
     <button class="btn btn-ghost btn-sm text-white p-1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -71,7 +143,9 @@
     <h2 class="text-xl font-bold mb-1">Your driver is on the way</h2>
     <a href="#" class="text-blue-500 flex items-center">
         Show Walking Directions to Pickup
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
             <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
     </a>
@@ -85,7 +159,9 @@
                 {% if driver and driver.profile %}
                     <img src="{{ driver.profile }}" alt="{{ driver.name }}" class="w-full h-full object-cover" />
                 {% else %}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
@@ -95,8 +171,14 @@
         <div>
             <div class="flex items-center">
                 <span class="font-bold">{{ driver.rating if driver else "4.83" }}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="gold" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500 ml-1">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                     viewBox="0 0 24 24" fill="gold" stroke="currentColor" 
+                     stroke-width="1" stroke-linecap="round" stroke-linejoin="round" 
+                     class="text-yellow-500 ml-1">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 
+                                    12 17.77 5.82 21.02 7 14.14 2 9.27 
+                                    8.91 8.26 12 2">
+                    </polygon>
                 </svg>
             </div>
             <p class="text-sm">{{ driver.name if driver else "Lavkush" }}</p>
@@ -107,14 +189,17 @@
     <div class="flex-1">
         <div class="flex flex-col items-center">
             <div class="bg-yellow-100 rounded-lg p-2 border-2 border-yellow-500 mb-1">
-                <img src="https://purepng.com/public/uploads/large/purepng.com-auto-rickshawvehiclerickshawautomobile-three-wheeledauto-rickshaw-1701527996815qy1hc.png" alt="Auto" class="h-12 w-20 object-contain">
+                <img src="https://purepng.com/public/uploads/large/purepng.com-auto-rickshawvehiclerickshawautomobile-three-wheeledauto-rickshaw-1701527996815qy1hc.png" 
+                     alt="Auto" class="h-12 w-20 object-contain">
             </div>
             <div class="flex items-center">
                 <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">Auto</span>
                 <span class="mx-1">•</span>
                 <span class="text-xs">3.3</span>
             </div>
-            <p class="font-mono text-xs font-semibold mt-1">{{ driver.vehicle_no if driver else "KA 01 23 4567" }}</p>
+            <p class="font-mono text-xs font-semibold mt-1">
+                {{ driver.vehicle_no if driver else "KA 01 23 4567" }}
+            </p>
         </div>
     </div>
 </div>
@@ -124,19 +209,25 @@
     <div>
         <div class="flex items-center">
             <span class="font-semibold text-xl">Fare Estimate</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" 
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                 class="ml-1 text-gray-500">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
         </div>
-        <p class="text-2xl font-bold">₹{{ driver.rate if driver else "100" }}</p>
+        <p class="text-2xl font-bold">
+            ₹{{ driver.rate if driver else "100" }}
+        </p>
     </div>
     
     <div class="border border-green-500 rounded px-2 py-1 text-green-600 text-sm font-medium">
         Pay by Cash/UPI
     </div>
 </div>
+
 <!-- Socket script to update driver details in real-time -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
 <script>

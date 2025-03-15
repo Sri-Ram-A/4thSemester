@@ -1,4 +1,5 @@
 import eventlet
+# from cost import get_price
 eventlet.monkey_patch()
 from flask import Flask, render_template, request, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -6,6 +7,8 @@ from flask_socketio import SocketIO, emit, join_room
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_cors import CORS  # Import CORS
+
+from junctions import gcfa
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes and origins
@@ -116,7 +119,6 @@ def driver_register():
             "city": city,
             "password": hashed_password,
             'profile':profile,
-            'rate':"rate"
         }
         db.drivers.insert_one(driver_data)
 
@@ -201,7 +203,7 @@ def confirm_location():
         print("Pickup:", pickup)
         print("Destination:", destination)
 
-    return render_template('rider/confirm_location.html', pickup=pickup, destination=destination, rider_id=rider_id)
+    return render_template('rider/confirm_location.html', pickup=pickup, destination=destination, rider_id=rider_id, pickup_coordinates = gcfa(pickup), drop_coords = gcfa(destination))
 
 @app.route("/rider/ride_confirmed")
 def ride_confirmed():
@@ -394,6 +396,12 @@ def handle_accept_request(data):
 def handle_driver_response(data):
     print("Driver response acknowledged by server:", data)
     socketio.emit('show_driver_response', data, room='riders')
+
+@app.route('/confirm_location', methods=['POST'])
+def confirm():
+    pickup = request.form['pickup']
+    destination = request.form['destination']
+    return render_template('rider/confirm_location.html', pickup_location=pickup, destination_location=destination)
 
 # ---------- MAIN ----------
 if __name__ == '__main__':
