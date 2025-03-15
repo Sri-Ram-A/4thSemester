@@ -1,6 +1,9 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
+from flask_socketio import SocketIO, emit
+import requests
+# driver.py (Flask app on port 5001)
 app = Flask(__name__)
+socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -34,5 +37,22 @@ def learboard():
 @app.route('/hello')
 def hello():
     return render_template('hello.html')
+
+# driver.py
+
+@app.route('/receive_request', methods=['POST'])
+def receive_request():
+    data = request.json
+    print("Driver received ride request:", data)
+    # Send message to Driver Web UI using SocketIO
+    socketio.emit('new_ride_request', data)
+    return "Driver received"
+
+@socketio.on('accept_request')
+def handle_accept_request(data):
+    print("Driver accepting ride:", data)
+    # Notify rider server
+    requests.post('http://localhost:5000/driver_response', json=data)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    socketio.run(app, port=5001)

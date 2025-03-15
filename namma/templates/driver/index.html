@@ -120,9 +120,9 @@
         // Change text every 2 seconds
         setInterval(changeText, 2000);
         
-        // Redirect to intro.html after 6 seconds
+        // Redirect to offline.html after 6 seconds
         setTimeout(() => {
-            window.location.href = "{{ url_for('intro') }}";
+            window.location.href = "{{ url_for('offline') }}";
         }, 6000);
     </script>
 </body>

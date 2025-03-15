@@ -1,0 +1,149 @@
+.vehicle-number {
+    background-color: #f0c808;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #333;
+    display: inline-block;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.blue-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.blue-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.blue-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.blue-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .blue-toggle-slider {
+    background-color: #60a5fa;
+}
+
+input:checked + .blue-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.auto-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    margin: 12px 0;
+}
+
+.auto-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.auto-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.auto-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.auto-capacity {
+    font-size: 14px;
+    color: #666;
+}
+
+.section-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.rate-card {
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

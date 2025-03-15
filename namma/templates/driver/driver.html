@@ -1,0 +1,25 @@
+<!-- <!DOCTYPE html>
+<html>
+<head><title>Driver</title></head>
+<body>
+    <div id="ride_request"></div>
+    <button onclick="acceptRequest()">Accept Ride</button>
+
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+        var currentRequest = null;
+
+        socket.on('new_ride_request', function(data) {
+            currentRequest = data;
+            document.getElementById("ride_request").innerHTML = "New Ride: " + data.message;
+        });
+
+        function acceptRequest() {
+            if (currentRequest) {
+                socket.emit('accept_request', { message: "Driver123 accepted your request" });
+            }
+        }
+    </script>
+</body>
+</html> -->

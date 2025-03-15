@@ -1,0 +1,21 @@
+<!-- <!DOCTYPE html>
+<html>
+<head><title>Rider</title></head>
+<body>
+    <button onclick="sendRequest()">Send Ride Request</button>
+    <div id="response"></div>
+
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+
+        function sendRequest() {
+            socket.emit('send_request', { message: "Rider123 needs a ride" });
+        }
+
+        socket.on('show_driver_response', function(data) {
+            document.getElementById("response").innerHTML = "Driver says: " + data.message;
+        });
+    </script>
+</body>
+</html> -->

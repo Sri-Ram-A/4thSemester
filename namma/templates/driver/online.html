@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "driver/base.html" %}
 {%block style%}
 <link rel="stylesheet" href="{{ url_for('static', filename='online.css') }}">
 {%endblock%}
@@ -15,7 +15,7 @@
 
             <!-- Mode Selector -->
             <div class="mode-selector flex flex-1 ml-4">
-                <a href="/offline" class="mode-button">Offline</a>
+                <a href="./offline" class="mode-button">Offline</a>
                 <button class="mode-button active flex-1 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -53,7 +53,7 @@
     <!-- Map Area with Components -->
     <div class="flex-grow map-background relative">
         <!-- Action Buttons -->
-        <div class="absolute top-4 left-2 right-2 flex justify-between">
+        <!-- <div class="absolute top-4 left-2 right-2 flex justify-between">
             <button class="btn btn-sm btn-outline bg-white rounded-full flex items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -79,7 +79,7 @@
                     <span class="text-sm">Hotspots</span>
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <!-- Blue Circle in Center -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -154,8 +154,29 @@
                 </div>
             </div>
         </div>
+        <div>
+            <h1>Driver Dashboard</h1>
+                <p>Status: <span id="status">Waiting for ride requests...</span></p>
+            
+                <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+                <script>
+                    const socket = io();
+            
+                    socket.emit('register_driver', { driver_id: 'driver123' });
+            
+                    socket.on('new_ride_request', (data) => {
+                        console.log("Received ride request:", data);
+                        document.getElementById('status').innerText = "Ride Request Received!";
+                        // You can show popup or modal for Accept Ride button
+                    });
+            
+                    function acceptRide() {
+                        socket.emit('driver/accept_request', { driver_id: 'driver123', ride_id: 'ride456' });
+                    }
+                </script>
+            </div>
     </div>
-
+    
     <!-- OTP Modal -->
     <div id="otp-modal" class="otp-modal">
         <div class="otp-container">
@@ -249,22 +270,5 @@
             });
         });
     </script>
-    <button onclick="acceptRequest()">Accept Ride</button>
-
-    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
-    <script>
-        var socket = io();
-        var currentRequest = null;
-
-        socket.on('new_ride_request', function(data) {
-            currentRequest = data;
-            document.getElementById("ride_request").innerHTML = "New Ride: " + data.message;
-        });
-
-        function acceptRequest() {
-            if (currentRequest) {
-                socket.emit('accept_request', { message: "Driver123 accepted your request" });
-            }
-        }
-        </script>
+        
 {%endblock%}

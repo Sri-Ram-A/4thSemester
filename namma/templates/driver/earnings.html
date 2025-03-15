@@ -1,0 +1,193 @@
+{% extends "driver/base.html" %}
+
+{% block style %}
+<style>
+    /* Hide scrollbars */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .earnings-bar {
+        height: 120px;
+        width: 20px;
+        background-color: #4CAF50;
+        border-radius: 4px;
+    }
+    
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.75rem;
+        color: #9CA3AF;
+    }
+    
+    .nav-item.active {
+        color: #111827;
+        font-weight: 500;
+    }
+    
+    .badge-new {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #EF4444;
+        color: white;
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Header with back button -->
+<div class="bg-white p-4 border-b border-gray-200 flex items-center">
+    <a href="javascript:history.back()" class="mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+    </a>
+    <h1 class="text-2xl font-semibold">Earnings</h1>
+</div>
+        
+<!-- Content -->
+<div class="p-4 space-y-4 overflow-hidden">
+    <!-- Tabs -->
+    <div class="flex rounded-full bg-white overflow-hidden shadow-md">
+        <button class="flex-1 py-3 px-4 bg-gray-800 text-white font-medium rounded-full flex items-center justify-center">
+            Earnings <span class="ml-1 text-green-300">₹</span>
+        </button>
+        <button class="flex-1 py-3 px-4 text-gray-500 font-medium flex items-center justify-center">
+            Yatri Points <span class="ml-1 text-yellow-400">🔅</span>
+        </button>
+    </div>
+
+    <!-- Earnings Card -->
+    <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="mb-6 flex justify-between items-center">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <div class="text-center">
+                <p class="text-gray-500">10 Mar - 16 Mar, Earnings</p>
+            </div>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="text-center mb-8">
+            <h2 class="text-5xl font-bold">₹202</h2>
+        </div>
+
+        <!-- Chart -->
+        <div class="mb-4 px-2">
+            <div class="relative h-32">
+                <!-- Horizontal lines -->
+                <div class="absolute top-0 left-0 right-0 border-t border-gray-200 border-dashed flex justify-end">
+                    <span class="text-gray-500">₹202</span>
+                </div>
+                <div class="absolute top-1/3 left-0 right-0 border-t border-gray-200 border-dashed flex justify-end">
+                    <span class="text-gray-500">₹134</span>
+                </div>
+                <div class="absolute top-2/3 left-0 right-0 border-t border-gray-200 border-dashed flex justify-end">
+                    <span class="text-gray-500">₹67</span>
+                </div>
+                
+                <!-- Base line -->
+                <div class="absolute bottom-0 left-0 right-0 border-t border-gray-300"></div>
+                
+                <!-- Bars -->
+                <div class="absolute bottom-0 left-0 right-0 flex justify-around items-end h-full">
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">10<br>Mon</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="earnings-bar"></div>
+                        <div class="mt-2 text-gray-500 text-sm">11<br>Tue</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">12<br>Wed</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">13<br>Thu</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">14<br>Fri</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">15<br>Sat</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-0 h-0"></div>
+                        <div class="mt-2 text-gray-500 text-sm">16<br>Sun</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 divide-x">
+            <div class="text-center">
+                <p class="text-gray-500">Rides</p>
+                <p class="text-2xl font-semibold">3</p>
+            </div>
+            <div class="text-center">
+                <p class="text-gray-500">Distance</p>
+                <p class="text-2xl font-semibold">8 km</p>
+            </div>
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="flex justify-center mt-6 space-x-1">
+            <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+            <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+            <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+            <div class="h-2 w-2 rounded-full bg-gray-800"></div>
+        </div>
+    </div>
+
+    <!-- Ride History -->
+    <div class="mb-4">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-semibold">Ride History</h2>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="text-gray-500 mr-1">Today</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- No Rides Card -->
+        <div class="bg-white rounded-xl p-8 shadow-sm flex flex-col items-center justify-center">
+            <h3 class="text-2xl font-semibold mb-2">No Rides</h3>
+            <p class="text-gray-500 text-center">You did not take any rides on 12 Mar, 2025</p>
+        </div>
+
+        <!-- New Button -->
+        <div class="flex justify-end mt-2">
+            <button class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
+                NEW +
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

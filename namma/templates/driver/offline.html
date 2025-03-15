@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "driver/base.html" %}
 {%block style%} <link rel="stylesheet" href="{{ url_for('static', filename='offline.css') }}">{%endblock%}
     {% block content %}
 
@@ -23,7 +23,7 @@
                         </svg>
                         Offline
                     </button>
-                    <a href="/online" class="mode-button">Online</a>
+                    <a href="./online" class="mode-button">Online</a>
                     
                 </div>
             </div>

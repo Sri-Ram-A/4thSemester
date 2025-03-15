@@ -1,0 +1,128 @@
+{% extends "rider/base.html" %}
+
+{% block content %}
+<div class="bg-gray-800 text-white p-4">
+    <div class="flex items-center mb-8">
+        <a href="{{ url_for('home') }}" class="mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+
+        <div class="flex-1">
+            <div class="flex items-center mb-4">
+                <div class="h-6 w-6 bg-green-500 rounded-full mr-4"></div>
+                <div class="text-lg">Current Location</div>
+            </div>
+
+            <div class="h-10 border-l-2 border-dashed border-gray-500 ml-3"></div>
+
+            <div class="flex items-center">
+                <div class="h-6 w-6 bg-red-500 rounded-full mr-4"></div>
+                <div class="w-full">
+
+                    <input type="text" placeholder="Where to?"
+                        class="w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-white pb-1 text-lg" />
+                            <h1>Rider Dashboard</h1>
+                            <button onclick="sendRideRequest()">Request Ride</button>
+                            <p id="response">Waiting for driver...</p>
+                        
+                            <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+                            <script>
+                                const socket = io();
+                                socket.emit('register_rider', { rider_id: 'rider001' });
+                        
+                                function sendRideRequest() {
+                                    const data = {
+                                        pickup: "Location A",
+                                        drop: "Location B",
+                                        rider_id: "rider001"
+                                    };
+                                    socket.emit('rider/send_request', data);
+                                }
+                        
+                                socket.on('driver_response', (data) => {
+                                    console.log("Driver responded:", data);
+                                    document.getElementById('response').innerText = "Driver Accepted Ride!";
+                                });
+                            </script>
+
+                        
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Saved Places -->
+<div class="flex justify-between px-4 py-4">
+    <div class="flex-1 mx-1">
+        <button
+            class="btn btn-outline btn-sm rounded-full w-full flex items-center justify-center border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-blue-500 mr-1">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            Home
+        </button>
+    </div>
+
+    <div class="flex-1 mx-1">
+        <button
+            class="btn btn-outline btn-sm rounded-full w-full flex items-center justify-center border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-blue-500 mr-1">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            Work
+        </button>
+    </div>
+
+    <span class="flex-1 mx-1">
+        <button
+            class="btn btn-outline btn-sm rounded-full w-full flex items-center justify-center border border-gray-300">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-red-500 mr-1">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+            </svg>
+
+            Favourites
+
+        </button>
+    </span>
+</div>
+
+<!-- Welcome Image -->
+<div class="flex flex-col items-center justify-center py-6">
+    <div class="bg-blue-50 rounded-full p-6 mb-4">
+        <img src="https://img.freepik.com/free-vector/indian-man-with-traditional-clothes-holding-smartphone_23-2148533009.jpg"
+            alt="Welcome" class="h-40 w-40 object-contain">
+    </div>
+    <p class="text-gray-500 text-lg">Start typing to search for places</p>
+</div>
+
+<!-- Select on Map -->
+<div class="fixed bottom-20 left-0 right-0 flex justify-center">
+    <a href="{{ url_for('confirm_location') }}"
+        class="flex items-center bg-white border border-gray-300 rounded-full px-6 py-3 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="text-gray-600 mr-2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <span class="text-gray-700 text-lg">Select location on map</span>
+    </a>
+</div>
+{% endblock %}
