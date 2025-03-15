@@ -1,0 +1,138 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.app-container {
+    width: 100%;
+    max-width: 414px;
+    height: 100%;
+    max-height: 896px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.map-background {
+    background-image: url('https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/77.5946,12.9716,14,0/414x580?access_token=pk.eyJ1IjoiZXhhbXBsZXVzZXIiLCJhIjoiY2xpa2V4bWxlMDhpaDNlbnRsMWU4d3h6ciJ9.wmztxRoVMSXwVa0bLV_8AQ');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+.location-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #3B82F6;
+}
+.mode-selector {
+    background-color: white;
+    border: 2px solid #3B82F6;
+    border-radius: 50px;
+    padding: 2px;
+}
+.mode-button {
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.mode-button.active {
+    background-color: #3B82F6;
+    color: white;
+}
+.mode-button:not(.active) {
+    color: #666;
+}
+.otp-button {
+    border: 2px solid #3B82F6;
+    color: #3B82F6;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.otp-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 50;
+}
+.otp-modal.active {
+    display: flex;
+}
+.otp-container {
+    width: 100%;
+    max-width: 414px;
+    background-color: white;
+    border-radius: 24px 24px 0 0;
+    padding: 24px;
+}
+.numpad-btn {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 50%;
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.numpad-btn:hover {
+    background-color: #f0f0f0;
+}
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #777;
+    flex: 1;
+}
+.nav-item.active {
+    color: #3B82F6;
+}
+.badge-new {
+    background-color: #3B82F6;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 4px;
+    position: relative;
+    top: -10px;
+}

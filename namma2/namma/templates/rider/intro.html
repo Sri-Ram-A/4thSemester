@@ -1,0 +1,185 @@
+{% extends "rider/base.html" %}
+
+{% block content %}
+<div class="flex justify-between items-center px-4 py-3">
+    <button class="btn btn-ghost btn-sm p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+    <div class="flex items-center">
+        <img src="https://cdn.blume.vc/blume/imager/images/startups/namma-yatri/logo/39000/NM-logo_5dbced9873927dbc00aa1bed763f6f2b.png" alt="Namma Yatri"  width="150" height="150">
+    </div>
+    <button class="btn btn-ghost text-blue-500 btn-sm">Have a Referral?</button>
+</div>
+
+<!-- Map Section -->
+<div class="map-container h-80 relative">
+    <!-- User Location Marker -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="h-4 w-4 bg-blue-500 rounded-full border-2 border-white"></div>
+    </div>
+    <!-- Car Location Marker -->
+    <div class="absolute left-[45%] top-[55%]">
+        <div class="h-4 w-4 bg-green-500 rounded-full border-2 border-white"></div>
+    </div>
+    <!-- Location Control -->
+    <div class="absolute bottom-4 right-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="22" y1="12" x2="18" y2="12"></line>
+            <line x1="6" y1="12" x2="2" y2="12"></line>
+            <line x1="12" y1="6" x2="12" y2="2"></line>
+            <line x1="12" y1="22" x2="12" y2="18"></line>
+        </svg>
+    </div>
+</div>
+
+<!-- Search Box -->
+<div class="px-4 py-4">
+    <a href="{{ url_for('search') }}" class="flex items-center bg-gray-800 text-white rounded-xl p-4 w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500 mr-2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span class="text-xl font-medium">Where are you going?</span>
+    </a>
+</div>
+
+<!-- Services Section -->
+<div class="px-4 mb-4">
+    <h2 class="text-2xl font-bold mb-4">Namma Services</h2>
+    <div class="grid grid-cols-4 gap-2">
+        <div class="flex flex-col items-center bg-green-50 rounded-lg p-4">
+            <div class="text-green-500 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.9 5c-.2.5-.3.9-.3 1.4V18c0 .6.4 1 1 1h2"></path>
+                    <circle cx="7" cy="17" r="2"></circle>
+                    <path d="M9 17h6"></path>
+                    <circle cx="17" cy="17" r="2"></circle>
+                </svg>
+            </div>
+            <span class="text-sm">Instant</span>
+        </div>
+        
+        <div class="flex flex-col items-center bg-yellow-50 rounded-lg p-4">
+            <div class="text-yellow-500 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <span class="text-sm">Rental</span>
+        </div>
+        
+        <div class="flex flex-col items-center bg-blue-50 rounded-lg p-4">
+            <div class="text-blue-500 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+            </div>
+            <span class="text-sm">Intercity</span>
+        </div>
+        
+        <div class="flex flex-col items-center bg-orange-50 rounded-lg p-4">
+            <div class="text-orange-500 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 11V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5"></path>
+                    <path d="M8 14h8"></path>
+                    <path d="M17 19h3a2 2 0 0 0 2-2v-5a5 5 0 0 0-5-5h-5"></path>
+                    <path d="M4 17a2 2 0 0 0 2 2h3"></path>
+                    <path d="M10 19h4"></path>
+                    <rect x="2" y="11" width="20" height="8" rx="2"></rect>
+                </svg>
+            </div>
+            <span class="text-sm">Intercity Bus</span>
+        </div>
+    </div>
+</div>
+
+<!-- Cities Banner -->
+<div class="px-4 mb-6">
+    <div class="bg-green-500 rounded-xl p-5 relative overflow-hidden">
+        <h3 class="text-2xl font-bold text-black mb-2">Namma Yatri now live in..</h3>
+        <div class="relative">
+            <!-- City route illustration -->
+            <div class="h-16 w-full relative">
+                <!-- Road with dashed line -->
+                <div class="absolute top-1/2 left-0 right-0 h-1 bg-black"></div>
+                <div class="absolute top-1/2 left-0 right-0 h-1 border-t-2 border-dashed border-white"></div>
+                
+                <!-- Cities -->
+                <div class="absolute bottom-0 left-[10%]">
+                    <div class="relative">
+                        <div class="h-4 w-4 bg-red-500 rounded-full"></div>
+                        <span class="text-xs font-semibold absolute -bottom-5 -left-10">Bengaluru</span>
+                    </div>
+                </div>
+                
+                <div class="absolute top-0 left-[30%]">
+                    <div class="relative">
+                        <div class="h-4 w-4 bg-red-500 rounded-full"></div>
+                        <span class="text-xs font-semibold absolute -top-5 -left-8">Mysuru</span>
+                    </div>
+                </div>
+                
+                <div class="absolute top-0 right-[30%]">
+                    <div class="relative">
+                        <div class="h-4 w-4 bg-red-500 rounded-full"></div>
+                        <span class="text-xs font-semibold absolute -top-5 -left-6">Bidar</span>
+                    </div>
+                </div>
+                
+                <div class="absolute bottom-0 right-[10%]">
+                    <div class="relative">
+                        <div class="h-4 w-4 bg-red-500 rounded-full"></div>
+                        <span class="text-xs font-semibold absolute -bottom-5 -left-10">Kalaburgi</span>
+                    </div>
+                </div>
+                
+                <!-- Auto icon -->
+                <div class="absolute bottom-0 left-[10%]">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkgMTloMmMuNiAwIDEtLjQgMS0xdi0zYzAtLjktLjctMS43LTEuNS0xLjlDMTguNyAxMC42IDE2IDEwIDE2IDEwcy0xLjMtMS40LTIuMi0yLjNjLS41LS40LTEuMS0uNy0xLjgtLjdINWMtLjYgMC0xLjEuNC0xLjQuOWwtMS45IDVjLS4yLjUtLjMuOS0uMyAxLjRWMThjMCAuNi40IDEgMSAxaDIiIHN0cm9rZT0iI2ZiYmYyNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcCJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPjxjaXJjbGUgY3g9IjciIGN5PSIxNyIgcj0iMiIgc3Ryb2tlPSIjZmJiZjI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9jaXJjbGU+PHBhdGggZD0iTTkgMTdoNiIgc3Ryb2tlPSIjZmJiZjI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPjxjaXJjbGUgY3g9IjE3IiBjeT0iMTciIHI9IjIiIHN0cm9rZT0iI2ZiYmYyNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvY2lyY2xlPjwvc3ZnPg==" alt="Auto" class="h-8 w-8 transform -translate-y-2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page Indicators -->
+<div class="flex justify-center mb-4">
+    <div class="flex space-x-1">
+        <div class="h-2 w-2 bg-gray-800 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+        <div class="h-2 w-2 bg-gray-300 rounded-full"></div>
+    </div>
+</div>
+
+<!-- Explore Section -->
+<div class="px-4 mb-20">
+    <h2 class="text-2xl font-bold mb-4">Explore</h2>
+    <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gray-900 rounded-xl overflow-hidden h-28 relative">
+            <img src="https://images.unsplash.com/photo-1582972178958-e13c360a0813" alt="City Monument" class="object-cover w-full h-full opacity-60">
+        </div>
+        <div class="bg-teal-500 rounded-xl overflow-hidden h-28 relative">
+            <img src="https://images.unsplash.com/photo-1522071901873-411886a10004" alt="People" class="object-cover w-full h-full opacity-60">
+            <div class="absolute top-2 right-2 bg-red-500 text-white rounded p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

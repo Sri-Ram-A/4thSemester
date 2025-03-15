@@ -1,0 +1,2257 @@
+U-Turn Detection Debug Log
+==================================================
+Checking 0 -> 10: Travel = 0.47m, Straight = 0.47m
+Checking 0 -> 11: Travel = 0.47m, Straight = 0.47m
+Checking 0 -> 12: Travel = 0.48m, Straight = 0.47m
+Checking 0 -> 13: Travel = 0.48m, Straight = 0.47m
+Checking 0 -> 14: Travel = 0.51m, Straight = 0.49m
+Checking 0 -> 15: Travel = 0.52m, Straight = 0.49m
+Checking 0 -> 16: Travel = 0.52m, Straight = 0.49m
+Checking 0 -> 17: Travel = 0.53m, Straight = 0.50m
+Checking 0 -> 18: Travel = 0.55m, Straight = 0.51m
+Checking 0 -> 19: Travel = 0.58m, Straight = 0.52m
+Checking 0 -> 20: Travel = 0.59m, Straight = 0.53m
+Checking 0 -> 21: Travel = 0.67m, Straight = 0.56m
+Checking 0 -> 22: Travel = 0.68m, Straight = 0.57m
+Checking 0 -> 23: Travel = 0.70m, Straight = 0.59m
+Checking 0 -> 24: Travel = 0.76m, Straight = 0.60m
+Checking 0 -> 25: Travel = 0.78m, Straight = 0.60m
+Checking 0 -> 26: Travel = 0.79m, Straight = 0.60m
+Checking 0 -> 27: Travel = 0.85m, Straight = 0.58m
+Checking 0 -> 28: Travel = 0.86m, Straight = 0.58m
+Checking 0 -> 29: Travel = 0.86m, Straight = 0.58m
+Checking 0 -> 30: Travel = 0.87m, Straight = 0.59m
+Checking 0 -> 31: Travel = 0.88m, Straight = 0.58m
+Checking 0 -> 32: Travel = 0.90m, Straight = 0.57m
+Checking 0 -> 33: Travel = 0.92m, Straight = 0.56m
+Checking 0 -> 34: Travel = 0.94m, Straight = 0.56m
+Checking 0 -> 35: Travel = 0.95m, Straight = 0.55m
+Checking 0 -> 36: Travel = 0.99m, Straight = 0.55m
+Checking 0 -> 37: Travel = 1.02m, Straight = 0.54m
+Checking 0 -> 38: Travel = 1.09m, Straight = 0.52m
+Checking 0 -> 39: Travel = 1.13m, Straight = 0.52m
+Checking 0 -> 40: Travel = 1.14m, Straight = 0.52m
+Checking 0 -> 41: Travel = 1.15m, Straight = 0.52m
+Checking 0 -> 42: Travel = 1.17m, Straight = 0.52m
+Checking 0 -> 43: Travel = 1.26m, Straight = 0.53m
+Checking 0 -> 44: Travel = 1.32m, Straight = 0.55m
+Checking 0 -> 45: Travel = 1.35m, Straight = 0.57m
+Checking 0 -> 46: Travel = 1.43m, Straight = 0.62m
+Checking 0 -> 47: Travel = 1.49m, Straight = 0.66m
+Checking 0 -> 48: Travel = 1.57m, Straight = 0.70m
+Checking 0 -> 49: Travel = 1.67m, Straight = 0.76m
+Checking 0 -> 50: Travel = 1.69m, Straight = 0.77m
+Checking 0 -> 51: Travel = 1.70m, Straight = 0.79m
+Checking 0 -> 52: Travel = 1.78m, Straight = 0.74m
+Checking 0 -> 53: Travel = 1.83m, Straight = 0.71m
+Checking 0 -> 54: Travel = 1.87m, Straight = 0.69m
+Checking 0 -> 55: Travel = 1.88m, Straight = 0.68m
+Checking 0 -> 56: Travel = 1.90m, Straight = 0.67m
+Checking 0 -> 57: Travel = 1.96m, Straight = 0.64m
+Checking 0 -> 58: Travel = 2.01m, Straight = 0.61m
+Checking 0 -> 59: Travel = 2.03m, Straight = 0.59m
+Checking 0 -> 60: Travel = 2.06m, Straight = 0.58m
+Checking 0 -> 61: Travel = 2.10m, Straight = 0.56m
+Checking 0 -> 62: Travel = 2.14m, Straight = 0.54m
+Checking 0 -> 63: Travel = 2.19m, Straight = 0.53m
+Checking 0 -> 64: Travel = 2.26m, Straight = 0.53m
+Checking 0 -> 65: Travel = 2.28m, Straight = 0.53m
+Checking 0 -> 66: Travel = 2.32m, Straight = 0.57m
+Checking 0 -> 67: Travel = 2.41m, Straight = 0.65m
+Checking 0 -> 68: Travel = 2.42m, Straight = 0.66m
+Checking 0 -> 69: Travel = 2.42m, Straight = 0.66m
+Checking 0 -> 70: Travel = 2.43m, Straight = 0.66m
+Checking 0 -> 71: Travel = 2.47m, Straight = 0.64m
+Checking 0 -> 72: Travel = 2.52m, Straight = 0.59m
+Checking 1 -> 11: Travel = 0.45m, Straight = 0.45m
+Checking 1 -> 12: Travel = 0.46m, Straight = 0.45m
+Checking 1 -> 13: Travel = 0.46m, Straight = 0.45m
+Checking 1 -> 14: Travel = 0.49m, Straight = 0.47m
+Checking 1 -> 15: Travel = 0.50m, Straight = 0.47m
+Checking 1 -> 16: Travel = 0.50m, Straight = 0.47m
+Checking 1 -> 17: Travel = 0.51m, Straight = 0.48m
+Checking 1 -> 18: Travel = 0.53m, Straight = 0.49m
+Checking 1 -> 19: Travel = 0.56m, Straight = 0.51m
+Checking 1 -> 20: Travel = 0.57m, Straight = 0.51m
+Checking 1 -> 21: Travel = 0.65m, Straight = 0.55m
+Checking 1 -> 22: Travel = 0.66m, Straight = 0.56m
+Checking 1 -> 23: Travel = 0.68m, Straight = 0.57m
+Checking 1 -> 24: Travel = 0.75m, Straight = 0.59m
+Checking 1 -> 25: Travel = 0.76m, Straight = 0.58m
+Checking 1 -> 26: Travel = 0.77m, Straight = 0.58m
+Checking 1 -> 27: Travel = 0.83m, Straight = 0.57m
+Checking 1 -> 28: Travel = 0.84m, Straight = 0.57m
+Checking 1 -> 29: Travel = 0.84m, Straight = 0.57m
+Checking 1 -> 30: Travel = 0.85m, Straight = 0.58m
+Checking 1 -> 31: Travel = 0.86m, Straight = 0.57m
+Checking 1 -> 32: Travel = 0.88m, Straight = 0.56m
+Checking 1 -> 33: Travel = 0.90m, Straight = 0.55m
+Checking 1 -> 34: Travel = 0.92m, Straight = 0.55m
+Checking 1 -> 35: Travel = 0.93m, Straight = 0.54m
+Checking 1 -> 36: Travel = 0.97m, Straight = 0.54m
+Checking 1 -> 37: Travel = 1.00m, Straight = 0.53m
+Checking 1 -> 38: Travel = 1.07m, Straight = 0.52m
+Checking 1 -> 39: Travel = 1.11m, Straight = 0.52m
+Checking 1 -> 40: Travel = 1.12m, Straight = 0.52m
+Checking 1 -> 41: Travel = 1.13m, Straight = 0.51m
+Checking 1 -> 42: Travel = 1.15m, Straight = 0.52m
+Checking 1 -> 43: Travel = 1.24m, Straight = 0.53m
+Checking 1 -> 44: Travel = 1.30m, Straight = 0.56m
+Checking 1 -> 45: Travel = 1.33m, Straight = 0.57m
+Checking 1 -> 46: Travel = 1.41m, Straight = 0.63m
+Checking 1 -> 47: Travel = 1.47m, Straight = 0.67m
+Checking 1 -> 48: Travel = 1.55m, Straight = 0.71m
+Checking 1 -> 49: Travel = 1.65m, Straight = 0.77m
+Checking 1 -> 50: Travel = 1.67m, Straight = 0.78m
+Checking 1 -> 51: Travel = 1.69m, Straight = 0.80m
+Checking 1 -> 52: Travel = 1.76m, Straight = 0.75m
+Checking 1 -> 53: Travel = 1.81m, Straight = 0.72m
+Checking 1 -> 54: Travel = 1.85m, Straight = 0.70m
+Checking 1 -> 55: Travel = 1.86m, Straight = 0.69m
+Checking 1 -> 56: Travel = 1.88m, Straight = 0.68m
+Checking 1 -> 57: Travel = 1.94m, Straight = 0.64m
+Checking 1 -> 58: Travel = 1.99m, Straight = 0.61m
+Checking 1 -> 59: Travel = 2.02m, Straight = 0.60m
+Checking 1 -> 60: Travel = 2.04m, Straight = 0.58m
+Checking 1 -> 61: Travel = 2.08m, Straight = 0.56m
+Checking 1 -> 62: Travel = 2.12m, Straight = 0.55m
+Checking 1 -> 63: Travel = 2.17m, Straight = 0.53m
+Checking 1 -> 64: Travel = 2.24m, Straight = 0.53m
+Checking 1 -> 65: Travel = 2.26m, Straight = 0.53m
+Checking 1 -> 66: Travel = 2.30m, Straight = 0.57m
+Checking 1 -> 67: Travel = 2.39m, Straight = 0.65m
+Checking 1 -> 68: Travel = 2.40m, Straight = 0.65m
+Checking 1 -> 69: Travel = 2.40m, Straight = 0.66m
+Checking 1 -> 70: Travel = 2.41m, Straight = 0.66m
+Checking 1 -> 71: Travel = 2.45m, Straight = 0.64m
+Checking 1 -> 72: Travel = 2.50m, Straight = 0.59m
+Checking 2 -> 12: Travel = 0.42m, Straight = 0.41m
+Checking 2 -> 13: Travel = 0.42m, Straight = 0.41m
+Checking 2 -> 14: Travel = 0.46m, Straight = 0.43m
+Checking 2 -> 15: Travel = 0.46m, Straight = 0.43m
+Checking 2 -> 16: Travel = 0.47m, Straight = 0.44m
+Checking 2 -> 17: Travel = 0.47m, Straight = 0.44m
+Checking 2 -> 18: Travel = 0.50m, Straight = 0.45m
+Checking 2 -> 19: Travel = 0.52m, Straight = 0.47m
+Checking 2 -> 20: Travel = 0.53m, Straight = 0.47m
+Checking 2 -> 21: Travel = 0.61m, Straight = 0.52m
+Checking 2 -> 22: Travel = 0.63m, Straight = 0.53m
+Checking 2 -> 23: Travel = 0.64m, Straight = 0.54m
+Checking 2 -> 24: Travel = 0.71m, Straight = 0.56m
+Checking 2 -> 25: Travel = 0.72m, Straight = 0.55m
+Checking 2 -> 26: Travel = 0.73m, Straight = 0.55m
+Checking 2 -> 27: Travel = 0.79m, Straight = 0.54m
+Checking 2 -> 28: Travel = 0.80m, Straight = 0.54m
+Checking 2 -> 29: Travel = 0.80m, Straight = 0.54m
+Checking 2 -> 30: Travel = 0.81m, Straight = 0.55m
+Checking 2 -> 31: Travel = 0.82m, Straight = 0.54m
+Checking 2 -> 32: Travel = 0.84m, Straight = 0.53m
+Checking 2 -> 33: Travel = 0.86m, Straight = 0.53m
+Checking 2 -> 34: Travel = 0.88m, Straight = 0.52m
+Checking 2 -> 35: Travel = 0.90m, Straight = 0.52m
+Checking 2 -> 36: Travel = 0.94m, Straight = 0.52m
+Checking 2 -> 37: Travel = 0.96m, Straight = 0.51m
+Checking 2 -> 38: Travel = 1.03m, Straight = 0.50m
+Checking 2 -> 39: Travel = 1.07m, Straight = 0.50m
+Checking 2 -> 40: Travel = 1.08m, Straight = 0.50m
+Checking 2 -> 41: Travel = 1.09m, Straight = 0.51m
+Checking 2 -> 42: Travel = 1.11m, Straight = 0.51m
+Checking 2 -> 43: Travel = 1.20m, Straight = 0.53m
+Checking 2 -> 44: Travel = 1.26m, Straight = 0.56m
+Checking 2 -> 45: Travel = 1.29m, Straight = 0.58m
+Checking 2 -> 46: Travel = 1.37m, Straight = 0.63m
+Checking 2 -> 47: Travel = 1.43m, Straight = 0.68m
+Checking 2 -> 48: Travel = 1.51m, Straight = 0.73m
+Checking 2 -> 49: Travel = 1.61m, Straight = 0.79m
+Checking 2 -> 50: Travel = 1.63m, Straight = 0.80m
+Checking 2 -> 51: Travel = 1.65m, Straight = 0.81m
+Checking 2 -> 52: Travel = 1.72m, Straight = 0.77m
+Checking 2 -> 53: Travel = 1.77m, Straight = 0.74m
+Checking 2 -> 54: Travel = 1.81m, Straight = 0.71m
+Checking 2 -> 55: Travel = 1.83m, Straight = 0.70m
+Checking 2 -> 56: Travel = 1.84m, Straight = 0.69m
+Checking 2 -> 57: Travel = 1.90m, Straight = 0.65m
+Checking 2 -> 58: Travel = 1.95m, Straight = 0.62m
+Checking 2 -> 59: Travel = 1.98m, Straight = 0.60m
+Checking 2 -> 60: Travel = 2.01m, Straight = 0.58m
+Checking 2 -> 61: Travel = 2.04m, Straight = 0.56m
+Checking 2 -> 62: Travel = 2.08m, Straight = 0.54m
+Checking 2 -> 63: Travel = 2.13m, Straight = 0.53m
+Checking 2 -> 64: Travel = 2.20m, Straight = 0.52m
+Checking 2 -> 65: Travel = 2.22m, Straight = 0.52m
+Checking 2 -> 66: Travel = 2.26m, Straight = 0.56m
+Checking 2 -> 67: Travel = 2.36m, Straight = 0.64m
+Checking 2 -> 68: Travel = 2.36m, Straight = 0.65m
+Checking 2 -> 69: Travel = 2.36m, Straight = 0.65m
+Checking 2 -> 70: Travel = 2.37m, Straight = 0.65m
+Checking 2 -> 71: Travel = 2.41m, Straight = 0.64m
+Checking 2 -> 72: Travel = 2.46m, Straight = 0.59m
+Checking 3 -> 13: Travel = 0.41m, Straight = 0.40m
+Checking 3 -> 14: Travel = 0.44m, Straight = 0.41m
+Checking 3 -> 15: Travel = 0.44m, Straight = 0.42m
+Checking 3 -> 16: Travel = 0.45m, Straight = 0.42m
+Checking 3 -> 17: Travel = 0.45m, Straight = 0.42m
+Checking 3 -> 18: Travel = 0.48m, Straight = 0.44m
+Checking 3 -> 19: Travel = 0.51m, Straight = 0.45m
+Checking 3 -> 20: Travel = 0.51m, Straight = 0.46m
+Checking 3 -> 21: Travel = 0.59m, Straight = 0.50m
+Checking 3 -> 22: Travel = 0.61m, Straight = 0.51m
+Checking 3 -> 23: Travel = 0.62m, Straight = 0.52m
+Checking 3 -> 24: Travel = 0.69m, Straight = 0.54m
+Checking 3 -> 25: Travel = 0.71m, Straight = 0.54m
+Checking 3 -> 26: Travel = 0.72m, Straight = 0.54m
+Checking 3 -> 27: Travel = 0.77m, Straight = 0.53m
+Checking 3 -> 28: Travel = 0.78m, Straight = 0.53m
+Checking 3 -> 29: Travel = 0.78m, Straight = 0.53m
+Checking 3 -> 30: Travel = 0.79m, Straight = 0.54m
+Checking 3 -> 31: Travel = 0.80m, Straight = 0.53m
+Checking 3 -> 32: Travel = 0.82m, Straight = 0.52m
+Checking 3 -> 33: Travel = 0.84m, Straight = 0.52m
+Checking 3 -> 34: Travel = 0.86m, Straight = 0.51m
+Checking 3 -> 35: Travel = 0.88m, Straight = 0.51m
+Checking 3 -> 36: Travel = 0.92m, Straight = 0.51m
+Checking 3 -> 37: Travel = 0.95m, Straight = 0.50m
+Checking 3 -> 38: Travel = 1.01m, Straight = 0.50m
+Checking 3 -> 39: Travel = 1.05m, Straight = 0.50m
+Checking 3 -> 40: Travel = 1.06m, Straight = 0.50m
+Checking 3 -> 41: Travel = 1.07m, Straight = 0.50m
+Checking 3 -> 42: Travel = 1.09m, Straight = 0.50m
+Checking 3 -> 43: Travel = 1.18m, Straight = 0.53m
+Checking 3 -> 44: Travel = 1.24m, Straight = 0.56m
+Checking 3 -> 45: Travel = 1.27m, Straight = 0.58m
+Checking 3 -> 46: Travel = 1.35m, Straight = 0.64m
+Checking 3 -> 47: Travel = 1.41m, Straight = 0.68m
+Checking 3 -> 48: Travel = 1.49m, Straight = 0.73m
+Checking 3 -> 49: Travel = 1.60m, Straight = 0.80m
+Checking 3 -> 50: Travel = 1.61m, Straight = 0.81m
+Checking 3 -> 51: Travel = 1.63m, Straight = 0.82m
+Checking 3 -> 52: Travel = 1.70m, Straight = 0.77m
+Checking 3 -> 53: Travel = 1.75m, Straight = 0.74m
+Checking 3 -> 54: Travel = 1.79m, Straight = 0.72m
+Checking 3 -> 55: Travel = 1.81m, Straight = 0.71m
+Checking 3 -> 56: Travel = 1.82m, Straight = 0.70m
+Checking 3 -> 57: Travel = 1.88m, Straight = 0.65m
+Checking 3 -> 58: Travel = 1.93m, Straight = 0.62m
+Checking 3 -> 59: Travel = 1.96m, Straight = 0.60m
+Checking 3 -> 60: Travel = 1.99m, Straight = 0.59m
+Checking 3 -> 61: Travel = 2.02m, Straight = 0.56m
+Checking 3 -> 62: Travel = 2.06m, Straight = 0.54m
+Checking 3 -> 63: Travel = 2.11m, Straight = 0.53m
+Checking 3 -> 64: Travel = 2.18m, Straight = 0.51m
+Checking 3 -> 65: Travel = 2.20m, Straight = 0.51m
+Checking 3 -> 66: Travel = 2.24m, Straight = 0.55m
+Checking 3 -> 67: Travel = 2.34m, Straight = 0.64m
+Checking 3 -> 68: Travel = 2.34m, Straight = 0.64m
+Checking 3 -> 69: Travel = 2.35m, Straight = 0.65m
+Checking 3 -> 70: Travel = 2.35m, Straight = 0.65m
+Checking 3 -> 71: Travel = 2.39m, Straight = 0.64m
+Checking 3 -> 72: Travel = 2.44m, Straight = 0.59m
+Checking 4 -> 14: Travel = 0.35m, Straight = 0.33m
+Checking 4 -> 15: Travel = 0.36m, Straight = 0.33m
+Checking 4 -> 16: Travel = 0.36m, Straight = 0.34m
+Checking 4 -> 17: Travel = 0.37m, Straight = 0.34m
+Checking 4 -> 18: Travel = 0.40m, Straight = 0.36m
+Checking 4 -> 19: Travel = 0.42m, Straight = 0.37m
+Checking 4 -> 20: Travel = 0.43m, Straight = 0.38m
+Checking 4 -> 21: Travel = 0.51m, Straight = 0.42m
+Checking 4 -> 22: Travel = 0.52m, Straight = 0.43m
+Checking 4 -> 23: Travel = 0.54m, Straight = 0.45m
+Checking 4 -> 24: Travel = 0.61m, Straight = 0.47m
+Checking 4 -> 25: Travel = 0.62m, Straight = 0.47m
+Checking 4 -> 26: Travel = 0.63m, Straight = 0.47m
+Checking 4 -> 27: Travel = 0.69m, Straight = 0.47m
+Checking 4 -> 28: Travel = 0.70m, Straight = 0.47m
+Checking 4 -> 29: Travel = 0.70m, Straight = 0.47m
+Checking 4 -> 30: Travel = 0.71m, Straight = 0.48m
+Checking 4 -> 31: Travel = 0.72m, Straight = 0.47m
+Checking 4 -> 32: Travel = 0.74m, Straight = 0.46m
+Checking 4 -> 33: Travel = 0.76m, Straight = 0.46m
+Checking 4 -> 34: Travel = 0.78m, Straight = 0.46m
+Checking 4 -> 35: Travel = 0.79m, Straight = 0.46m
+Checking 4 -> 36: Travel = 0.84m, Straight = 0.46m
+Checking 4 -> 37: Travel = 0.86m, Straight = 0.46m
+Checking 4 -> 38: Travel = 0.93m, Straight = 0.47m
+Checking 4 -> 39: Travel = 0.97m, Straight = 0.48m
+Checking 4 -> 40: Travel = 0.98m, Straight = 0.48m
+Checking 4 -> 41: Travel = 0.99m, Straight = 0.48m
+Checking 4 -> 42: Travel = 1.01m, Straight = 0.49m
+Checking 4 -> 43: Travel = 1.10m, Straight = 0.52m
+Checking 4 -> 44: Travel = 1.16m, Straight = 0.57m
+Checking 4 -> 45: Travel = 1.19m, Straight = 0.59m
+Checking 4 -> 46: Travel = 1.27m, Straight = 0.65m
+Checking 4 -> 47: Travel = 1.33m, Straight = 0.70m
+Checking 4 -> 48: Travel = 1.41m, Straight = 0.76m
+Checking 4 -> 49: Travel = 1.51m, Straight = 0.83m
+Checking 4 -> 50: Travel = 1.53m, Straight = 0.84m
+Checking 4 -> 51: Travel = 1.55m, Straight = 0.86m
+Checking 4 -> 52: Travel = 1.62m, Straight = 0.80m
+Checking 4 -> 53: Travel = 1.67m, Straight = 0.77m
+Checking 4 -> 54: Travel = 1.71m, Straight = 0.74m
+Checking 4 -> 55: Travel = 1.72m, Straight = 0.73m
+Checking 4 -> 56: Travel = 1.74m, Straight = 0.72m
+Checking 4 -> 57: Travel = 1.80m, Straight = 0.67m
+Checking 4 -> 58: Travel = 1.85m, Straight = 0.63m
+Checking 4 -> 59: Travel = 1.88m, Straight = 0.61m
+Checking 4 -> 60: Travel = 1.91m, Straight = 0.59m
+Checking 4 -> 61: Travel = 1.94m, Straight = 0.57m
+Checking 4 -> 62: Travel = 1.98m, Straight = 0.54m
+Checking 4 -> 63: Travel = 2.03m, Straight = 0.52m
+Checking 4 -> 64: Travel = 2.10m, Straight = 0.49m
+Checking 4 -> 65: Travel = 2.12m, Straight = 0.49m
+Checking 4 -> 66: Travel = 2.16m, Straight = 0.53m
+Checking 4 -> 67: Travel = 2.26m, Straight = 0.62m
+Checking 4 -> 68: Travel = 2.26m, Straight = 0.62m
+Checking 4 -> 69: Travel = 2.26m, Straight = 0.63m
+Checking 4 -> 70: Travel = 2.27m, Straight = 0.63m
+Checking 4 -> 71: Travel = 2.31m, Straight = 0.62m
+Checking 4 -> 72: Travel = 2.36m, Straight = 0.57m
+Checking 5 -> 15: Travel = 0.27m, Straight = 0.25m
+Checking 5 -> 16: Travel = 0.28m, Straight = 0.25m
+Checking 5 -> 17: Travel = 0.29m, Straight = 0.26m
+Checking 5 -> 18: Travel = 0.31m, Straight = 0.27m
+Checking 5 -> 19: Travel = 0.34m, Straight = 0.29m
+Checking 5 -> 20: Travel = 0.34m, Straight = 0.30m
+Checking 5 -> 21: Travel = 0.42m, Straight = 0.35m
+Checking 5 -> 22: Travel = 0.44m, Straight = 0.36m
+Checking 5 -> 23: Travel = 0.46m, Straight = 0.38m
+Checking 5 -> 24: Travel = 0.52m, Straight = 0.41m
+Checking 5 -> 25: Travel = 0.54m, Straight = 0.41m
+Checking 5 -> 26: Travel = 0.55m, Straight = 0.41m
+Checking 5 -> 27: Travel = 0.60m, Straight = 0.42m
+Checking 5 -> 28: Travel = 0.61m, Straight = 0.42m
+Checking 5 -> 29: Travel = 0.62m, Straight = 0.42m
+Checking 5 -> 30: Travel = 0.63m, Straight = 0.43m
+Checking 5 -> 31: Travel = 0.63m, Straight = 0.43m
+Checking 5 -> 32: Travel = 0.66m, Straight = 0.42m
+Checking 5 -> 33: Travel = 0.67m, Straight = 0.42m
+Checking 5 -> 34: Travel = 0.70m, Straight = 0.42m
+Checking 5 -> 35: Travel = 0.71m, Straight = 0.43m
+Checking 5 -> 36: Travel = 0.75m, Straight = 0.44m
+Checking 5 -> 37: Travel = 0.78m, Straight = 0.44m
+Checking 5 -> 38: Travel = 0.85m, Straight = 0.46m
+Checking 5 -> 39: Travel = 0.88m, Straight = 0.47m
+Checking 5 -> 40: Travel = 0.89m, Straight = 0.48m
+Checking 5 -> 41: Travel = 0.91m, Straight = 0.48m
+Checking 5 -> 42: Travel = 0.92m, Straight = 0.49m
+Checking 5 -> 43: Travel = 1.02m, Straight = 0.54m
+Checking 5 -> 44: Travel = 1.08m, Straight = 0.59m
+Checking 5 -> 45: Travel = 1.11m, Straight = 0.61m
+Checking 5 -> 46: Travel = 1.18m, Straight = 0.68m
+Checking 5 -> 47: Travel = 1.25m, Straight = 0.73m
+Checking 5 -> 48: Travel = 1.33m, Straight = 0.80m
+Checking 5 -> 49: Travel = 1.43m, Straight = 0.88m
+Checking 5 -> 50: Travel = 1.44m, Straight = 0.89m
+Checking 5 -> 51: Travel = 1.46m, Straight = 0.90m
+Checking 5 -> 52: Travel = 1.53m, Straight = 0.84m
+Checking 5 -> 53: Travel = 1.59m, Straight = 0.80m
+Checking 5 -> 54: Travel = 1.63m, Straight = 0.77m
+Checking 5 -> 55: Travel = 1.64m, Straight = 0.76m
+Checking 5 -> 56: Travel = 1.65m, Straight = 0.75m
+Checking 5 -> 57: Travel = 1.71m, Straight = 0.70m
+Checking 5 -> 58: Travel = 1.76m, Straight = 0.66m
+Checking 5 -> 59: Travel = 1.79m, Straight = 0.63m
+Checking 5 -> 60: Travel = 1.82m, Straight = 0.61m
+Checking 5 -> 61: Travel = 1.85m, Straight = 0.58m
+Checking 5 -> 62: Travel = 1.89m, Straight = 0.55m
+Checking 5 -> 63: Travel = 1.94m, Straight = 0.52m
+Checking 5 -> 64: Travel = 2.01m, Straight = 0.49m
+Checking 5 -> 65: Travel = 2.03m, Straight = 0.48m
+Checking 5 -> 66: Travel = 2.08m, Straight = 0.52m
+Checking 5 -> 67: Travel = 2.17m, Straight = 0.62m
+Checking 5 -> 68: Travel = 2.17m, Straight = 0.62m
+Checking 5 -> 69: Travel = 2.18m, Straight = 0.62m
+Checking 5 -> 70: Travel = 2.18m, Straight = 0.62m
+Checking 5 -> 71: Travel = 2.22m, Straight = 0.62m
+Checking 5 -> 72: Travel = 2.28m, Straight = 0.57m
+Checking 6 -> 16: Travel = 0.26m, Straight = 0.23m
+Checking 6 -> 17: Travel = 0.26m, Straight = 0.24m
+Checking 6 -> 18: Travel = 0.29m, Straight = 0.25m
+Checking 6 -> 19: Travel = 0.31m, Straight = 0.27m
+Checking 6 -> 20: Travel = 0.32m, Straight = 0.28m
+Checking 6 -> 21: Travel = 0.40m, Straight = 0.33m
+Checking 6 -> 22: Travel = 0.42m, Straight = 0.34m
+Checking 6 -> 23: Travel = 0.43m, Straight = 0.36m
+Checking 6 -> 24: Travel = 0.50m, Straight = 0.39m
+Checking 6 -> 25: Travel = 0.52m, Straight = 0.40m
+Checking 6 -> 26: Travel = 0.53m, Straight = 0.40m
+Checking 6 -> 27: Travel = 0.58m, Straight = 0.41m
+Checking 6 -> 28: Travel = 0.59m, Straight = 0.41m
+Checking 6 -> 29: Travel = 0.59m, Straight = 0.41m
+Checking 6 -> 30: Travel = 0.60m, Straight = 0.42m
+Checking 6 -> 31: Travel = 0.61m, Straight = 0.42m
+Checking 6 -> 32: Travel = 0.63m, Straight = 0.41m
+Checking 6 -> 33: Travel = 0.65m, Straight = 0.41m
+Checking 6 -> 34: Travel = 0.67m, Straight = 0.42m
+Checking 6 -> 35: Travel = 0.69m, Straight = 0.42m
+Checking 6 -> 36: Travel = 0.73m, Straight = 0.43m
+Checking 6 -> 37: Travel = 0.75m, Straight = 0.44m
+Checking 6 -> 38: Travel = 0.82m, Straight = 0.46m
+Checking 6 -> 39: Travel = 0.86m, Straight = 0.47m
+Checking 6 -> 40: Travel = 0.87m, Straight = 0.48m
+Checking 6 -> 41: Travel = 0.88m, Straight = 0.48m
+Checking 6 -> 42: Travel = 0.90m, Straight = 0.49m
+Checking 6 -> 43: Travel = 0.99m, Straight = 0.55m
+Checking 6 -> 44: Travel = 1.05m, Straight = 0.60m
+Checking 6 -> 45: Travel = 1.08m, Straight = 0.62m
+Checking 6 -> 46: Travel = 1.16m, Straight = 0.69m
+Checking 6 -> 47: Travel = 1.22m, Straight = 0.74m
+Checking 6 -> 48: Travel = 1.30m, Straight = 0.81m
+Checking 6 -> 49: Travel = 1.40m, Straight = 0.89m
+Checking 6 -> 50: Travel = 1.42m, Straight = 0.90m
+Checking 6 -> 51: Travel = 1.44m, Straight = 0.92m
+Checking 6 -> 52: Travel = 1.51m, Straight = 0.86m
+Checking 6 -> 53: Travel = 1.56m, Straight = 0.82m
+Checking 6 -> 54: Travel = 1.60m, Straight = 0.78m
+Checking 6 -> 55: Travel = 1.62m, Straight = 0.77m
+Checking 6 -> 56: Travel = 1.63m, Straight = 0.76m
+Checking 6 -> 57: Travel = 1.69m, Straight = 0.71m
+Checking 6 -> 58: Travel = 1.74m, Straight = 0.67m
+Checking 6 -> 59: Travel = 1.77m, Straight = 0.64m
+Checking 6 -> 60: Travel = 1.80m, Straight = 0.62m
+Checking 6 -> 61: Travel = 1.83m, Straight = 0.59m
+Checking 6 -> 62: Travel = 1.87m, Straight = 0.56m
+Checking 6 -> 63: Travel = 1.92m, Straight = 0.53m
+Checking 6 -> 64: Travel = 1.99m, Straight = 0.49m
+Checking 6 -> 65: Travel = 2.01m, Straight = 0.48m
+Checking 6 -> 66: Travel = 2.05m, Straight = 0.52m
+Checking 6 -> 67: Travel = 2.15m, Straight = 0.62m
+Checking 6 -> 68: Travel = 2.15m, Straight = 0.62m
+Checking 6 -> 69: Travel = 2.15m, Straight = 0.62m
+Checking 6 -> 70: Travel = 2.16m, Straight = 0.63m
+Checking 6 -> 71: Travel = 2.20m, Straight = 0.63m
+Checking 6 -> 72: Travel = 2.25m, Straight = 0.58m
+Checking 7 -> 17: Travel = 0.22m, Straight = 0.19m
+Checking 7 -> 18: Travel = 0.24m, Straight = 0.21m
+Checking 7 -> 19: Travel = 0.27m, Straight = 0.23m
+Checking 7 -> 20: Travel = 0.28m, Straight = 0.24m
+Checking 7 -> 21: Travel = 0.36m, Straight = 0.30m
+Checking 7 -> 22: Travel = 0.37m, Straight = 0.31m
+Checking 7 -> 23: Travel = 0.39m, Straight = 0.33m
+Checking 7 -> 24: Travel = 0.45m, Straight = 0.37m
+Checking 7 -> 25: Travel = 0.47m, Straight = 0.37m
+Checking 7 -> 26: Travel = 0.48m, Straight = 0.38m
+Checking 7 -> 27: Travel = 0.54m, Straight = 0.39m
+Checking 7 -> 28: Travel = 0.54m, Straight = 0.39m
+Checking 7 -> 29: Travel = 0.55m, Straight = 0.39m
+Checking 7 -> 30: Travel = 0.56m, Straight = 0.40m
+Checking 7 -> 31: Travel = 0.57m, Straight = 0.40m
+Checking 7 -> 32: Travel = 0.59m, Straight = 0.39m
+Checking 7 -> 33: Travel = 0.61m, Straight = 0.40m
+Checking 7 -> 34: Travel = 0.63m, Straight = 0.41m
+Checking 7 -> 35: Travel = 0.64m, Straight = 0.41m
+Checking 7 -> 36: Travel = 0.68m, Straight = 0.43m
+Checking 7 -> 37: Travel = 0.71m, Straight = 0.43m
+Checking 7 -> 38: Travel = 0.78m, Straight = 0.46m
+Checking 7 -> 39: Travel = 0.82m, Straight = 0.48m
+Checking 7 -> 40: Travel = 0.82m, Straight = 0.48m
+Checking 7 -> 41: Travel = 0.84m, Straight = 0.49m
+Checking 7 -> 42: Travel = 0.85m, Straight = 0.50m
+Checking 7 -> 43: Travel = 0.95m, Straight = 0.56m
+Checking 7 -> 44: Travel = 1.01m, Straight = 0.61m
+Checking 7 -> 45: Travel = 1.04m, Straight = 0.64m
+Checking 7 -> 46: Travel = 1.11m, Straight = 0.71m
+Checking 7 -> 47: Travel = 1.18m, Straight = 0.77m
+Checking 7 -> 48: Travel = 1.26m, Straight = 0.83m
+Checking 7 -> 49: Travel = 1.36m, Straight = 0.92m
+Checking 7 -> 50: Travel = 1.38m, Straight = 0.93m
+Checking 7 -> 51: Travel = 1.39m, Straight = 0.94m
+Checking 7 -> 52: Travel = 1.47m, Straight = 0.88m
+Checking 7 -> 53: Travel = 1.52m, Straight = 0.84m
+Checking 7 -> 54: Travel = 1.56m, Straight = 0.81m
+Checking 7 -> 55: Travel = 1.57m, Straight = 0.80m
+Checking 7 -> 56: Travel = 1.59m, Straight = 0.78m
+Checking 7 -> 57: Travel = 1.65m, Straight = 0.73m
+Checking 7 -> 58: Travel = 1.70m, Straight = 0.69m
+Checking 7 -> 59: Travel = 1.72m, Straight = 0.66m
+Checking 7 -> 60: Travel = 1.75m, Straight = 0.64m
+Checking 7 -> 61: Travel = 1.79m, Straight = 0.61m
+Checking 7 -> 62: Travel = 1.83m, Straight = 0.57m
+Checking 7 -> 63: Travel = 1.87m, Straight = 0.54m
+Checking 7 -> 64: Travel = 1.95m, Straight = 0.50m
+Checking 7 -> 65: Travel = 1.97m, Straight = 0.49m
+Checking 7 -> 66: Travel = 2.01m, Straight = 0.53m
+Checking 7 -> 67: Travel = 2.10m, Straight = 0.62m
+Checking 7 -> 68: Travel = 2.10m, Straight = 0.62m
+Checking 7 -> 69: Travel = 2.11m, Straight = 0.63m
+Checking 7 -> 70: Travel = 2.11m, Straight = 0.63m
+Checking 7 -> 71: Travel = 2.16m, Straight = 0.64m
+Checking 7 -> 72: Travel = 2.21m, Straight = 0.58m
+Checking 8 -> 18: Travel = 0.24m, Straight = 0.21m
+Checking 8 -> 19: Travel = 0.26m, Straight = 0.23m
+Checking 8 -> 20: Travel = 0.27m, Straight = 0.23m
+Checking 8 -> 21: Travel = 0.35m, Straight = 0.29m
+Checking 8 -> 22: Travel = 0.37m, Straight = 0.31m
+Checking 8 -> 23: Travel = 0.38m, Straight = 0.32m
+Checking 8 -> 24: Travel = 0.45m, Straight = 0.36m
+Checking 8 -> 25: Travel = 0.46m, Straight = 0.37m
+Checking 8 -> 26: Travel = 0.47m, Straight = 0.37m
+Checking 8 -> 27: Travel = 0.53m, Straight = 0.38m
+Checking 8 -> 28: Travel = 0.54m, Straight = 0.38m
+Checking 8 -> 29: Travel = 0.54m, Straight = 0.39m
+Checking 8 -> 30: Travel = 0.55m, Straight = 0.40m
+Checking 8 -> 31: Travel = 0.56m, Straight = 0.39m
+Checking 8 -> 32: Travel = 0.58m, Straight = 0.39m
+Checking 8 -> 33: Travel = 0.60m, Straight = 0.40m
+Checking 8 -> 34: Travel = 0.62m, Straight = 0.40m
+Checking 8 -> 35: Travel = 0.63m, Straight = 0.41m
+Checking 8 -> 36: Travel = 0.68m, Straight = 0.42m
+Checking 8 -> 37: Travel = 0.70m, Straight = 0.43m
+Checking 8 -> 38: Travel = 0.77m, Straight = 0.46m
+Checking 8 -> 39: Travel = 0.81m, Straight = 0.48m
+Checking 8 -> 40: Travel = 0.82m, Straight = 0.48m
+Checking 8 -> 41: Travel = 0.83m, Straight = 0.49m
+Checking 8 -> 42: Travel = 0.85m, Straight = 0.50m
+Checking 8 -> 43: Travel = 0.94m, Straight = 0.56m
+Checking 8 -> 44: Travel = 1.00m, Straight = 0.62m
+Checking 8 -> 45: Travel = 1.03m, Straight = 0.64m
+Checking 8 -> 46: Travel = 1.11m, Straight = 0.71m
+Checking 8 -> 47: Travel = 1.17m, Straight = 0.77m
+Checking 8 -> 48: Travel = 1.25m, Straight = 0.84m
+Checking 8 -> 49: Travel = 1.35m, Straight = 0.92m
+Checking 8 -> 50: Travel = 1.37m, Straight = 0.93m
+Checking 8 -> 51: Travel = 1.39m, Straight = 0.95m
+Checking 8 -> 52: Travel = 1.46m, Straight = 0.88m
+Checking 8 -> 53: Travel = 1.51m, Straight = 0.84m
+Checking 8 -> 54: Travel = 1.55m, Straight = 0.81m
+Checking 8 -> 55: Travel = 1.56m, Straight = 0.80m
+Checking 8 -> 56: Travel = 1.58m, Straight = 0.78m
+Checking 8 -> 57: Travel = 1.64m, Straight = 0.73m
+Checking 8 -> 58: Travel = 1.69m, Straight = 0.69m
+Checking 8 -> 59: Travel = 1.72m, Straight = 0.66m
+Checking 8 -> 60: Travel = 1.75m, Straight = 0.64m
+Checking 8 -> 61: Travel = 1.78m, Straight = 0.61m
+Checking 8 -> 62: Travel = 1.82m, Straight = 0.58m
+Checking 8 -> 63: Travel = 1.87m, Straight = 0.54m
+Checking 8 -> 64: Travel = 1.94m, Straight = 0.50m
+Checking 8 -> 65: Travel = 1.96m, Straight = 0.49m
+Checking 8 -> 66: Travel = 2.00m, Straight = 0.53m
+Checking 8 -> 67: Travel = 2.10m, Straight = 0.62m
+Checking 8 -> 68: Travel = 2.10m, Straight = 0.62m
+Checking 8 -> 69: Travel = 2.10m, Straight = 0.63m
+Checking 8 -> 70: Travel = 2.11m, Straight = 0.63m
+Checking 8 -> 71: Travel = 2.15m, Straight = 0.64m
+Checking 8 -> 72: Travel = 2.20m, Straight = 0.58m
+Checking 9 -> 19: Travel = 0.13m, Straight = 0.12m
+Checking 9 -> 20: Travel = 0.14m, Straight = 0.13m
+Checking 9 -> 21: Travel = 0.22m, Straight = 0.21m
+Checking 9 -> 22: Travel = 0.23m, Straight = 0.22m
+Checking 9 -> 23: Travel = 0.25m, Straight = 0.24m
+Checking 9 -> 24: Travel = 0.31m, Straight = 0.29m
+Checking 9 -> 25: Travel = 0.33m, Straight = 0.31m
+Checking 9 -> 26: Travel = 0.34m, Straight = 0.31m
+Checking 9 -> 27: Travel = 0.40m, Straight = 0.34m
+Checking 9 -> 28: Travel = 0.40m, Straight = 0.35m
+Checking 9 -> 29: Travel = 0.41m, Straight = 0.35m
+Checking 9 -> 30: Travel = 0.42m, Straight = 0.36m
+Checking 9 -> 31: Travel = 0.43m, Straight = 0.36m
+Checking 9 -> 32: Travel = 0.45m, Straight = 0.37m
+Checking 9 -> 33: Travel = 0.47m, Straight = 0.38m
+Checking 9 -> 34: Travel = 0.49m, Straight = 0.39m
+Checking 9 -> 35: Travel = 0.50m, Straight = 0.40m
+Checking 9 -> 36: Travel = 0.54m, Straight = 0.43m
+Checking 9 -> 37: Travel = 0.57m, Straight = 0.44m
+Checking 9 -> 38: Travel = 0.64m, Straight = 0.49m
+Checking 9 -> 39: Travel = 0.68m, Straight = 0.51m
+Checking 9 -> 40: Travel = 0.68m, Straight = 0.52m
+Checking 9 -> 41: Travel = 0.70m, Straight = 0.53m
+Checking 9 -> 42: Travel = 0.71m, Straight = 0.54m
+Checking 9 -> 43: Travel = 0.81m, Straight = 0.62m
+Checking 9 -> 44: Travel = 0.87m, Straight = 0.68m
+Checking 9 -> 45: Travel = 0.90m, Straight = 0.70m
+Checking 9 -> 46: Travel = 0.97m, Straight = 0.78m
+Checking 9 -> 47: Travel = 1.04m, Straight = 0.84m
+Checking 9 -> 48: Travel = 1.12m, Straight = 0.91m
+Checking 9 -> 49: Travel = 1.22m, Straight = 1.00m
+Checking 9 -> 50: Travel = 1.23m, Straight = 1.01m
+Checking 9 -> 51: Travel = 1.25m, Straight = 1.03m
+Checking 9 -> 52: Travel = 1.33m, Straight = 0.96m
+Checking 9 -> 53: Travel = 1.38m, Straight = 0.92m
+Checking 9 -> 54: Travel = 1.42m, Straight = 0.88m
+Checking 9 -> 55: Travel = 1.43m, Straight = 0.87m
+Checking 9 -> 56: Travel = 1.45m, Straight = 0.85m
+Checking 9 -> 57: Travel = 1.51m, Straight = 0.80m
+Checking 9 -> 58: Travel = 1.56m, Straight = 0.75m
+Checking 9 -> 59: Travel = 1.58m, Straight = 0.72m
+Checking 9 -> 60: Travel = 1.61m, Straight = 0.70m
+Checking 9 -> 61: Travel = 1.64m, Straight = 0.67m
+Checking 9 -> 62: Travel = 1.68m, Straight = 0.63m
+Checking 9 -> 63: Travel = 1.73m, Straight = 0.59m
+Checking 9 -> 64: Travel = 1.81m, Straight = 0.53m
+Checking 9 -> 65: Travel = 1.82m, Straight = 0.52m
+Checking 9 -> 66: Travel = 1.87m, Straight = 0.55m
+Checking 9 -> 67: Travel = 1.96m, Straight = 0.64m
+Checking 9 -> 68: Travel = 1.96m, Straight = 0.65m
+Checking 9 -> 69: Travel = 1.97m, Straight = 0.65m
+Checking 9 -> 70: Travel = 1.97m, Straight = 0.65m
+Checking 9 -> 71: Travel = 2.02m, Straight = 0.67m
+Checking 9 -> 72: Travel = 2.07m, Straight = 0.62m
+Checking 10 -> 20: Travel = 0.12m, Straight = 0.12m
+Checking 10 -> 21: Travel = 0.20m, Straight = 0.20m
+Checking 10 -> 22: Travel = 0.22m, Straight = 0.22m
+Checking 10 -> 23: Travel = 0.23m, Straight = 0.23m
+Checking 10 -> 24: Travel = 0.30m, Straight = 0.29m
+Checking 10 -> 25: Travel = 0.32m, Straight = 0.30m
+Checking 10 -> 26: Travel = 0.33m, Straight = 0.31m
+Checking 10 -> 27: Travel = 0.38m, Straight = 0.34m
+Checking 10 -> 28: Travel = 0.39m, Straight = 0.34m
+Checking 10 -> 29: Travel = 0.39m, Straight = 0.35m
+Checking 10 -> 30: Travel = 0.40m, Straight = 0.36m
+Checking 10 -> 31: Travel = 0.41m, Straight = 0.36m
+Checking 10 -> 32: Travel = 0.43m, Straight = 0.37m
+Checking 10 -> 33: Travel = 0.45m, Straight = 0.38m
+Checking 10 -> 34: Travel = 0.47m, Straight = 0.39m
+Checking 10 -> 35: Travel = 0.49m, Straight = 0.40m
+Checking 10 -> 36: Travel = 0.53m, Straight = 0.43m
+Checking 10 -> 37: Travel = 0.56m, Straight = 0.44m
+Checking 10 -> 38: Travel = 0.62m, Straight = 0.49m
+Checking 10 -> 39: Travel = 0.66m, Straight = 0.52m
+Checking 10 -> 40: Travel = 0.67m, Straight = 0.53m
+Checking 10 -> 41: Travel = 0.68m, Straight = 0.54m
+Checking 10 -> 42: Travel = 0.70m, Straight = 0.55m
+Checking 10 -> 43: Travel = 0.79m, Straight = 0.63m
+Checking 10 -> 44: Travel = 0.85m, Straight = 0.68m
+Checking 10 -> 45: Travel = 0.88m, Straight = 0.71m
+Checking 10 -> 46: Travel = 0.96m, Straight = 0.79m
+Checking 10 -> 47: Travel = 1.02m, Straight = 0.85m
+Checking 10 -> 48: Travel = 1.10m, Straight = 0.92m
+Checking 10 -> 49: Travel = 1.21m, Straight = 1.01m
+Checking 10 -> 50: Travel = 1.22m, Straight = 1.02m
+Checking 10 -> 51: Travel = 1.24m, Straight = 1.04m
+Checking 10 -> 52: Travel = 1.31m, Straight = 0.97m
+Checking 10 -> 53: Travel = 1.36m, Straight = 0.92m
+Checking 10 -> 54: Travel = 1.40m, Straight = 0.89m
+Checking 10 -> 55: Travel = 1.42m, Straight = 0.88m
+Checking 10 -> 56: Travel = 1.43m, Straight = 0.86m
+Checking 10 -> 57: Travel = 1.49m, Straight = 0.80m
+Checking 10 -> 58: Travel = 1.54m, Straight = 0.76m
+Checking 10 -> 59: Travel = 1.57m, Straight = 0.73m
+Checking 10 -> 60: Travel = 1.60m, Straight = 0.70m
+Checking 10 -> 61: Travel = 1.63m, Straight = 0.67m
+Checking 10 -> 62: Travel = 1.67m, Straight = 0.63m
+Checking 10 -> 63: Travel = 1.72m, Straight = 0.59m
+Checking 10 -> 64: Travel = 1.79m, Straight = 0.53m
+Checking 10 -> 65: Travel = 1.81m, Straight = 0.52m
+Checking 10 -> 66: Travel = 1.85m, Straight = 0.56m
+Checking 10 -> 67: Travel = 1.95m, Straight = 0.65m
+Checking 10 -> 68: Travel = 1.95m, Straight = 0.65m
+Checking 10 -> 69: Travel = 1.95m, Straight = 0.65m
+Checking 10 -> 70: Travel = 1.96m, Straight = 0.66m
+Checking 10 -> 71: Travel = 2.00m, Straight = 0.67m
+Checking 10 -> 72: Travel = 2.05m, Straight = 0.62m
+Checking 11 -> 21: Travel = 0.20m, Straight = 0.19m
+Checking 11 -> 22: Travel = 0.21m, Straight = 0.21m
+Checking 11 -> 23: Travel = 0.23m, Straight = 0.23m
+Checking 11 -> 24: Travel = 0.29m, Straight = 0.28m
+Checking 11 -> 25: Travel = 0.31m, Straight = 0.30m
+Checking 11 -> 26: Travel = 0.32m, Straight = 0.30m
+Checking 11 -> 27: Travel = 0.38m, Straight = 0.34m
+Checking 11 -> 28: Travel = 0.38m, Straight = 0.34m
+Checking 11 -> 29: Travel = 0.39m, Straight = 0.34m
+Checking 11 -> 30: Travel = 0.40m, Straight = 0.35m
+Checking 11 -> 31: Travel = 0.41m, Straight = 0.36m
+Checking 11 -> 32: Travel = 0.43m, Straight = 0.36m
+Checking 11 -> 33: Travel = 0.45m, Straight = 0.37m
+Checking 11 -> 34: Travel = 0.47m, Straight = 0.39m
+Checking 11 -> 35: Travel = 0.48m, Straight = 0.39m
+Checking 11 -> 36: Travel = 0.52m, Straight = 0.42m
+Checking 11 -> 37: Travel = 0.55m, Straight = 0.44m
+Checking 11 -> 38: Travel = 0.62m, Straight = 0.49m
+Checking 11 -> 39: Travel = 0.66m, Straight = 0.52m
+Checking 11 -> 40: Travel = 0.66m, Straight = 0.52m
+Checking 11 -> 41: Travel = 0.68m, Straight = 0.53m
+Checking 11 -> 42: Travel = 0.69m, Straight = 0.55m
+Checking 11 -> 43: Travel = 0.79m, Straight = 0.62m
+Checking 11 -> 44: Travel = 0.85m, Straight = 0.68m
+Checking 11 -> 45: Travel = 0.88m, Straight = 0.71m
+Checking 11 -> 46: Travel = 0.95m, Straight = 0.78m
+Checking 11 -> 47: Travel = 1.02m, Straight = 0.85m
+Checking 11 -> 48: Travel = 1.10m, Straight = 0.92m
+Checking 11 -> 49: Travel = 1.20m, Straight = 1.01m
+Checking 11 -> 50: Travel = 1.22m, Straight = 1.02m
+Checking 11 -> 51: Travel = 1.23m, Straight = 1.03m
+Checking 11 -> 52: Travel = 1.31m, Straight = 0.97m
+Checking 11 -> 53: Travel = 1.36m, Straight = 0.92m
+Checking 11 -> 54: Travel = 1.40m, Straight = 0.89m
+Checking 11 -> 55: Travel = 1.41m, Straight = 0.87m
+Checking 11 -> 56: Travel = 1.43m, Straight = 0.86m
+Checking 11 -> 57: Travel = 1.49m, Straight = 0.80m
+Checking 11 -> 58: Travel = 1.54m, Straight = 0.75m
+Checking 11 -> 59: Travel = 1.56m, Straight = 0.73m
+Checking 11 -> 60: Travel = 1.59m, Straight = 0.70m
+Checking 11 -> 61: Travel = 1.63m, Straight = 0.67m
+Checking 11 -> 62: Travel = 1.67m, Straight = 0.63m
+Checking 11 -> 63: Travel = 1.71m, Straight = 0.59m
+Checking 11 -> 64: Travel = 1.79m, Straight = 0.53m
+Checking 11 -> 65: Travel = 1.81m, Straight = 0.52m
+Checking 11 -> 66: Travel = 1.85m, Straight = 0.55m
+Checking 11 -> 67: Travel = 1.94m, Straight = 0.64m
+Checking 11 -> 68: Travel = 1.94m, Straight = 0.65m
+Checking 11 -> 69: Travel = 1.95m, Straight = 0.65m
+Checking 11 -> 70: Travel = 1.95m, Straight = 0.65m
+Checking 11 -> 71: Travel = 2.00m, Straight = 0.67m
+Checking 11 -> 72: Travel = 2.05m, Straight = 0.62m
+Checking 12 -> 22: Travel = 0.21m, Straight = 0.21m
+Checking 12 -> 23: Travel = 0.22m, Straight = 0.22m
+Checking 12 -> 24: Travel = 0.29m, Straight = 0.28m
+Checking 12 -> 25: Travel = 0.31m, Straight = 0.29m
+Checking 12 -> 26: Travel = 0.32m, Straight = 0.30m
+Checking 12 -> 27: Travel = 0.37m, Straight = 0.33m
+Checking 12 -> 28: Travel = 0.38m, Straight = 0.34m
+Checking 12 -> 29: Travel = 0.38m, Straight = 0.34m
+Checking 12 -> 30: Travel = 0.39m, Straight = 0.35m
+Checking 12 -> 31: Travel = 0.40m, Straight = 0.35m
+Checking 12 -> 32: Travel = 0.42m, Straight = 0.36m
+Checking 12 -> 33: Travel = 0.44m, Straight = 0.37m
+Checking 12 -> 34: Travel = 0.46m, Straight = 0.38m
+Checking 12 -> 35: Travel = 0.48m, Straight = 0.39m
+Checking 12 -> 36: Travel = 0.52m, Straight = 0.42m
+Checking 12 -> 37: Travel = 0.54m, Straight = 0.44m
+Checking 12 -> 38: Travel = 0.61m, Straight = 0.48m
+Checking 12 -> 39: Travel = 0.65m, Straight = 0.51m
+Checking 12 -> 40: Travel = 0.66m, Straight = 0.52m
+Checking 12 -> 41: Travel = 0.67m, Straight = 0.53m
+Checking 12 -> 42: Travel = 0.69m, Straight = 0.54m
+Checking 12 -> 43: Travel = 0.78m, Straight = 0.62m
+Checking 12 -> 44: Travel = 0.84m, Straight = 0.68m
+Checking 12 -> 45: Travel = 0.87m, Straight = 0.71m
+Checking 12 -> 46: Travel = 0.95m, Straight = 0.78m
+Checking 12 -> 47: Travel = 1.01m, Straight = 0.84m
+Checking 12 -> 48: Travel = 1.09m, Straight = 0.92m
+Checking 12 -> 49: Travel = 1.20m, Straight = 1.01m
+Checking 12 -> 50: Travel = 1.21m, Straight = 1.02m
+Checking 12 -> 51: Travel = 1.23m, Straight = 1.03m
+Checking 12 -> 52: Travel = 1.30m, Straight = 0.96m
+Checking 12 -> 53: Travel = 1.35m, Straight = 0.92m
+Checking 12 -> 54: Travel = 1.39m, Straight = 0.88m
+Checking 12 -> 55: Travel = 1.41m, Straight = 0.87m
+Checking 12 -> 56: Travel = 1.42m, Straight = 0.86m
+Checking 12 -> 57: Travel = 1.48m, Straight = 0.80m
+Checking 12 -> 58: Travel = 1.53m, Straight = 0.75m
+Checking 12 -> 59: Travel = 1.56m, Straight = 0.73m
+Checking 12 -> 60: Travel = 1.59m, Straight = 0.70m
+Checking 12 -> 61: Travel = 1.62m, Straight = 0.67m
+Checking 12 -> 62: Travel = 1.66m, Straight = 0.63m
+Checking 12 -> 63: Travel = 1.71m, Straight = 0.59m
+Checking 12 -> 64: Travel = 1.78m, Straight = 0.53m
+Checking 12 -> 65: Travel = 1.80m, Straight = 0.51m
+Checking 12 -> 66: Travel = 1.84m, Straight = 0.55m
+Checking 12 -> 67: Travel = 1.94m, Straight = 0.64m
+Checking 12 -> 68: Travel = 1.94m, Straight = 0.64m
+Checking 12 -> 69: Travel = 1.94m, Straight = 0.65m
+Checking 12 -> 70: Travel = 1.95m, Straight = 0.65m
+Checking 12 -> 71: Travel = 1.99m, Straight = 0.67m
+Checking 12 -> 72: Travel = 2.04m, Straight = 0.62m
+Checking 13 -> 23: Travel = 0.22m, Straight = 0.22m
+Checking 13 -> 24: Travel = 0.28m, Straight = 0.27m
+Checking 13 -> 25: Travel = 0.30m, Straight = 0.29m
+Checking 13 -> 26: Travel = 0.31m, Straight = 0.29m
+Checking 13 -> 27: Travel = 0.37m, Straight = 0.33m
+Checking 13 -> 28: Travel = 0.37m, Straight = 0.33m
+Checking 13 -> 29: Travel = 0.38m, Straight = 0.33m
+Checking 13 -> 30: Travel = 0.39m, Straight = 0.35m
+Checking 13 -> 31: Travel = 0.40m, Straight = 0.35m
+Checking 13 -> 32: Travel = 0.42m, Straight = 0.35m
+Checking 13 -> 33: Travel = 0.44m, Straight = 0.36m
+Checking 13 -> 34: Travel = 0.46m, Straight = 0.38m
+Checking 13 -> 35: Travel = 0.47m, Straight = 0.39m
+Checking 13 -> 36: Travel = 0.51m, Straight = 0.42m
+Checking 13 -> 37: Travel = 0.54m, Straight = 0.43m
+Checking 13 -> 38: Travel = 0.61m, Straight = 0.48m
+Checking 13 -> 39: Travel = 0.65m, Straight = 0.51m
+Checking 13 -> 40: Travel = 0.65m, Straight = 0.52m
+Checking 13 -> 41: Travel = 0.67m, Straight = 0.53m
+Checking 13 -> 42: Travel = 0.68m, Straight = 0.54m
+Checking 13 -> 43: Travel = 0.78m, Straight = 0.62m
+Checking 13 -> 44: Travel = 0.84m, Straight = 0.68m
+Checking 13 -> 45: Travel = 0.87m, Straight = 0.70m
+Checking 13 -> 46: Travel = 0.94m, Straight = 0.78m
+Checking 13 -> 47: Travel = 1.01m, Straight = 0.84m
+Checking 13 -> 48: Travel = 1.09m, Straight = 0.91m
+Checking 13 -> 49: Travel = 1.19m, Straight = 1.00m
+Checking 13 -> 50: Travel = 1.21m, Straight = 1.02m
+Checking 13 -> 51: Travel = 1.22m, Straight = 1.03m
+Checking 13 -> 52: Travel = 1.30m, Straight = 0.96m
+Checking 13 -> 53: Travel = 1.35m, Straight = 0.92m
+Checking 13 -> 54: Travel = 1.39m, Straight = 0.88m
+Checking 13 -> 55: Travel = 1.40m, Straight = 0.87m
+Checking 13 -> 56: Travel = 1.42m, Straight = 0.85m
+Checking 13 -> 57: Travel = 1.48m, Straight = 0.80m
+Checking 13 -> 58: Travel = 1.53m, Straight = 0.75m
+Checking 13 -> 59: Travel = 1.55m, Straight = 0.72m
+Checking 13 -> 60: Travel = 1.58m, Straight = 0.70m
+Checking 13 -> 61: Travel = 1.62m, Straight = 0.66m
+Checking 13 -> 62: Travel = 1.66m, Straight = 0.63m
+Checking 13 -> 63: Travel = 1.70m, Straight = 0.58m
+Checking 13 -> 64: Travel = 1.78m, Straight = 0.53m
+Checking 13 -> 65: Travel = 1.79m, Straight = 0.51m
+Checking 13 -> 66: Travel = 1.84m, Straight = 0.55m
+Checking 13 -> 67: Travel = 1.93m, Straight = 0.64m
+Checking 13 -> 68: Travel = 1.93m, Straight = 0.64m
+Checking 13 -> 69: Travel = 1.94m, Straight = 0.64m
+Checking 13 -> 70: Travel = 1.94m, Straight = 0.65m
+Checking 13 -> 71: Travel = 1.99m, Straight = 0.66m
+Checking 13 -> 72: Travel = 2.04m, Straight = 0.61m
+Checking 14 -> 24: Travel = 0.25m, Straight = 0.24m
+Checking 14 -> 25: Travel = 0.27m, Straight = 0.26m
+Checking 14 -> 26: Travel = 0.28m, Straight = 0.26m
+Checking 14 -> 27: Travel = 0.33m, Straight = 0.30m
+Checking 14 -> 28: Travel = 0.34m, Straight = 0.30m
+Checking 14 -> 29: Travel = 0.35m, Straight = 0.31m
+Checking 14 -> 30: Travel = 0.36m, Straight = 0.32m
+Checking 14 -> 31: Travel = 0.37m, Straight = 0.32m
+Checking 14 -> 32: Travel = 0.39m, Straight = 0.33m
+Checking 14 -> 33: Travel = 0.41m, Straight = 0.34m
+Checking 14 -> 34: Travel = 0.43m, Straight = 0.35m
+Checking 14 -> 35: Travel = 0.44m, Straight = 0.36m
+Checking 14 -> 36: Travel = 0.48m, Straight = 0.39m
+Checking 14 -> 37: Travel = 0.51m, Straight = 0.41m
+Checking 14 -> 38: Travel = 0.58m, Straight = 0.46m
+Checking 14 -> 39: Travel = 0.62m, Straight = 0.49m
+Checking 14 -> 40: Travel = 0.62m, Straight = 0.50m
+Checking 14 -> 41: Travel = 0.64m, Straight = 0.51m
+Checking 14 -> 42: Travel = 0.65m, Straight = 0.52m
+Checking 14 -> 43: Travel = 0.75m, Straight = 0.60m
+Checking 14 -> 44: Travel = 0.81m, Straight = 0.66m
+Checking 14 -> 45: Travel = 0.84m, Straight = 0.69m
+Checking 14 -> 46: Travel = 0.91m, Straight = 0.77m
+Checking 14 -> 47: Travel = 0.98m, Straight = 0.83m
+Checking 14 -> 48: Travel = 1.06m, Straight = 0.90m
+Checking 14 -> 49: Travel = 1.16m, Straight = 0.99m
+Checking 14 -> 50: Travel = 1.17m, Straight = 1.01m
+Checking 14 -> 51: Travel = 1.19m, Straight = 1.02m
+Checking 14 -> 52: Travel = 1.27m, Straight = 0.95m
+Checking 14 -> 53: Travel = 1.32m, Straight = 0.91m
+Checking 14 -> 54: Travel = 1.36m, Straight = 0.87m
+Checking 14 -> 55: Travel = 1.37m, Straight = 0.86m
+Checking 14 -> 56: Travel = 1.38m, Straight = 0.84m
+Checking 14 -> 57: Travel = 1.45m, Straight = 0.78m
+Checking 14 -> 58: Travel = 1.49m, Straight = 0.74m
+Checking 14 -> 59: Travel = 1.52m, Straight = 0.71m
+Checking 14 -> 60: Travel = 1.55m, Straight = 0.68m
+Checking 14 -> 61: Travel = 1.58m, Straight = 0.65m
+Checking 14 -> 62: Travel = 1.62m, Straight = 0.61m
+Checking 14 -> 63: Travel = 1.67m, Straight = 0.57m
+Checking 14 -> 64: Travel = 1.74m, Straight = 0.51m
+Checking 14 -> 65: Travel = 1.76m, Straight = 0.49m
+Checking 14 -> 66: Travel = 1.81m, Straight = 0.53m
+Checking 14 -> 67: Travel = 1.90m, Straight = 0.62m
+Checking 14 -> 68: Travel = 1.90m, Straight = 0.62m
+Checking 14 -> 69: Travel = 1.91m, Straight = 0.62m
+Checking 14 -> 70: Travel = 1.91m, Straight = 0.63m
+Checking 14 -> 71: Travel = 1.95m, Straight = 0.64m
+Checking 14 -> 72: Travel = 2.01m, Straight = 0.60m
+Checking 15 -> 25: Travel = 0.27m, Straight = 0.25m
+Checking 15 -> 26: Travel = 0.28m, Straight = 0.26m
+Checking 15 -> 27: Travel = 0.33m, Straight = 0.30m
+Checking 15 -> 28: Travel = 0.34m, Straight = 0.30m
+Checking 15 -> 29: Travel = 0.34m, Straight = 0.30m
+Checking 15 -> 30: Travel = 0.35m, Straight = 0.31m
+Checking 15 -> 31: Travel = 0.36m, Straight = 0.32m
+Checking 15 -> 32: Travel = 0.38m, Straight = 0.32m
+Checking 15 -> 33: Travel = 0.40m, Straight = 0.34m
+Checking 15 -> 34: Travel = 0.42m, Straight = 0.35m
+Checking 15 -> 35: Travel = 0.44m, Straight = 0.36m
+Checking 15 -> 36: Travel = 0.48m, Straight = 0.39m
+Checking 15 -> 37: Travel = 0.50m, Straight = 0.41m
+Checking 15 -> 38: Travel = 0.57m, Straight = 0.46m
+Checking 15 -> 39: Travel = 0.61m, Straight = 0.49m
+Checking 15 -> 40: Travel = 0.62m, Straight = 0.50m
+Checking 15 -> 41: Travel = 0.63m, Straight = 0.51m
+Checking 15 -> 42: Travel = 0.65m, Straight = 0.52m
+Checking 15 -> 43: Travel = 0.74m, Straight = 0.60m
+Checking 15 -> 44: Travel = 0.80m, Straight = 0.66m
+Checking 15 -> 45: Travel = 0.83m, Straight = 0.69m
+Checking 15 -> 46: Travel = 0.91m, Straight = 0.77m
+Checking 15 -> 47: Travel = 0.97m, Straight = 0.83m
+Checking 15 -> 48: Travel = 1.05m, Straight = 0.90m
+Checking 15 -> 49: Travel = 1.15m, Straight = 0.99m
+Checking 15 -> 50: Travel = 1.17m, Straight = 1.01m
+Checking 15 -> 51: Travel = 1.19m, Straight = 1.02m
+Checking 15 -> 52: Travel = 1.26m, Straight = 0.95m
+Checking 15 -> 53: Travel = 1.31m, Straight = 0.91m
+Checking 15 -> 54: Travel = 1.35m, Straight = 0.87m
+Checking 15 -> 55: Travel = 1.37m, Straight = 0.86m
+Checking 15 -> 56: Travel = 1.38m, Straight = 0.84m
+Checking 15 -> 57: Travel = 1.44m, Straight = 0.78m
+Checking 15 -> 58: Travel = 1.49m, Straight = 0.74m
+Checking 15 -> 59: Travel = 1.52m, Straight = 0.71m
+Checking 15 -> 60: Travel = 1.55m, Straight = 0.68m
+Checking 15 -> 61: Travel = 1.58m, Straight = 0.65m
+Checking 15 -> 62: Travel = 1.62m, Straight = 0.61m
+Checking 15 -> 63: Travel = 1.67m, Straight = 0.57m
+Checking 15 -> 64: Travel = 1.74m, Straight = 0.51m
+Checking 15 -> 65: Travel = 1.76m, Straight = 0.49m
+Checking 15 -> 66: Travel = 1.80m, Straight = 0.53m
+Checking 15 -> 67: Travel = 1.90m, Straight = 0.61m
+Checking 15 -> 68: Travel = 1.90m, Straight = 0.62m
+Checking 15 -> 69: Travel = 1.90m, Straight = 0.62m
+Checking 15 -> 70: Travel = 1.91m, Straight = 0.62m
+Checking 15 -> 71: Travel = 1.95m, Straight = 0.64m
+Checking 15 -> 72: Travel = 2.00m, Straight = 0.59m
+Checking 16 -> 26: Travel = 0.27m, Straight = 0.26m
+Checking 16 -> 27: Travel = 0.32m, Straight = 0.29m
+Checking 16 -> 28: Travel = 0.33m, Straight = 0.30m
+Checking 16 -> 29: Travel = 0.34m, Straight = 0.30m
+Checking 16 -> 30: Travel = 0.35m, Straight = 0.31m
+Checking 16 -> 31: Travel = 0.36m, Straight = 0.31m
+Checking 16 -> 32: Travel = 0.38m, Straight = 0.32m
+Checking 16 -> 33: Travel = 0.40m, Straight = 0.33m
+Checking 16 -> 34: Travel = 0.42m, Straight = 0.35m
+Checking 16 -> 35: Travel = 0.43m, Straight = 0.36m
+Checking 16 -> 36: Travel = 0.47m, Straight = 0.39m
+Checking 16 -> 37: Travel = 0.50m, Straight = 0.41m
+Checking 16 -> 38: Travel = 0.57m, Straight = 0.46m
+Checking 16 -> 39: Travel = 0.61m, Straight = 0.49m
+Checking 16 -> 40: Travel = 0.61m, Straight = 0.49m
+Checking 16 -> 41: Travel = 0.63m, Straight = 0.50m
+Checking 16 -> 42: Travel = 0.64m, Straight = 0.52m
+Checking 16 -> 43: Travel = 0.74m, Straight = 0.60m
+Checking 16 -> 44: Travel = 0.80m, Straight = 0.66m
+Checking 16 -> 45: Travel = 0.83m, Straight = 0.69m
+Checking 16 -> 46: Travel = 0.90m, Straight = 0.76m
+Checking 16 -> 47: Travel = 0.97m, Straight = 0.83m
+Checking 16 -> 48: Travel = 1.05m, Straight = 0.90m
+Checking 16 -> 49: Travel = 1.15m, Straight = 0.99m
+Checking 16 -> 50: Travel = 1.16m, Straight = 1.01m
+Checking 16 -> 51: Travel = 1.18m, Straight = 1.02m
+Checking 16 -> 52: Travel = 1.26m, Straight = 0.95m
+Checking 16 -> 53: Travel = 1.31m, Straight = 0.90m
+Checking 16 -> 54: Travel = 1.35m, Straight = 0.87m
+Checking 16 -> 55: Travel = 1.36m, Straight = 0.85m
+Checking 16 -> 56: Travel = 1.37m, Straight = 0.84m
+Checking 16 -> 57: Travel = 1.44m, Straight = 0.78m
+Checking 16 -> 58: Travel = 1.48m, Straight = 0.73m
+Checking 16 -> 59: Travel = 1.51m, Straight = 0.71m
+Checking 16 -> 60: Travel = 1.54m, Straight = 0.68m
+Checking 16 -> 61: Travel = 1.57m, Straight = 0.65m
+Checking 16 -> 62: Travel = 1.61m, Straight = 0.61m
+Checking 16 -> 63: Travel = 1.66m, Straight = 0.56m
+Checking 16 -> 64: Travel = 1.73m, Straight = 0.50m
+Checking 16 -> 65: Travel = 1.75m, Straight = 0.49m
+Checking 16 -> 66: Travel = 1.80m, Straight = 0.52m
+Checking 16 -> 67: Travel = 1.89m, Straight = 0.61m
+Checking 16 -> 68: Travel = 1.89m, Straight = 0.61m
+Checking 16 -> 69: Travel = 1.90m, Straight = 0.62m
+Checking 16 -> 70: Travel = 1.90m, Straight = 0.62m
+Checking 16 -> 71: Travel = 1.94m, Straight = 0.64m
+Checking 16 -> 72: Travel = 2.00m, Straight = 0.59m
+Checking 17 -> 27: Travel = 0.32m, Straight = 0.28m
+Checking 17 -> 28: Travel = 0.33m, Straight = 0.29m
+Checking 17 -> 29: Travel = 0.33m, Straight = 0.29m
+Checking 17 -> 30: Travel = 0.34m, Straight = 0.30m
+Checking 17 -> 31: Travel = 0.35m, Straight = 0.30m
+Checking 17 -> 32: Travel = 0.37m, Straight = 0.31m
+Checking 17 -> 33: Travel = 0.39m, Straight = 0.32m
+Checking 17 -> 34: Travel = 0.41m, Straight = 0.34m
+Checking 17 -> 35: Travel = 0.42m, Straight = 0.35m
+Checking 17 -> 36: Travel = 0.46m, Straight = 0.38m
+Checking 17 -> 37: Travel = 0.49m, Straight = 0.40m
+Checking 17 -> 38: Travel = 0.56m, Straight = 0.45m
+Checking 17 -> 39: Travel = 0.60m, Straight = 0.48m
+Checking 17 -> 40: Travel = 0.61m, Straight = 0.49m
+Checking 17 -> 41: Travel = 0.62m, Straight = 0.50m
+Checking 17 -> 42: Travel = 0.64m, Straight = 0.51m
+Checking 17 -> 43: Travel = 0.73m, Straight = 0.60m
+Checking 17 -> 44: Travel = 0.79m, Straight = 0.66m
+Checking 17 -> 45: Travel = 0.82m, Straight = 0.68m
+Checking 17 -> 46: Travel = 0.89m, Straight = 0.76m
+Checking 17 -> 47: Travel = 0.96m, Straight = 0.82m
+Checking 17 -> 48: Travel = 1.04m, Straight = 0.90m
+Checking 17 -> 49: Travel = 1.14m, Straight = 0.99m
+Checking 17 -> 50: Travel = 1.16m, Straight = 1.00m
+Checking 17 -> 51: Travel = 1.17m, Straight = 1.02m
+Checking 17 -> 52: Travel = 1.25m, Straight = 0.95m
+Checking 17 -> 53: Travel = 1.30m, Straight = 0.90m
+Checking 17 -> 54: Travel = 1.34m, Straight = 0.86m
+Checking 17 -> 55: Travel = 1.35m, Straight = 0.85m
+Checking 17 -> 56: Travel = 1.37m, Straight = 0.84m
+Checking 17 -> 57: Travel = 1.43m, Straight = 0.78m
+Checking 17 -> 58: Travel = 1.48m, Straight = 0.73m
+Checking 17 -> 59: Travel = 1.50m, Straight = 0.70m
+Checking 17 -> 60: Travel = 1.53m, Straight = 0.67m
+Checking 17 -> 61: Travel = 1.57m, Straight = 0.64m
+Checking 17 -> 62: Travel = 1.61m, Straight = 0.60m
+Checking 17 -> 63: Travel = 1.65m, Straight = 0.56m
+Checking 17 -> 64: Travel = 1.73m, Straight = 0.50m
+Checking 17 -> 65: Travel = 1.75m, Straight = 0.48m
+Checking 17 -> 66: Travel = 1.79m, Straight = 0.52m
+Checking 17 -> 67: Travel = 1.88m, Straight = 0.61m
+Checking 17 -> 68: Travel = 1.89m, Straight = 0.61m
+Checking 17 -> 69: Travel = 1.89m, Straight = 0.61m
+Checking 17 -> 70: Travel = 1.89m, Straight = 0.62m
+Checking 17 -> 71: Travel = 1.94m, Straight = 0.63m
+Checking 17 -> 72: Travel = 1.99m, Straight = 0.59m
+Checking 18 -> 28: Travel = 0.30m, Straight = 0.27m
+Checking 18 -> 29: Travel = 0.31m, Straight = 0.27m
+Checking 18 -> 30: Travel = 0.32m, Straight = 0.28m
+Checking 18 -> 31: Travel = 0.33m, Straight = 0.29m
+Checking 18 -> 32: Travel = 0.35m, Straight = 0.29m
+Checking 18 -> 33: Travel = 0.36m, Straight = 0.31m
+Checking 18 -> 34: Travel = 0.39m, Straight = 0.32m
+Checking 18 -> 35: Travel = 0.40m, Straight = 0.33m
+Checking 18 -> 36: Travel = 0.44m, Straight = 0.37m
+Checking 18 -> 37: Travel = 0.47m, Straight = 0.39m
+Checking 18 -> 38: Travel = 0.54m, Straight = 0.44m
+Checking 18 -> 39: Travel = 0.57m, Straight = 0.47m
+Checking 18 -> 40: Travel = 0.58m, Straight = 0.48m
+Checking 18 -> 41: Travel = 0.60m, Straight = 0.49m
+Checking 18 -> 42: Travel = 0.61m, Straight = 0.50m
+Checking 18 -> 43: Travel = 0.71m, Straight = 0.59m
+Checking 18 -> 44: Travel = 0.77m, Straight = 0.65m
+Checking 18 -> 45: Travel = 0.80m, Straight = 0.68m
+Checking 18 -> 46: Travel = 0.87m, Straight = 0.75m
+Checking 18 -> 47: Travel = 0.94m, Straight = 0.81m
+Checking 18 -> 48: Travel = 1.02m, Straight = 0.89m
+Checking 18 -> 49: Travel = 1.12m, Straight = 0.98m
+Checking 18 -> 50: Travel = 1.13m, Straight = 1.00m
+Checking 18 -> 51: Travel = 1.15m, Straight = 1.01m
+Checking 18 -> 52: Travel = 1.22m, Straight = 0.94m
+Checking 18 -> 53: Travel = 1.28m, Straight = 0.89m
+Checking 18 -> 54: Travel = 1.32m, Straight = 0.86m
+Checking 18 -> 55: Travel = 1.33m, Straight = 0.84m
+Checking 18 -> 56: Travel = 1.34m, Straight = 0.83m
+Checking 18 -> 57: Travel = 1.41m, Straight = 0.77m
+Checking 18 -> 58: Travel = 1.45m, Straight = 0.72m
+Checking 18 -> 59: Travel = 1.48m, Straight = 0.69m
+Checking 18 -> 60: Travel = 1.51m, Straight = 0.67m
+Checking 18 -> 61: Travel = 1.54m, Straight = 0.63m
+Checking 18 -> 62: Travel = 1.58m, Straight = 0.59m
+Checking 18 -> 63: Travel = 1.63m, Straight = 0.55m
+Checking 18 -> 64: Travel = 1.70m, Straight = 0.49m
+Checking 18 -> 65: Travel = 1.72m, Straight = 0.47m
+Checking 18 -> 66: Travel = 1.77m, Straight = 0.50m
+Checking 18 -> 67: Travel = 1.86m, Straight = 0.59m
+Checking 18 -> 68: Travel = 1.86m, Straight = 0.59m
+Checking 18 -> 69: Travel = 1.87m, Straight = 0.60m
+Checking 18 -> 70: Travel = 1.87m, Straight = 0.60m
+Checking 18 -> 71: Travel = 1.91m, Straight = 0.62m
+Checking 18 -> 72: Travel = 1.97m, Straight = 0.57m
+Checking 19 -> 29: Travel = 0.28m, Straight = 0.25m
+Checking 19 -> 30: Travel = 0.29m, Straight = 0.26m
+Checking 19 -> 31: Travel = 0.30m, Straight = 0.26m
+Checking 19 -> 32: Travel = 0.32m, Straight = 0.27m
+Checking 19 -> 33: Travel = 0.34m, Straight = 0.29m
+Checking 19 -> 34: Travel = 0.36m, Straight = 0.30m
+Checking 19 -> 35: Travel = 0.37m, Straight = 0.31m
+Checking 19 -> 36: Travel = 0.41m, Straight = 0.35m
+Checking 19 -> 37: Travel = 0.44m, Straight = 0.37m
+Checking 19 -> 38: Travel = 0.51m, Straight = 0.42m
+Checking 19 -> 39: Travel = 0.55m, Straight = 0.46m
+Checking 19 -> 40: Travel = 0.55m, Straight = 0.46m
+Checking 19 -> 41: Travel = 0.57m, Straight = 0.48m
+Checking 19 -> 42: Travel = 0.58m, Straight = 0.49m
+Checking 19 -> 43: Travel = 0.68m, Straight = 0.58m
+Checking 19 -> 44: Travel = 0.74m, Straight = 0.64m
+Checking 19 -> 45: Travel = 0.77m, Straight = 0.66m
+Checking 19 -> 46: Travel = 0.84m, Straight = 0.74m
+Checking 19 -> 47: Travel = 0.91m, Straight = 0.80m
+Checking 19 -> 48: Travel = 0.99m, Straight = 0.88m
+Checking 19 -> 49: Travel = 1.09m, Straight = 0.98m
+Checking 19 -> 50: Travel = 1.11m, Straight = 0.99m
+Checking 19 -> 51: Travel = 1.12m, Straight = 1.00m
+Checking 19 -> 52: Travel = 1.20m, Straight = 0.93m
+Checking 19 -> 53: Travel = 1.25m, Straight = 0.88m
+Checking 19 -> 54: Travel = 1.29m, Straight = 0.85m
+Checking 19 -> 55: Travel = 1.30m, Straight = 0.83m
+Checking 19 -> 56: Travel = 1.32m, Straight = 0.82m
+Checking 19 -> 57: Travel = 1.38m, Straight = 0.76m
+Checking 19 -> 58: Travel = 1.43m, Straight = 0.71m
+Checking 19 -> 59: Travel = 1.45m, Straight = 0.68m
+Checking 19 -> 60: Travel = 1.48m, Straight = 0.65m
+Checking 19 -> 61: Travel = 1.51m, Straight = 0.62m
+Checking 19 -> 62: Travel = 1.55m, Straight = 0.58m
+Checking 19 -> 63: Travel = 1.60m, Straight = 0.54m
+Checking 19 -> 64: Travel = 1.68m, Straight = 0.47m
+Checking 19 -> 65: Travel = 1.69m, Straight = 0.46m
+Checking 19 -> 66: Travel = 1.74m, Straight = 0.49m
+Checking 19 -> 67: Travel = 1.83m, Straight = 0.57m
+Checking 19 -> 68: Travel = 1.83m, Straight = 0.58m
+Checking 19 -> 69: Travel = 1.84m, Straight = 0.58m
+Checking 19 -> 70: Travel = 1.84m, Straight = 0.58m
+Checking 19 -> 71: Travel = 1.89m, Straight = 0.60m
+Checking 19 -> 72: Travel = 1.94m, Straight = 0.56m
+Checking 20 -> 30: Travel = 0.28m, Straight = 0.25m
+Checking 20 -> 31: Travel = 0.29m, Straight = 0.26m
+Checking 20 -> 32: Travel = 0.31m, Straight = 0.27m
+Checking 20 -> 33: Travel = 0.33m, Straight = 0.28m
+Checking 20 -> 34: Travel = 0.35m, Straight = 0.30m
+Checking 20 -> 35: Travel = 0.36m, Straight = 0.31m
+Checking 20 -> 36: Travel = 0.40m, Straight = 0.34m
+Checking 20 -> 37: Travel = 0.43m, Straight = 0.36m
+Checking 20 -> 38: Travel = 0.50m, Straight = 0.42m
+Checking 20 -> 39: Travel = 0.54m, Straight = 0.45m
+Checking 20 -> 40: Travel = 0.55m, Straight = 0.46m
+Checking 20 -> 41: Travel = 0.56m, Straight = 0.47m
+Checking 20 -> 42: Travel = 0.58m, Straight = 0.49m
+Checking 20 -> 43: Travel = 0.67m, Straight = 0.57m
+Checking 20 -> 44: Travel = 0.73m, Straight = 0.63m
+Checking 20 -> 45: Travel = 0.76m, Straight = 0.66m
+Checking 20 -> 46: Travel = 0.84m, Straight = 0.74m
+Checking 20 -> 47: Travel = 0.90m, Straight = 0.80m
+Checking 20 -> 48: Travel = 0.98m, Straight = 0.88m
+Checking 20 -> 49: Travel = 1.08m, Straight = 0.97m
+Checking 20 -> 50: Travel = 1.10m, Straight = 0.99m
+Checking 20 -> 51: Travel = 1.12m, Straight = 1.00m
+Checking 20 -> 52: Travel = 1.19m, Straight = 0.93m
+Checking 20 -> 53: Travel = 1.24m, Straight = 0.88m
+Checking 20 -> 54: Travel = 1.28m, Straight = 0.84m
+Checking 20 -> 55: Travel = 1.29m, Straight = 0.83m
+Checking 20 -> 56: Travel = 1.31m, Straight = 0.82m
+Checking 20 -> 57: Travel = 1.37m, Straight = 0.75m
+Checking 20 -> 58: Travel = 1.42m, Straight = 0.71m
+Checking 20 -> 59: Travel = 1.45m, Straight = 0.68m
+Checking 20 -> 60: Travel = 1.48m, Straight = 0.65m
+Checking 20 -> 61: Travel = 1.51m, Straight = 0.62m
+Checking 20 -> 62: Travel = 1.55m, Straight = 0.58m
+Checking 20 -> 63: Travel = 1.60m, Straight = 0.53m
+Checking 20 -> 64: Travel = 1.67m, Straight = 0.47m
+Checking 20 -> 65: Travel = 1.69m, Straight = 0.45m
+Checking 20 -> 66: Travel = 1.73m, Straight = 0.48m
+Checking 20 -> 67: Travel = 1.83m, Straight = 0.57m
+Checking 20 -> 68: Travel = 1.83m, Straight = 0.57m
+Checking 20 -> 69: Travel = 1.83m, Straight = 0.58m
+Checking 20 -> 70: Travel = 1.84m, Straight = 0.58m
+Checking 20 -> 71: Travel = 1.88m, Straight = 0.60m
+Checking 20 -> 72: Travel = 1.93m, Straight = 0.55m
+Checking 21 -> 31: Travel = 0.21m, Straight = 0.19m
+Checking 21 -> 32: Travel = 0.23m, Straight = 0.20m
+Checking 21 -> 33: Travel = 0.25m, Straight = 0.22m
+Checking 21 -> 34: Travel = 0.27m, Straight = 0.24m
+Checking 21 -> 35: Travel = 0.29m, Straight = 0.25m
+Checking 21 -> 36: Travel = 0.33m, Straight = 0.29m
+Checking 21 -> 37: Travel = 0.35m, Straight = 0.31m
+Checking 21 -> 38: Travel = 0.42m, Straight = 0.37m
+Checking 21 -> 39: Travel = 0.46m, Straight = 0.41m
+Checking 21 -> 40: Travel = 0.47m, Straight = 0.42m
+Checking 21 -> 41: Travel = 0.48m, Straight = 0.43m
+Checking 21 -> 42: Travel = 0.50m, Straight = 0.44m
+Checking 21 -> 43: Travel = 0.59m, Straight = 0.54m
+Checking 21 -> 44: Travel = 0.65m, Straight = 0.60m
+Checking 21 -> 45: Travel = 0.68m, Straight = 0.62m
+Checking 21 -> 46: Travel = 0.76m, Straight = 0.70m
+Checking 21 -> 47: Travel = 0.82m, Straight = 0.77m
+Checking 21 -> 48: Travel = 0.90m, Straight = 0.84m
+Checking 21 -> 49: Travel = 1.00m, Straight = 0.94m
+Checking 21 -> 50: Travel = 1.02m, Straight = 0.96m
+Checking 21 -> 51: Travel = 1.04m, Straight = 0.96m
+Checking 21 -> 52: Travel = 1.11m, Straight = 0.89m
+Checking 21 -> 53: Travel = 1.16m, Straight = 0.84m
+Checking 21 -> 54: Travel = 1.20m, Straight = 0.81m
+Checking 21 -> 55: Travel = 1.22m, Straight = 0.79m
+Checking 21 -> 56: Travel = 1.23m, Straight = 0.78m
+Checking 21 -> 57: Travel = 1.29m, Straight = 0.72m
+Checking 21 -> 58: Travel = 1.34m, Straight = 0.67m
+Checking 21 -> 59: Travel = 1.37m, Straight = 0.64m
+Checking 21 -> 60: Travel = 1.40m, Straight = 0.61m
+Checking 21 -> 61: Travel = 1.43m, Straight = 0.58m
+Checking 21 -> 62: Travel = 1.47m, Straight = 0.54m
+Checking 21 -> 63: Travel = 1.52m, Straight = 0.49m
+Checking 21 -> 64: Travel = 1.59m, Straight = 0.42m
+Checking 21 -> 65: Travel = 1.61m, Straight = 0.41m
+Checking 21 -> 66: Travel = 1.65m, Straight = 0.43m
+Checking 21 -> 67: Travel = 1.75m, Straight = 0.51m
+Checking 21 -> 68: Travel = 1.75m, Straight = 0.51m
+Checking 21 -> 69: Travel = 1.75m, Straight = 0.52m
+Checking 21 -> 70: Travel = 1.76m, Straight = 0.52m
+Checking 21 -> 71: Travel = 1.80m, Straight = 0.55m
+Checking 21 -> 72: Travel = 1.85m, Straight = 0.51m
+Checking 22 -> 32: Travel = 0.22m, Straight = 0.19m
+Checking 22 -> 33: Travel = 0.23m, Straight = 0.21m
+Checking 22 -> 34: Travel = 0.26m, Straight = 0.23m
+Checking 22 -> 35: Travel = 0.27m, Straight = 0.24m
+Checking 22 -> 36: Travel = 0.31m, Straight = 0.28m
+Checking 22 -> 37: Travel = 0.34m, Straight = 0.30m
+Checking 22 -> 38: Travel = 0.41m, Straight = 0.37m
+Checking 22 -> 39: Travel = 0.44m, Straight = 0.40m
+Checking 22 -> 40: Travel = 0.45m, Straight = 0.41m
+Checking 22 -> 41: Travel = 0.47m, Straight = 0.42m
+Checking 22 -> 42: Travel = 0.48m, Straight = 0.44m
+Checking 22 -> 43: Travel = 0.58m, Straight = 0.53m
+Checking 22 -> 44: Travel = 0.64m, Straight = 0.59m
+Checking 22 -> 45: Travel = 0.67m, Straight = 0.62m
+Checking 22 -> 46: Travel = 0.74m, Straight = 0.69m
+Checking 22 -> 47: Travel = 0.81m, Straight = 0.76m
+Checking 22 -> 48: Travel = 0.89m, Straight = 0.84m
+Checking 22 -> 49: Travel = 0.99m, Straight = 0.94m
+Checking 22 -> 50: Travel = 1.00m, Straight = 0.95m
+Checking 22 -> 51: Travel = 1.02m, Straight = 0.96m
+Checking 22 -> 52: Travel = 1.09m, Straight = 0.89m
+Checking 22 -> 53: Travel = 1.15m, Straight = 0.84m
+Checking 22 -> 54: Travel = 1.19m, Straight = 0.80m
+Checking 22 -> 55: Travel = 1.20m, Straight = 0.79m
+Checking 22 -> 56: Travel = 1.21m, Straight = 0.77m
+Checking 22 -> 57: Travel = 1.28m, Straight = 0.71m
+Checking 22 -> 58: Travel = 1.32m, Straight = 0.66m
+Checking 22 -> 59: Travel = 1.35m, Straight = 0.64m
+Checking 22 -> 60: Travel = 1.38m, Straight = 0.61m
+Checking 22 -> 61: Travel = 1.41m, Straight = 0.57m
+Checking 22 -> 62: Travel = 1.45m, Straight = 0.53m
+Checking 22 -> 63: Travel = 1.50m, Straight = 0.49m
+Checking 22 -> 64: Travel = 1.57m, Straight = 0.42m
+Checking 22 -> 65: Travel = 1.59m, Straight = 0.40m
+Checking 22 -> 66: Travel = 1.64m, Straight = 0.42m
+Checking 22 -> 67: Travel = 1.73m, Straight = 0.50m
+Checking 22 -> 68: Travel = 1.73m, Straight = 0.50m
+Checking 22 -> 69: Travel = 1.74m, Straight = 0.51m
+Checking 22 -> 70: Travel = 1.74m, Straight = 0.51m
+Checking 22 -> 71: Travel = 1.78m, Straight = 0.54m
+Checking 22 -> 72: Travel = 1.84m, Straight = 0.50m
+Checking 23 -> 33: Travel = 0.22m, Straight = 0.20m
+Checking 23 -> 34: Travel = 0.24m, Straight = 0.22m
+Checking 23 -> 35: Travel = 0.25m, Straight = 0.23m
+Checking 23 -> 36: Travel = 0.29m, Straight = 0.27m
+Checking 23 -> 37: Travel = 0.32m, Straight = 0.29m
+Checking 23 -> 38: Travel = 0.39m, Straight = 0.36m
+Checking 23 -> 39: Travel = 0.43m, Straight = 0.40m
+Checking 23 -> 40: Travel = 0.44m, Straight = 0.40m
+Checking 23 -> 41: Travel = 0.45m, Straight = 0.42m
+Checking 23 -> 42: Travel = 0.46m, Straight = 0.43m
+Checking 23 -> 43: Travel = 0.56m, Straight = 0.52m
+Checking 23 -> 44: Travel = 0.62m, Straight = 0.58m
+Checking 23 -> 45: Travel = 0.65m, Straight = 0.61m
+Checking 23 -> 46: Travel = 0.72m, Straight = 0.69m
+Checking 23 -> 47: Travel = 0.79m, Straight = 0.75m
+Checking 23 -> 48: Travel = 0.87m, Straight = 0.83m
+Checking 23 -> 49: Travel = 0.97m, Straight = 0.93m
+Checking 23 -> 50: Travel = 0.99m, Straight = 0.95m
+Checking 23 -> 51: Travel = 1.00m, Straight = 0.95m
+Checking 23 -> 52: Travel = 1.08m, Straight = 0.88m
+Checking 23 -> 53: Travel = 1.13m, Straight = 0.83m
+Checking 23 -> 54: Travel = 1.17m, Straight = 0.79m
+Checking 23 -> 55: Travel = 1.18m, Straight = 0.78m
+Checking 23 -> 56: Travel = 1.20m, Straight = 0.77m
+Checking 23 -> 57: Travel = 1.26m, Straight = 0.70m
+Checking 23 -> 58: Travel = 1.31m, Straight = 0.66m
+Checking 23 -> 59: Travel = 1.33m, Straight = 0.63m
+Checking 23 -> 60: Travel = 1.36m, Straight = 0.60m
+Checking 23 -> 61: Travel = 1.40m, Straight = 0.57m
+Checking 23 -> 62: Travel = 1.44m, Straight = 0.53m
+Checking 23 -> 63: Travel = 1.48m, Straight = 0.48m
+Checking 23 -> 64: Travel = 1.56m, Straight = 0.41m
+Checking 23 -> 65: Travel = 1.58m, Straight = 0.39m
+Checking 23 -> 66: Travel = 1.62m, Straight = 0.42m
+Checking 23 -> 67: Travel = 1.71m, Straight = 0.49m
+Checking 23 -> 68: Travel = 1.72m, Straight = 0.49m
+Checking 23 -> 69: Travel = 1.72m, Straight = 0.50m
+Checking 23 -> 70: Travel = 1.72m, Straight = 0.50m
+Checking 23 -> 71: Travel = 1.77m, Straight = 0.53m
+Checking 23 -> 72: Travel = 1.82m, Straight = 0.49m
+Checking 24 -> 34: Travel = 0.18m, Straight = 0.16m
+Checking 24 -> 35: Travel = 0.19m, Straight = 0.18m
+Checking 24 -> 36: Travel = 0.23m, Straight = 0.22m
+Checking 24 -> 37: Travel = 0.26m, Straight = 0.24m
+Checking 24 -> 38: Travel = 0.33m, Straight = 0.31m
+Checking 24 -> 39: Travel = 0.36m, Straight = 0.35m
+Checking 24 -> 40: Travel = 0.37m, Straight = 0.36m
+Checking 24 -> 41: Travel = 0.38m, Straight = 0.37m
+Checking 24 -> 42: Travel = 0.40m, Straight = 0.39m
+Checking 24 -> 43: Travel = 0.50m, Straight = 0.48m
+Checking 24 -> 44: Travel = 0.56m, Straight = 0.54m
+Checking 24 -> 45: Travel = 0.59m, Straight = 0.57m
+Checking 24 -> 46: Travel = 0.66m, Straight = 0.64m
+Checking 24 -> 47: Travel = 0.73m, Straight = 0.71m
+Checking 24 -> 48: Travel = 0.81m, Straight = 0.79m
+Checking 24 -> 49: Travel = 0.91m, Straight = 0.89m
+Checking 24 -> 50: Travel = 0.92m, Straight = 0.90m
+Checking 24 -> 51: Travel = 0.94m, Straight = 0.91m
+Checking 24 -> 52: Travel = 1.01m, Straight = 0.84m
+Checking 24 -> 53: Travel = 1.07m, Straight = 0.79m
+Checking 24 -> 54: Travel = 1.11m, Straight = 0.75m
+Checking 24 -> 55: Travel = 1.12m, Straight = 0.73m
+Checking 24 -> 56: Travel = 1.13m, Straight = 0.72m
+Checking 24 -> 57: Travel = 1.19m, Straight = 0.66m
+Checking 24 -> 58: Travel = 1.24m, Straight = 0.61m
+Checking 24 -> 59: Travel = 1.27m, Straight = 0.58m
+Checking 24 -> 60: Travel = 1.30m, Straight = 0.55m
+Checking 24 -> 61: Travel = 1.33m, Straight = 0.52m
+Checking 24 -> 62: Travel = 1.37m, Straight = 0.48m
+Checking 24 -> 63: Travel = 1.42m, Straight = 0.43m
+Checking 24 -> 64: Travel = 1.49m, Straight = 0.36m
+Checking 24 -> 65: Travel = 1.51m, Straight = 0.34m
+Checking 24 -> 66: Travel = 1.56m, Straight = 0.36m
+Checking 24 -> 67: Travel = 1.65m, Straight = 0.44m
+Checking 24 -> 68: Travel = 1.65m, Straight = 0.44m
+Checking 24 -> 69: Travel = 1.66m, Straight = 0.44m
+Checking 24 -> 70: Travel = 1.66m, Straight = 0.45m
+Checking 24 -> 71: Travel = 1.70m, Straight = 0.47m
+Checking 24 -> 72: Travel = 1.76m, Straight = 0.44m
+Checking 25 -> 35: Travel = 0.17m, Straight = 0.16m
+Checking 25 -> 36: Travel = 0.21m, Straight = 0.20m
+Checking 25 -> 37: Travel = 0.24m, Straight = 0.23m
+Checking 25 -> 38: Travel = 0.31m, Straight = 0.29m
+Checking 25 -> 39: Travel = 0.35m, Straight = 0.33m
+Checking 25 -> 40: Travel = 0.35m, Straight = 0.34m
+Checking 25 -> 41: Travel = 0.37m, Straight = 0.35m
+Checking 25 -> 42: Travel = 0.38m, Straight = 0.37m
+Checking 25 -> 43: Travel = 0.48m, Straight = 0.46m
+Checking 25 -> 44: Travel = 0.54m, Straight = 0.52m
+Checking 25 -> 45: Travel = 0.57m, Straight = 0.55m
+Checking 25 -> 46: Travel = 0.64m, Straight = 0.63m
+Checking 25 -> 47: Travel = 0.71m, Straight = 0.69m
+Checking 25 -> 48: Travel = 0.79m, Straight = 0.77m
+Checking 25 -> 49: Travel = 0.89m, Straight = 0.87m
+Checking 25 -> 50: Travel = 0.90m, Straight = 0.89m
+Checking 25 -> 51: Travel = 0.92m, Straight = 0.89m
+Checking 25 -> 52: Travel = 1.00m, Straight = 0.82m
+Checking 25 -> 53: Travel = 1.05m, Straight = 0.77m
+Checking 25 -> 54: Travel = 1.09m, Straight = 0.73m
+Checking 25 -> 55: Travel = 1.10m, Straight = 0.72m
+Checking 25 -> 56: Travel = 1.12m, Straight = 0.70m
+Checking 25 -> 57: Travel = 1.18m, Straight = 0.64m
+Checking 25 -> 58: Travel = 1.23m, Straight = 0.59m
+Checking 25 -> 59: Travel = 1.25m, Straight = 0.57m
+Checking 25 -> 60: Travel = 1.28m, Straight = 0.54m
+Checking 25 -> 61: Travel = 1.31m, Straight = 0.51m
+Checking 25 -> 62: Travel = 1.35m, Straight = 0.47m
+Checking 25 -> 63: Travel = 1.40m, Straight = 0.42m
+Checking 25 -> 64: Travel = 1.48m, Straight = 0.34m
+Checking 25 -> 65: Travel = 1.49m, Straight = 0.33m
+Checking 25 -> 66: Travel = 1.54m, Straight = 0.35m
+Checking 25 -> 67: Travel = 1.63m, Straight = 0.42m
+Checking 25 -> 68: Travel = 1.63m, Straight = 0.42m
+Checking 25 -> 69: Travel = 1.64m, Straight = 0.42m
+Checking 25 -> 70: Travel = 1.64m, Straight = 0.43m
+Checking 25 -> 71: Travel = 1.69m, Straight = 0.46m
+Checking 25 -> 72: Travel = 1.74m, Straight = 0.42m
+Checking 26 -> 36: Travel = 0.20m, Straight = 0.19m
+Checking 26 -> 37: Travel = 0.23m, Straight = 0.22m
+Checking 26 -> 38: Travel = 0.30m, Straight = 0.29m
+Checking 26 -> 39: Travel = 0.34m, Straight = 0.32m
+Checking 26 -> 40: Travel = 0.34m, Straight = 0.33m
+Checking 26 -> 41: Travel = 0.36m, Straight = 0.35m
+Checking 26 -> 42: Travel = 0.37m, Straight = 0.36m
+Checking 26 -> 43: Travel = 0.47m, Straight = 0.46m
+Checking 26 -> 44: Travel = 0.53m, Straight = 0.52m
+Checking 26 -> 45: Travel = 0.56m, Straight = 0.54m
+Checking 26 -> 46: Travel = 0.63m, Straight = 0.62m
+Checking 26 -> 47: Travel = 0.70m, Straight = 0.68m
+Checking 26 -> 48: Travel = 0.78m, Straight = 0.76m
+Checking 26 -> 49: Travel = 0.88m, Straight = 0.86m
+Checking 26 -> 50: Travel = 0.89m, Straight = 0.88m
+Checking 26 -> 51: Travel = 0.91m, Straight = 0.89m
+Checking 26 -> 52: Travel = 0.99m, Straight = 0.81m
+Checking 26 -> 53: Travel = 1.04m, Straight = 0.76m
+Checking 26 -> 54: Travel = 1.08m, Straight = 0.72m
+Checking 26 -> 55: Travel = 1.09m, Straight = 0.71m
+Checking 26 -> 56: Travel = 1.11m, Straight = 0.69m
+Checking 26 -> 57: Travel = 1.17m, Straight = 0.63m
+Checking 26 -> 58: Travel = 1.22m, Straight = 0.58m
+Checking 26 -> 59: Travel = 1.24m, Straight = 0.56m
+Checking 26 -> 60: Travel = 1.27m, Straight = 0.53m
+Checking 26 -> 61: Travel = 1.30m, Straight = 0.50m
+Checking 26 -> 62: Travel = 1.34m, Straight = 0.46m
+Checking 26 -> 63: Travel = 1.39m, Straight = 0.41m
+Checking 26 -> 64: Travel = 1.47m, Straight = 0.34m
+Checking 26 -> 65: Travel = 1.48m, Straight = 0.32m
+Checking 26 -> 66: Travel = 1.53m, Straight = 0.34m
+Checking 26 -> 67: Travel = 1.62m, Straight = 0.41m
+Checking 26 -> 68: Travel = 1.62m, Straight = 0.41m
+Checking 26 -> 69: Travel = 1.63m, Straight = 0.42m
+Checking 26 -> 70: Travel = 1.63m, Straight = 0.42m
+Checking 26 -> 71: Travel = 1.68m, Straight = 0.45m
+Checking 26 -> 72: Travel = 1.73m, Straight = 0.41m
+Checking 27 -> 37: Travel = 0.17m, Straight = 0.16m
+Checking 27 -> 38: Travel = 0.24m, Straight = 0.23m
+Checking 27 -> 39: Travel = 0.28m, Straight = 0.27m
+Checking 27 -> 40: Travel = 0.29m, Straight = 0.28m
+Checking 27 -> 41: Travel = 0.30m, Straight = 0.29m
+Checking 27 -> 42: Travel = 0.32m, Straight = 0.31m
+Checking 27 -> 43: Travel = 0.41m, Straight = 0.40m
+Checking 27 -> 44: Travel = 0.47m, Straight = 0.46m
+Checking 27 -> 45: Travel = 0.50m, Straight = 0.49m
+Checking 27 -> 46: Travel = 0.58m, Straight = 0.56m
+Checking 27 -> 47: Travel = 0.64m, Straight = 0.63m
+Checking 27 -> 48: Travel = 0.72m, Straight = 0.71m
+Checking 27 -> 49: Travel = 0.82m, Straight = 0.81m
+Checking 27 -> 50: Travel = 0.84m, Straight = 0.82m
+Checking 27 -> 51: Travel = 0.86m, Straight = 0.83m
+Checking 27 -> 52: Travel = 0.93m, Straight = 0.76m
+Checking 27 -> 53: Travel = 0.98m, Straight = 0.71m
+Checking 27 -> 54: Travel = 1.02m, Straight = 0.67m
+Checking 27 -> 55: Travel = 1.04m, Straight = 0.65m
+Checking 27 -> 56: Travel = 1.05m, Straight = 0.64m
+Checking 27 -> 57: Travel = 1.11m, Straight = 0.58m
+Checking 27 -> 58: Travel = 1.16m, Straight = 0.53m
+Checking 27 -> 59: Travel = 1.19m, Straight = 0.50m
+Checking 27 -> 60: Travel = 1.22m, Straight = 0.47m
+Checking 27 -> 61: Travel = 1.25m, Straight = 0.44m
+Checking 27 -> 62: Travel = 1.29m, Straight = 0.40m
+Checking 27 -> 63: Travel = 1.34m, Straight = 0.35m
+Checking 27 -> 64: Travel = 1.41m, Straight = 0.28m
+Checking 27 -> 65: Travel = 1.43m, Straight = 0.26m
+Checking 27 -> 66: Travel = 1.47m, Straight = 0.28m
+Checking 27 -> 67: Travel = 1.57m, Straight = 0.35m
+Checking 27 -> 68: Travel = 1.57m, Straight = 0.36m
+Checking 27 -> 69: Travel = 1.57m, Straight = 0.36m
+Checking 27 -> 70: Travel = 1.58m, Straight = 0.36m
+Checking 27 -> 71: Travel = 1.62m, Straight = 0.39m
+Checking 27 -> 72: Travel = 1.67m, Straight = 0.36m
+Checking 28 -> 38: Travel = 0.23m, Straight = 0.22m
+Checking 28 -> 39: Travel = 0.27m, Straight = 0.26m
+Checking 28 -> 40: Travel = 0.28m, Straight = 0.27m
+Checking 28 -> 41: Travel = 0.29m, Straight = 0.28m
+Checking 28 -> 42: Travel = 0.31m, Straight = 0.30m
+Checking 28 -> 43: Travel = 0.40m, Straight = 0.39m
+Checking 28 -> 44: Travel = 0.46m, Straight = 0.45m
+Checking 28 -> 45: Travel = 0.49m, Straight = 0.48m
+Checking 28 -> 46: Travel = 0.57m, Straight = 0.56m
+Checking 28 -> 47: Travel = 0.63m, Straight = 0.62m
+Checking 28 -> 48: Travel = 0.71m, Straight = 0.70m
+Checking 28 -> 49: Travel = 0.82m, Straight = 0.80m
+Checking 28 -> 50: Travel = 0.83m, Straight = 0.81m
+Checking 28 -> 51: Travel = 0.85m, Straight = 0.82m
+Checking 28 -> 52: Travel = 0.92m, Straight = 0.75m
+Checking 28 -> 53: Travel = 0.97m, Straight = 0.70m
+Checking 28 -> 54: Travel = 1.01m, Straight = 0.66m
+Checking 28 -> 55: Travel = 1.03m, Straight = 0.65m
+Checking 28 -> 56: Travel = 1.04m, Straight = 0.63m
+Checking 28 -> 57: Travel = 1.10m, Straight = 0.57m
+Checking 28 -> 58: Travel = 1.15m, Straight = 0.52m
+Checking 28 -> 59: Travel = 1.18m, Straight = 0.49m
+Checking 28 -> 60: Travel = 1.21m, Straight = 0.47m
+Checking 28 -> 61: Travel = 1.24m, Straight = 0.43m
+Checking 28 -> 62: Travel = 1.28m, Straight = 0.39m
+Checking 28 -> 63: Travel = 1.33m, Straight = 0.35m
+Checking 28 -> 64: Travel = 1.40m, Straight = 0.27m
+Checking 28 -> 65: Travel = 1.42m, Straight = 0.25m
+Checking 28 -> 66: Travel = 1.46m, Straight = 0.27m
+Checking 28 -> 67: Travel = 1.56m, Straight = 0.35m
+Checking 28 -> 68: Travel = 1.56m, Straight = 0.35m
+Checking 28 -> 69: Travel = 1.57m, Straight = 0.35m
+Checking 28 -> 70: Travel = 1.57m, Straight = 0.36m
+Checking 28 -> 71: Travel = 1.61m, Straight = 0.38m
+Checking 28 -> 72: Travel = 1.66m, Straight = 0.35m
+Checking 29 -> 39: Travel = 0.27m, Straight = 0.26m
+Checking 29 -> 40: Travel = 0.28m, Straight = 0.27m
+Checking 29 -> 41: Travel = 0.29m, Straight = 0.28m
+Checking 29 -> 42: Travel = 0.31m, Straight = 0.30m
+Checking 29 -> 43: Travel = 0.40m, Straight = 0.39m
+Checking 29 -> 44: Travel = 0.46m, Straight = 0.45m
+Checking 29 -> 45: Travel = 0.49m, Straight = 0.48m
+Checking 29 -> 46: Travel = 0.57m, Straight = 0.55m
+Checking 29 -> 47: Travel = 0.63m, Straight = 0.62m
+Checking 29 -> 48: Travel = 0.71m, Straight = 0.70m
+Checking 29 -> 49: Travel = 0.81m, Straight = 0.80m
+Checking 29 -> 50: Travel = 0.83m, Straight = 0.81m
+Checking 29 -> 51: Travel = 0.84m, Straight = 0.82m
+Checking 29 -> 52: Travel = 0.92m, Straight = 0.75m
+Checking 29 -> 53: Travel = 0.97m, Straight = 0.70m
+Checking 29 -> 54: Travel = 1.01m, Straight = 0.66m
+Checking 29 -> 55: Travel = 1.02m, Straight = 0.64m
+Checking 29 -> 56: Travel = 1.04m, Straight = 0.63m
+Checking 29 -> 57: Travel = 1.10m, Straight = 0.57m
+Checking 29 -> 58: Travel = 1.15m, Straight = 0.52m
+Checking 29 -> 59: Travel = 1.18m, Straight = 0.49m
+Checking 29 -> 60: Travel = 1.20m, Straight = 0.46m
+Checking 29 -> 61: Travel = 1.24m, Straight = 0.43m
+Checking 29 -> 62: Travel = 1.28m, Straight = 0.39m
+Checking 29 -> 63: Travel = 1.33m, Straight = 0.34m
+Checking 29 -> 64: Travel = 1.40m, Straight = 0.27m
+Checking 29 -> 65: Travel = 1.42m, Straight = 0.25m
+Checking 29 -> 66: Travel = 1.46m, Straight = 0.27m
+Checking 29 -> 67: Travel = 1.55m, Straight = 0.34m
+Checking 29 -> 68: Travel = 1.56m, Straight = 0.34m
+Checking 29 -> 69: Travel = 1.56m, Straight = 0.35m
+Checking 29 -> 70: Travel = 1.57m, Straight = 0.35m
+Checking 29 -> 71: Travel = 1.61m, Straight = 0.38m
+Checking 29 -> 72: Travel = 1.66m, Straight = 0.34m
+Checking 30 -> 40: Travel = 0.27m, Straight = 0.26m
+Checking 30 -> 41: Travel = 0.28m, Straight = 0.28m
+Checking 30 -> 42: Travel = 0.30m, Straight = 0.29m
+Checking 30 -> 43: Travel = 0.39m, Straight = 0.39m
+Checking 30 -> 44: Travel = 0.45m, Straight = 0.45m
+Checking 30 -> 45: Travel = 0.48m, Straight = 0.48m
+Checking 30 -> 46: Travel = 0.56m, Straight = 0.55m
+Checking 30 -> 47: Travel = 0.62m, Straight = 0.61m
+Checking 30 -> 48: Travel = 0.70m, Straight = 0.69m
+Checking 30 -> 49: Travel = 0.80m, Straight = 0.79m
+Checking 30 -> 50: Travel = 0.82m, Straight = 0.81m
+Checking 30 -> 51: Travel = 0.83m, Straight = 0.82m
+Checking 30 -> 52: Travel = 0.91m, Straight = 0.74m
+Checking 30 -> 53: Travel = 0.96m, Straight = 0.69m
+Checking 30 -> 54: Travel = 1.00m, Straight = 0.65m
+Checking 30 -> 55: Travel = 1.01m, Straight = 0.64m
+Checking 30 -> 56: Travel = 1.03m, Straight = 0.62m
+Checking 30 -> 57: Travel = 1.09m, Straight = 0.56m
+Checking 30 -> 58: Travel = 1.14m, Straight = 0.52m
+Checking 30 -> 59: Travel = 1.16m, Straight = 0.49m
+Checking 30 -> 60: Travel = 1.19m, Straight = 0.46m
+Checking 30 -> 61: Travel = 1.23m, Straight = 0.43m
+Checking 30 -> 62: Travel = 1.27m, Straight = 0.39m
+Checking 30 -> 63: Travel = 1.31m, Straight = 0.34m
+Checking 30 -> 64: Travel = 1.39m, Straight = 0.27m
+Checking 30 -> 65: Travel = 1.41m, Straight = 0.25m
+Checking 30 -> 66: Travel = 1.45m, Straight = 0.27m
+Checking 30 -> 67: Travel = 1.54m, Straight = 0.34m
+Checking 30 -> 68: Travel = 1.55m, Straight = 0.34m
+Checking 30 -> 69: Travel = 1.55m, Straight = 0.34m
+Checking 30 -> 70: Travel = 1.56m, Straight = 0.35m
+Checking 30 -> 71: Travel = 1.60m, Straight = 0.37m
+Checking 30 -> 72: Travel = 1.65m, Straight = 0.34m
+Checking 31 -> 41: Travel = 0.27m, Straight = 0.27m
+Checking 31 -> 42: Travel = 0.29m, Straight = 0.28m
+Checking 31 -> 43: Travel = 0.38m, Straight = 0.38m
+Checking 31 -> 44: Travel = 0.44m, Straight = 0.44m
+Checking 31 -> 45: Travel = 0.47m, Straight = 0.47m
+Checking 31 -> 46: Travel = 0.55m, Straight = 0.54m
+Checking 31 -> 47: Travel = 0.61m, Straight = 0.61m
+Checking 31 -> 48: Travel = 0.69m, Straight = 0.69m
+Checking 31 -> 49: Travel = 0.79m, Straight = 0.79m
+Checking 31 -> 50: Travel = 0.81m, Straight = 0.80m
+Checking 31 -> 51: Travel = 0.83m, Straight = 0.81m
+Checking 31 -> 52: Travel = 0.90m, Straight = 0.73m
+Checking 31 -> 53: Travel = 0.95m, Straight = 0.68m
+Checking 31 -> 54: Travel = 0.99m, Straight = 0.64m
+Checking 31 -> 55: Travel = 1.00m, Straight = 0.63m
+Checking 31 -> 56: Travel = 1.02m, Straight = 0.62m
+Checking 31 -> 57: Travel = 1.08m, Straight = 0.56m
+Checking 31 -> 58: Travel = 1.13m, Straight = 0.51m
+Checking 31 -> 59: Travel = 1.16m, Straight = 0.48m
+Checking 31 -> 60: Travel = 1.18m, Straight = 0.45m
+Checking 31 -> 61: Travel = 1.22m, Straight = 0.42m
+Checking 31 -> 62: Travel = 1.26m, Straight = 0.38m
+Checking 31 -> 63: Travel = 1.31m, Straight = 0.33m
+Checking 31 -> 64: Travel = 1.38m, Straight = 0.26m
+Checking 31 -> 65: Travel = 1.40m, Straight = 0.24m
+Checking 31 -> 66: Travel = 1.44m, Straight = 0.26m
+Checking 31 -> 67: Travel = 1.53m, Straight = 0.33m
+Checking 31 -> 68: Travel = 1.54m, Straight = 0.33m
+Checking 31 -> 69: Travel = 1.54m, Straight = 0.34m
+Checking 31 -> 70: Travel = 1.55m, Straight = 0.34m
+Checking 31 -> 71: Travel = 1.59m, Straight = 0.37m
+Checking 31 -> 72: Travel = 1.64m, Straight = 0.33m
+Checking 32 -> 42: Travel = 0.27m, Straight = 0.26m
+Checking 32 -> 43: Travel = 0.36m, Straight = 0.36m
+Checking 32 -> 44: Travel = 0.42m, Straight = 0.42m
+Checking 32 -> 45: Travel = 0.45m, Straight = 0.45m
+Checking 32 -> 46: Travel = 0.53m, Straight = 0.52m
+Checking 32 -> 47: Travel = 0.59m, Straight = 0.59m
+Checking 32 -> 48: Travel = 0.67m, Straight = 0.67m
+Checking 32 -> 49: Travel = 0.77m, Straight = 0.77m
+Checking 32 -> 50: Travel = 0.79m, Straight = 0.78m
+Checking 32 -> 51: Travel = 0.80m, Straight = 0.79m
+Checking 32 -> 52: Travel = 0.88m, Straight = 0.71m
+Checking 32 -> 53: Travel = 0.93m, Straight = 0.66m
+Checking 32 -> 54: Travel = 0.97m, Straight = 0.62m
+Checking 32 -> 55: Travel = 0.98m, Straight = 0.61m
+Checking 32 -> 56: Travel = 1.00m, Straight = 0.60m
+Checking 32 -> 57: Travel = 1.06m, Straight = 0.54m
+Checking 32 -> 58: Travel = 1.11m, Straight = 0.49m
+Checking 32 -> 59: Travel = 1.13m, Straight = 0.46m
+Checking 32 -> 60: Travel = 1.16m, Straight = 0.43m
+Checking 32 -> 61: Travel = 1.20m, Straight = 0.40m
+Checking 32 -> 62: Travel = 1.24m, Straight = 0.36m
+Checking 32 -> 63: Travel = 1.28m, Straight = 0.31m
+Checking 32 -> 64: Travel = 1.36m, Straight = 0.24m
+Checking 32 -> 65: Travel = 1.38m, Straight = 0.22m
+Checking 32 -> 66: Travel = 1.42m, Straight = 0.24m
+Checking 32 -> 67: Travel = 1.51m, Straight = 0.31m
+Checking 32 -> 68: Travel = 1.52m, Straight = 0.31m
+Checking 32 -> 69: Travel = 1.52m, Straight = 0.32m
+Checking 32 -> 70: Travel = 1.53m, Straight = 0.32m
+Checking 32 -> 71: Travel = 1.57m, Straight = 0.35m
+Checking 32 -> 72: Travel = 1.62m, Straight = 0.31m
+Checking 33 -> 43: Travel = 0.34m, Straight = 0.34m
+Checking 33 -> 44: Travel = 0.40m, Straight = 0.40m
+Checking 33 -> 45: Travel = 0.43m, Straight = 0.43m
+Checking 33 -> 46: Travel = 0.51m, Straight = 0.50m
+Checking 33 -> 47: Travel = 0.57m, Straight = 0.57m
+Checking 33 -> 48: Travel = 0.65m, Straight = 0.65m
+Checking 33 -> 49: Travel = 0.75m, Straight = 0.75m
+Checking 33 -> 50: Travel = 0.77m, Straight = 0.76m
+Checking 33 -> 51: Travel = 0.79m, Straight = 0.77m
+Checking 33 -> 52: Travel = 0.86m, Straight = 0.70m
+Checking 33 -> 53: Travel = 0.91m, Straight = 0.65m
+Checking 33 -> 54: Travel = 0.95m, Straight = 0.61m
+Checking 33 -> 55: Travel = 0.96m, Straight = 0.59m
+Checking 33 -> 56: Travel = 0.98m, Straight = 0.58m
+Checking 33 -> 57: Travel = 1.04m, Straight = 0.52m
+Checking 33 -> 58: Travel = 1.09m, Straight = 0.47m
+Checking 33 -> 59: Travel = 1.12m, Straight = 0.44m
+Checking 33 -> 60: Travel = 1.15m, Straight = 0.41m
+Checking 33 -> 61: Travel = 1.18m, Straight = 0.38m
+Checking 33 -> 62: Travel = 1.22m, Straight = 0.34m
+Checking 33 -> 63: Travel = 1.27m, Straight = 0.29m
+Checking 33 -> 64: Travel = 1.34m, Straight = 0.22m
+Checking 33 -> 65: Travel = 1.36m, Straight = 0.20m
+Checking 33 -> 66: Travel = 1.40m, Straight = 0.22m
+Checking 33 -> 67: Travel = 1.50m, Straight = 0.29m
+Checking 33 -> 68: Travel = 1.50m, Straight = 0.30m
+Checking 33 -> 69: Travel = 1.50m, Straight = 0.30m
+Checking 33 -> 70: Travel = 1.51m, Straight = 0.31m
+Checking 33 -> 71: Travel = 1.55m, Straight = 0.33m
+Checking 33 -> 72: Travel = 1.60m, Straight = 0.29m
+Checking 34 -> 44: Travel = 0.38m, Straight = 0.38m
+Checking 34 -> 45: Travel = 0.41m, Straight = 0.41m
+Checking 34 -> 46: Travel = 0.49m, Straight = 0.48m
+Checking 34 -> 47: Travel = 0.55m, Straight = 0.55m
+Checking 34 -> 48: Travel = 0.63m, Straight = 0.63m
+Checking 34 -> 49: Travel = 0.73m, Straight = 0.73m
+Checking 34 -> 50: Travel = 0.75m, Straight = 0.74m
+Checking 34 -> 51: Travel = 0.76m, Straight = 0.75m
+Checking 34 -> 52: Travel = 0.84m, Straight = 0.68m
+Checking 34 -> 53: Travel = 0.89m, Straight = 0.62m
+Checking 34 -> 54: Travel = 0.93m, Straight = 0.59m
+Checking 34 -> 55: Travel = 0.94m, Straight = 0.57m
+Checking 34 -> 56: Travel = 0.96m, Straight = 0.56m
+Checking 34 -> 57: Travel = 1.02m, Straight = 0.50m
+Checking 34 -> 58: Travel = 1.07m, Straight = 0.45m
+Checking 34 -> 59: Travel = 1.09m, Straight = 0.42m
+Checking 34 -> 60: Travel = 1.12m, Straight = 0.39m
+Checking 34 -> 61: Travel = 1.16m, Straight = 0.36m
+Checking 34 -> 62: Travel = 1.20m, Straight = 0.32m
+Checking 34 -> 63: Travel = 1.24m, Straight = 0.27m
+Checking 34 -> 64: Travel = 1.32m, Straight = 0.20m
+Checking 34 -> 65: Travel = 1.34m, Straight = 0.18m
+Checking 34 -> 66: Travel = 1.38m, Straight = 0.20m
+Checking 34 -> 67: Travel = 1.47m, Straight = 0.27m
+Checking 34 -> 68: Travel = 1.48m, Straight = 0.28m
+Checking 34 -> 69: Travel = 1.48m, Straight = 0.28m
+Checking 34 -> 70: Travel = 1.49m, Straight = 0.29m
+Checking 34 -> 71: Travel = 1.53m, Straight = 0.31m
+Checking 34 -> 72: Travel = 1.58m, Straight = 0.27m
+Checking 35 -> 45: Travel = 0.40m, Straight = 0.39m
+Checking 35 -> 46: Travel = 0.47m, Straight = 0.47m
+Checking 35 -> 47: Travel = 0.54m, Straight = 0.53m
+Checking 35 -> 48: Travel = 0.62m, Straight = 0.61m
+Checking 35 -> 49: Travel = 0.72m, Straight = 0.71m
+Checking 35 -> 50: Travel = 0.73m, Straight = 0.73m
+Checking 35 -> 51: Travel = 0.75m, Straight = 0.74m
+Checking 35 -> 52: Travel = 0.83m, Straight = 0.66m
+Checking 35 -> 53: Travel = 0.88m, Straight = 0.61m
+Checking 35 -> 54: Travel = 0.92m, Straight = 0.57m
+Checking 35 -> 55: Travel = 0.93m, Straight = 0.56m
+Checking 35 -> 56: Travel = 0.94m, Straight = 0.54m
+Checking 35 -> 57: Travel = 1.01m, Straight = 0.48m
+Checking 35 -> 58: Travel = 1.05m, Straight = 0.43m
+Checking 35 -> 59: Travel = 1.08m, Straight = 0.41m
+Checking 35 -> 60: Travel = 1.11m, Straight = 0.38m
+Checking 35 -> 61: Travel = 1.14m, Straight = 0.35m
+Checking 35 -> 62: Travel = 1.18m, Straight = 0.31m
+Checking 35 -> 63: Travel = 1.23m, Straight = 0.26m
+Checking 35 -> 64: Travel = 1.30m, Straight = 0.19m
+Checking 35 -> 65: Travel = 1.32m, Straight = 0.17m
+Checking 35 -> 66: Travel = 1.37m, Straight = 0.19m
+Checking 35 -> 67: Travel = 1.46m, Straight = 0.26m
+Checking 35 -> 68: Travel = 1.46m, Straight = 0.27m
+Checking 35 -> 69: Travel = 1.47m, Straight = 0.27m
+Checking 35 -> 70: Travel = 1.47m, Straight = 0.27m
+Checking 35 -> 71: Travel = 1.51m, Straight = 0.30m
+Checking 35 -> 72: Travel = 1.57m, Straight = 0.26m
+Checking 36 -> 46: Travel = 0.43m, Straight = 0.43m
+Checking 36 -> 47: Travel = 0.50m, Straight = 0.49m
+Checking 36 -> 48: Travel = 0.58m, Straight = 0.57m
+Checking 36 -> 49: Travel = 0.68m, Straight = 0.67m
+Checking 36 -> 50: Travel = 0.69m, Straight = 0.69m
+Checking 36 -> 51: Travel = 0.71m, Straight = 0.69m
+Checking 36 -> 52: Travel = 0.78m, Straight = 0.62m
+Checking 36 -> 53: Travel = 0.84m, Straight = 0.57m
+Checking 36 -> 54: Travel = 0.88m, Straight = 0.53m
+Checking 36 -> 55: Travel = 0.89m, Straight = 0.52m
+Checking 36 -> 56: Travel = 0.90m, Straight = 0.50m
+Checking 36 -> 57: Travel = 0.97m, Straight = 0.44m
+Checking 36 -> 58: Travel = 1.01m, Straight = 0.39m
+Checking 36 -> 59: Travel = 1.04m, Straight = 0.37m
+Checking 36 -> 60: Travel = 1.07m, Straight = 0.34m
+Checking 36 -> 61: Travel = 1.10m, Straight = 0.31m
+Checking 36 -> 62: Travel = 1.14m, Straight = 0.27m
+Checking 36 -> 63: Travel = 1.19m, Straight = 0.22m
+Checking 36 -> 64: Travel = 1.26m, Straight = 0.15m
+Checking 36 -> 65: Travel = 1.28m, Straight = 0.13m
+Checking 36 -> 66: Travel = 1.33m, Straight = 0.15m
+Checking 36 -> 67: Travel = 1.42m, Straight = 0.23m
+Checking 36 -> 68: Travel = 1.42m, Straight = 0.23m
+Checking 36 -> 69: Travel = 1.43m, Straight = 0.23m
+Checking 36 -> 70: Travel = 1.43m, Straight = 0.24m
+Checking 36 -> 71: Travel = 1.47m, Straight = 0.26m
+Checking 36 -> 72: Travel = 1.53m, Straight = 0.22m
+Checking 37 -> 47: Travel = 0.47m, Straight = 0.46m
+Checking 37 -> 48: Travel = 0.55m, Straight = 0.54m
+Checking 37 -> 49: Travel = 0.65m, Straight = 0.64m
+Checking 37 -> 50: Travel = 0.67m, Straight = 0.66m
+Checking 37 -> 51: Travel = 0.68m, Straight = 0.67m
+Checking 37 -> 52: Travel = 0.76m, Straight = 0.59m
+Checking 37 -> 53: Travel = 0.81m, Straight = 0.54m
+Checking 37 -> 54: Travel = 0.85m, Straight = 0.50m
+Checking 37 -> 55: Travel = 0.86m, Straight = 0.49m
+Checking 37 -> 56: Travel = 0.88m, Straight = 0.48m
+Checking 37 -> 57: Travel = 0.94m, Straight = 0.41m
+Checking 37 -> 58: Travel = 0.99m, Straight = 0.37m
+Checking 37 -> 59: Travel = 1.01m, Straight = 0.34m
+Checking 37 -> 60: Travel = 1.04m, Straight = 0.31m
+Checking 37 -> 61: Travel = 1.07m, Straight = 0.28m
+Checking 37 -> 62: Travel = 1.11m, Straight = 0.24m
+Checking 37 -> 63: Travel = 1.16m, Straight = 0.19m
+Checking 37 -> 64: Travel = 1.24m, Straight = 0.12m
+Checking 37 -> 65: Travel = 1.25m, Straight = 0.10m
+PAIN POINT DETECTED at 37 -> 65
+Start: (12.91373, 77.48617), End: (12.91431, 77.48686)
+Travel Distance: 1.25m, Straight Distance: 0.10m
+==================================================
+Checking 37 -> 66: Travel = 1.30m, Straight = 0.12m
+Checking 37 -> 67: Travel = 1.39m, Straight = 0.20m
+Checking 37 -> 68: Travel = 1.39m, Straight = 0.21m
+Checking 37 -> 69: Travel = 1.40m, Straight = 0.21m
+Checking 37 -> 70: Travel = 1.40m, Straight = 0.22m
+Checking 37 -> 71: Travel = 1.45m, Straight = 0.24m
+Checking 37 -> 72: Travel = 1.50m, Straight = 0.19m
+Checking 38 -> 48: Travel = 0.48m, Straight = 0.48m
+Checking 38 -> 49: Travel = 0.58m, Straight = 0.58m
+Checking 38 -> 50: Travel = 0.60m, Straight = 0.59m
+Checking 38 -> 51: Travel = 0.61m, Straight = 0.60m
+Checking 38 -> 52: Travel = 0.69m, Straight = 0.53m
+Checking 38 -> 53: Travel = 0.74m, Straight = 0.48m
+Checking 38 -> 54: Travel = 0.78m, Straight = 0.44m
+Checking 38 -> 55: Travel = 0.79m, Straight = 0.42m
+Checking 38 -> 56: Travel = 0.81m, Straight = 0.41m
+Checking 38 -> 57: Travel = 0.87m, Straight = 0.35m
+Checking 38 -> 58: Travel = 0.92m, Straight = 0.30m
+Checking 38 -> 59: Travel = 0.95m, Straight = 0.27m
+Checking 38 -> 60: Travel = 0.97m, Straight = 0.24m
+Checking 38 -> 61: Travel = 1.01m, Straight = 0.21m
+Checking 38 -> 62: Travel = 1.05m, Straight = 0.17m
+Checking 38 -> 63: Travel = 1.10m, Straight = 0.12m
+Checking 38 -> 64: Travel = 1.17m, Straight = 0.05m
+Merging pain points 65 -> 38
+PAIN POINT DETECTED at 38 -> 64
+Start: (12.91418, 77.48659), End: (12.91444, 77.48697)
+Travel Distance: 1.17m, Straight Distance: 0.05m
+==================================================
+Checking 38 -> 65: Travel = 1.19m, Straight = 0.03m
+Merging pain points 64 -> 38
+PAIN POINT DETECTED at 38 -> 65
+Start: (12.91418, 77.48659), End: (12.91431, 77.48686)
+Travel Distance: 1.19m, Straight Distance: 0.03m
+==================================================
+Checking 38 -> 66: Travel = 1.23m, Straight = 0.07m
+Merging pain points 65 -> 38
+PAIN POINT DETECTED at 38 -> 66
+Start: (12.91418, 77.48659), End: (12.91412, 77.48721)
+Travel Distance: 1.23m, Straight Distance: 0.07m
+==================================================
+Checking 38 -> 67: Travel = 1.32m, Straight = 0.16m
+Checking 38 -> 68: Travel = 1.33m, Straight = 0.16m
+Checking 38 -> 69: Travel = 1.33m, Straight = 0.17m
+Checking 38 -> 70: Travel = 1.34m, Straight = 0.17m
+Checking 38 -> 71: Travel = 1.38m, Straight = 0.18m
+Checking 38 -> 72: Travel = 1.43m, Straight = 0.13m
+Checking 39 -> 49: Travel = 0.54m, Straight = 0.54m
+Checking 39 -> 50: Travel = 0.56m, Straight = 0.55m
+Checking 39 -> 51: Travel = 0.58m, Straight = 0.56m
+Checking 39 -> 52: Travel = 0.65m, Straight = 0.49m
+Checking 39 -> 53: Travel = 0.70m, Straight = 0.44m
+Checking 39 -> 54: Travel = 0.74m, Straight = 0.40m
+Checking 39 -> 55: Travel = 0.75m, Straight = 0.39m
+Checking 39 -> 56: Travel = 0.77m, Straight = 0.37m
+Checking 39 -> 57: Travel = 0.83m, Straight = 0.31m
+Checking 39 -> 58: Travel = 0.88m, Straight = 0.26m
+Checking 39 -> 59: Travel = 0.91m, Straight = 0.23m
+Checking 39 -> 60: Travel = 0.94m, Straight = 0.20m
+Checking 39 -> 61: Travel = 0.97m, Straight = 0.17m
+Checking 39 -> 62: Travel = 1.01m, Straight = 0.13m
+Checking 39 -> 63: Travel = 1.06m, Straight = 0.08m
+Merging pain points 66 -> 39
+PAIN POINT DETECTED at 39 -> 63
+Start: (12.91444, 77.48683), End: (12.91491, 77.48744)
+Travel Distance: 1.06m, Straight Distance: 0.08m
+==================================================
+Checking 39 -> 64: Travel = 1.13m, Straight = 0.02m
+Merging pain points 63 -> 39
+PAIN POINT DETECTED at 39 -> 64
+Start: (12.91444, 77.48683), End: (12.91444, 77.48697)
+Travel Distance: 1.13m, Straight Distance: 0.02m
+==================================================
+Checking 39 -> 65: Travel = 1.15m, Straight = 0.01m
+Merging pain points 64 -> 39
+PAIN POINT DETECTED at 39 -> 65
+Start: (12.91444, 77.48683), End: (12.91431, 77.48686)
+Travel Distance: 1.15m, Straight Distance: 0.01m
+==================================================
+Checking 39 -> 66: Travel = 1.19m, Straight = 0.05m
+Merging pain points 65 -> 39
+PAIN POINT DETECTED at 39 -> 66
+Start: (12.91444, 77.48683), End: (12.91412, 77.48721)
+Travel Distance: 1.19m, Straight Distance: 0.05m
+==================================================
+Checking 39 -> 67: Travel = 1.29m, Straight = 0.14m
+Checking 39 -> 68: Travel = 1.29m, Straight = 0.15m
+Checking 39 -> 69: Travel = 1.29m, Straight = 0.15m
+Checking 39 -> 70: Travel = 1.30m, Straight = 0.15m
+Checking 39 -> 71: Travel = 1.34m, Straight = 0.16m
+Checking 39 -> 72: Travel = 1.39m, Straight = 0.11m
+Checking 40 -> 50: Travel = 0.55m, Straight = 0.55m
+Checking 40 -> 51: Travel = 0.57m, Straight = 0.55m
+Checking 40 -> 52: Travel = 0.64m, Straight = 0.48m
+Checking 40 -> 53: Travel = 0.69m, Straight = 0.43m
+Checking 40 -> 54: Travel = 0.73m, Straight = 0.39m
+Checking 40 -> 55: Travel = 0.75m, Straight = 0.38m
+Checking 40 -> 56: Travel = 0.76m, Straight = 0.36m
+Checking 40 -> 57: Travel = 0.82m, Straight = 0.30m
+Checking 40 -> 58: Travel = 0.87m, Straight = 0.25m
+Checking 40 -> 59: Travel = 0.90m, Straight = 0.23m
+Checking 40 -> 60: Travel = 0.93m, Straight = 0.20m
+Checking 40 -> 61: Travel = 0.96m, Straight = 0.16m
+Checking 40 -> 62: Travel = 1.00m, Straight = 0.12m
+Checking 40 -> 63: Travel = 1.05m, Straight = 0.08m
+Merging pain points 66 -> 40
+PAIN POINT DETECTED at 40 -> 63
+Start: (12.91449, 77.48688), End: (12.91491, 77.48744)
+Travel Distance: 1.05m, Straight Distance: 0.08m
+==================================================
+Checking 40 -> 64: Travel = 1.12m, Straight = 0.01m
+Merging pain points 63 -> 40
+PAIN POINT DETECTED at 40 -> 64
+Start: (12.91449, 77.48688), End: (12.91444, 77.48697)
+Travel Distance: 1.12m, Straight Distance: 0.01m
+==================================================
+Checking 40 -> 65: Travel = 1.14m, Straight = 0.02m
+Merging pain points 64 -> 40
+PAIN POINT DETECTED at 40 -> 65
+Start: (12.91449, 77.48688), End: (12.91431, 77.48686)
+Travel Distance: 1.14m, Straight Distance: 0.02m
+==================================================
+Checking 40 -> 66: Travel = 1.18m, Straight = 0.05m
+Merging pain points 65 -> 40
+PAIN POINT DETECTED at 40 -> 66
+Start: (12.91449, 77.48688), End: (12.91412, 77.48721)
+Travel Distance: 1.18m, Straight Distance: 0.05m
+==================================================
+Checking 40 -> 67: Travel = 1.28m, Straight = 0.14m
+Checking 40 -> 68: Travel = 1.28m, Straight = 0.14m
+Checking 40 -> 69: Travel = 1.29m, Straight = 0.15m
+Checking 40 -> 70: Travel = 1.29m, Straight = 0.15m
+Checking 40 -> 71: Travel = 1.33m, Straight = 0.15m
+Checking 40 -> 72: Travel = 1.38m, Straight = 0.10m
+Merging pain points 66 -> 40
+PAIN POINT DETECTED at 40 -> 72
+Start: (12.91449, 77.48688), End: (12.91445, 77.4878)
+Travel Distance: 1.38m, Straight Distance: 0.10m
+==================================================
+Checking 41 -> 51: Travel = 0.56m, Straight = 0.54m
+Checking 41 -> 52: Travel = 0.63m, Straight = 0.47m
+Checking 41 -> 53: Travel = 0.68m, Straight = 0.42m
+Checking 41 -> 54: Travel = 0.72m, Straight = 0.38m
+Checking 41 -> 55: Travel = 0.73m, Straight = 0.37m
+Checking 41 -> 56: Travel = 0.75m, Straight = 0.35m
+Checking 41 -> 57: Travel = 0.81m, Straight = 0.29m
+Checking 41 -> 58: Travel = 0.86m, Straight = 0.24m
+Checking 41 -> 59: Travel = 0.89m, Straight = 0.21m
+Checking 41 -> 60: Travel = 0.91m, Straight = 0.18m
+Checking 41 -> 61: Travel = 0.95m, Straight = 0.15m
+Checking 41 -> 62: Travel = 0.99m, Straight = 0.11m
+Checking 41 -> 63: Travel = 1.04m, Straight = 0.06m
+Merging pain points 72 -> 41
+PAIN POINT DETECTED at 41 -> 63
+Start: (12.91458, 77.48696), End: (12.91491, 77.48744)
+Travel Distance: 1.04m, Straight Distance: 0.06m
+==================================================
+Checking 41 -> 64: Travel = 1.11m, Straight = 0.02m
+Merging pain points 63 -> 41
+PAIN POINT DETECTED at 41 -> 64
+Start: (12.91458, 77.48696), End: (12.91444, 77.48697)
+Travel Distance: 1.11m, Straight Distance: 0.02m
+==================================================
+Checking 41 -> 65: Travel = 1.13m, Straight = 0.03m
+Merging pain points 64 -> 41
+PAIN POINT DETECTED at 41 -> 65
+Start: (12.91458, 77.48696), End: (12.91431, 77.48686)
+Travel Distance: 1.13m, Straight Distance: 0.03m
+==================================================
+Checking 41 -> 66: Travel = 1.17m, Straight = 0.06m
+Merging pain points 65 -> 41
+PAIN POINT DETECTED at 41 -> 66
+Start: (12.91458, 77.48696), End: (12.91412, 77.48721)
+Travel Distance: 1.17m, Straight Distance: 0.06m
+==================================================
+Checking 41 -> 67: Travel = 1.26m, Straight = 0.14m
+Checking 41 -> 68: Travel = 1.27m, Straight = 0.14m
+Checking 41 -> 69: Travel = 1.27m, Straight = 0.14m
+Checking 41 -> 70: Travel = 1.28m, Straight = 0.15m
+Checking 41 -> 71: Travel = 1.32m, Straight = 0.14m
+Checking 41 -> 72: Travel = 1.37m, Straight = 0.09m
+Merging pain points 66 -> 41
+PAIN POINT DETECTED at 41 -> 72
+Start: (12.91458, 77.48696), End: (12.91445, 77.4878)
+Travel Distance: 1.37m, Straight Distance: 0.09m
+==================================================
+Checking 42 -> 52: Travel = 0.61m, Straight = 0.45m
+Checking 42 -> 53: Travel = 0.66m, Straight = 0.40m
+Checking 42 -> 54: Travel = 0.70m, Straight = 0.36m
+Checking 42 -> 55: Travel = 0.72m, Straight = 0.35m
+Checking 42 -> 56: Travel = 0.73m, Straight = 0.33m
+Checking 42 -> 57: Travel = 0.79m, Straight = 0.27m
+Checking 42 -> 58: Travel = 0.84m, Straight = 0.22m
+Checking 42 -> 59: Travel = 0.87m, Straight = 0.20m
+Checking 42 -> 60: Travel = 0.90m, Straight = 0.17m
+Checking 42 -> 61: Travel = 0.93m, Straight = 0.14m
+Checking 42 -> 62: Travel = 0.97m, Straight = 0.10m
+Merging pain points 72 -> 42
+PAIN POINT DETECTED at 42 -> 62
+Start: (12.91469, 77.48706), End: (12.9152, 77.48777)
+Travel Distance: 0.97m, Straight Distance: 0.10m
+==================================================
+Checking 42 -> 63: Travel = 1.02m, Straight = 0.05m
+Merging pain points 62 -> 42
+PAIN POINT DETECTED at 42 -> 63
+Start: (12.91469, 77.48706), End: (12.91491, 77.48744)
+Travel Distance: 1.02m, Straight Distance: 0.05m
+==================================================
+Checking 42 -> 64: Travel = 1.09m, Straight = 0.03m
+Merging pain points 63 -> 42
+PAIN POINT DETECTED at 42 -> 64
+Start: (12.91469, 77.48706), End: (12.91444, 77.48697)
+Travel Distance: 1.09m, Straight Distance: 0.03m
+==================================================
+Checking 42 -> 65: Travel = 1.11m, Straight = 0.05m
+Merging pain points 64 -> 42
+PAIN POINT DETECTED at 42 -> 65
+Start: (12.91469, 77.48706), End: (12.91431, 77.48686)
+Travel Distance: 1.11m, Straight Distance: 0.05m
+==================================================
+Checking 42 -> 66: Travel = 1.15m, Straight = 0.07m
+Merging pain points 65 -> 42
+PAIN POINT DETECTED at 42 -> 66
+Start: (12.91469, 77.48706), End: (12.91412, 77.48721)
+Travel Distance: 1.15m, Straight Distance: 0.07m
+==================================================
+Checking 42 -> 67: Travel = 1.25m, Straight = 0.14m
+Checking 42 -> 68: Travel = 1.25m, Straight = 0.14m
+Checking 42 -> 69: Travel = 1.26m, Straight = 0.14m
+Checking 42 -> 70: Travel = 1.26m, Straight = 0.14m
+Checking 42 -> 71: Travel = 1.30m, Straight = 0.14m
+Checking 42 -> 72: Travel = 1.35m, Straight = 0.08m
+Merging pain points 66 -> 42
+PAIN POINT DETECTED at 42 -> 72
+Start: (12.91469, 77.48706), End: (12.91445, 77.4878)
+Travel Distance: 1.35m, Straight Distance: 0.08m
+==================================================
+Checking 43 -> 53: Travel = 0.57m, Straight = 0.31m
+Checking 43 -> 54: Travel = 0.61m, Straight = 0.27m
+Checking 43 -> 55: Travel = 0.62m, Straight = 0.26m
+Checking 43 -> 56: Travel = 0.64m, Straight = 0.24m
+Checking 43 -> 57: Travel = 0.70m, Straight = 0.18m
+Checking 43 -> 58: Travel = 0.75m, Straight = 0.13m
+Checking 43 -> 59: Travel = 0.77m, Straight = 0.11m
+Checking 43 -> 60: Travel = 0.80m, Straight = 0.08m
+Merging pain points 72 -> 43
+PAIN POINT DETECTED at 43 -> 60
+Start: (12.91531, 77.48766), End: (12.91556, 77.48833)
+Travel Distance: 0.80m, Straight Distance: 0.08m
+==================================================
+Checking 43 -> 61: Travel = 0.84m, Straight = 0.05m
+Merging pain points 60 -> 43
+PAIN POINT DETECTED at 43 -> 61
+Start: (12.91531, 77.48766), End: (12.91541, 77.48807)
+Travel Distance: 0.84m, Straight Distance: 0.05m
+==================================================
+Checking 43 -> 62: Travel = 0.88m, Straight = 0.02m
+Merging pain points 61 -> 43
+PAIN POINT DETECTED at 43 -> 62
+Start: (12.91531, 77.48766), End: (12.9152, 77.48777)
+Travel Distance: 0.88m, Straight Distance: 0.02m
+==================================================
+Checking 43 -> 63: Travel = 0.92m, Straight = 0.05m
+Merging pain points 62 -> 43
+PAIN POINT DETECTED at 43 -> 63
+Start: (12.91531, 77.48766), End: (12.91491, 77.48744)
+Travel Distance: 0.92m, Straight Distance: 0.05m
+==================================================
+Checking 43 -> 64: Travel = 1.00m, Straight = 0.12m
+Checking 43 -> 65: Travel = 1.02m, Straight = 0.14m
+Checking 43 -> 66: Travel = 1.06m, Straight = 0.14m
+Checking 43 -> 67: Travel = 1.15m, Straight = 0.16m
+Checking 43 -> 68: Travel = 1.16m, Straight = 0.16m
+Checking 43 -> 69: Travel = 1.16m, Straight = 0.16m
+Checking 43 -> 70: Travel = 1.16m, Straight = 0.16m
+Checking 43 -> 71: Travel = 1.21m, Straight = 0.13m
+Checking 43 -> 72: Travel = 1.26m, Straight = 0.10m
+Merging pain points 63 -> 43
+PAIN POINT DETECTED at 43 -> 72
+Start: (12.91531, 77.48766), End: (12.91445, 77.4878)
+Travel Distance: 1.26m, Straight Distance: 0.10m
+==================================================
+Checking 44 -> 54: Travel = 0.55m, Straight = 0.21m
+Checking 44 -> 55: Travel = 0.56m, Straight = 0.20m
+Checking 44 -> 56: Travel = 0.58m, Straight = 0.18m
+Checking 44 -> 57: Travel = 0.64m, Straight = 0.12m
+Checking 44 -> 58: Travel = 0.69m, Straight = 0.07m
+Merging pain points 72 -> 44
+PAIN POINT DETECTED at 44 -> 58
+Start: (12.91562, 77.48812), End: (12.91584, 77.48876)
+Travel Distance: 0.69m, Straight Distance: 0.07m
+==================================================
+Checking 44 -> 59: Travel = 0.71m, Straight = 0.05m
+Merging pain points 58 -> 44
+PAIN POINT DETECTED at 44 -> 59
+Start: (12.91562, 77.48812), End: (12.91571, 77.48855)
+Travel Distance: 0.71m, Straight Distance: 0.05m
+==================================================
+Checking 44 -> 60: Travel = 0.74m, Straight = 0.02m
+Merging pain points 59 -> 44
+PAIN POINT DETECTED at 44 -> 60
+Start: (12.91562, 77.48812), End: (12.91556, 77.48833)
+Travel Distance: 0.74m, Straight Distance: 0.02m
+==================================================
+Checking 44 -> 61: Travel = 0.78m, Straight = 0.02m
+Merging pain points 60 -> 44
+PAIN POINT DETECTED at 44 -> 61
+Start: (12.91562, 77.48812), End: (12.91541, 77.48807)
+Travel Distance: 0.78m, Straight Distance: 0.02m
+==================================================
+Checking 44 -> 62: Travel = 0.82m, Straight = 0.06m
+Merging pain points 61 -> 44
+PAIN POINT DETECTED at 44 -> 62
+Start: (12.91562, 77.48812), End: (12.9152, 77.48777)
+Travel Distance: 0.82m, Straight Distance: 0.06m
+==================================================
+Checking 44 -> 63: Travel = 0.86m, Straight = 0.11m
+Checking 44 -> 64: Travel = 0.94m, Straight = 0.18m
+Checking 44 -> 65: Travel = 0.96m, Straight = 0.20m
+Checking 44 -> 66: Travel = 1.00m, Straight = 0.19m
+Checking 44 -> 67: Travel = 1.09m, Straight = 0.19m
+Checking 44 -> 68: Travel = 1.09m, Straight = 0.19m
+Checking 44 -> 69: Travel = 1.10m, Straight = 0.19m
+Checking 44 -> 70: Travel = 1.10m, Straight = 0.18m
+Checking 44 -> 71: Travel = 1.15m, Straight = 0.15m
+Checking 44 -> 72: Travel = 1.20m, Straight = 0.13m
+Checking 45 -> 55: Travel = 0.53m, Straight = 0.17m
+Checking 45 -> 56: Travel = 0.55m, Straight = 0.15m
+Checking 45 -> 57: Travel = 0.61m, Straight = 0.09m
+Merging pain points 62 -> 45
+PAIN POINT DETECTED at 45 -> 57
+Start: (12.91575, 77.48835), End: (12.91609, 77.48913)
+Travel Distance: 0.61m, Straight Distance: 0.09m
+==================================================
+Checking 45 -> 58: Travel = 0.66m, Straight = 0.05m
+Merging pain points 57 -> 45
+PAIN POINT DETECTED at 45 -> 58
+Start: (12.91575, 77.48835), End: (12.91584, 77.48876)
+Travel Distance: 0.66m, Straight Distance: 0.05m
+==================================================
+Checking 45 -> 59: Travel = 0.68m, Straight = 0.02m
+Merging pain points 58 -> 45
+PAIN POINT DETECTED at 45 -> 59
+Start: (12.91575, 77.48835), End: (12.91571, 77.48855)
+Travel Distance: 0.68m, Straight Distance: 0.02m
+==================================================
+Checking 45 -> 60: Travel = 0.71m, Straight = 0.02m
+Merging pain points 59 -> 45
+PAIN POINT DETECTED at 45 -> 60
+Start: (12.91575, 77.48835), End: (12.91556, 77.48833)
+Travel Distance: 0.71m, Straight Distance: 0.02m
+==================================================
+Checking 45 -> 61: Travel = 0.75m, Straight = 0.05m
+Merging pain points 60 -> 45
+PAIN POINT DETECTED at 45 -> 61
+Start: (12.91575, 77.48835), End: (12.91541, 77.48807)
+Travel Distance: 0.75m, Straight Distance: 0.05m
+==================================================
+Checking 45 -> 62: Travel = 0.79m, Straight = 0.09m
+Merging pain points 61 -> 45
+PAIN POINT DETECTED at 45 -> 62
+Start: (12.91575, 77.48835), End: (12.9152, 77.48777)
+Travel Distance: 0.79m, Straight Distance: 0.09m
+==================================================
+Checking 45 -> 63: Travel = 0.83m, Straight = 0.14m
+Checking 45 -> 64: Travel = 0.91m, Straight = 0.21m
+Checking 45 -> 65: Travel = 0.93m, Straight = 0.23m
+Checking 45 -> 66: Travel = 0.97m, Straight = 0.22m
+Checking 45 -> 67: Travel = 1.06m, Straight = 0.21m
+Checking 45 -> 68: Travel = 1.07m, Straight = 0.21m
+Checking 45 -> 69: Travel = 1.07m, Straight = 0.20m
+Checking 45 -> 70: Travel = 1.08m, Straight = 0.20m
+Checking 45 -> 71: Travel = 1.12m, Straight = 0.16m
+Checking 45 -> 72: Travel = 1.17m, Straight = 0.16m
+Checking 46 -> 56: Travel = 0.47m, Straight = 0.08m
+Merging pain points 62 -> 46
+PAIN POINT DETECTED at 46 -> 56
+Start: (12.91608, 77.48896), End: (12.91641, 77.48959)
+Travel Distance: 0.47m, Straight Distance: 0.08m
+==================================================
+Checking 46 -> 57: Travel = 0.53m, Straight = 0.02m
+Merging pain points 56 -> 46
+PAIN POINT DETECTED at 46 -> 57
+Start: (12.91608, 77.48896), End: (12.91609, 77.48913)
+Travel Distance: 0.53m, Straight Distance: 0.02m
+==================================================
+Checking 46 -> 58: Travel = 0.58m, Straight = 0.03m
+Merging pain points 57 -> 46
+PAIN POINT DETECTED at 46 -> 58
+Start: (12.91608, 77.48896), End: (12.91584, 77.48876)
+Travel Distance: 0.58m, Straight Distance: 0.03m
+==================================================
+Checking 46 -> 59: Travel = 0.61m, Straight = 0.06m
+Merging pain points 58 -> 46
+PAIN POINT DETECTED at 46 -> 59
+Start: (12.91608, 77.48896), End: (12.91571, 77.48855)
+Travel Distance: 0.61m, Straight Distance: 0.06m
+==================================================
+Checking 46 -> 60: Travel = 0.64m, Straight = 0.09m
+Merging pain points 59 -> 46
+PAIN POINT DETECTED at 46 -> 60
+Start: (12.91608, 77.48896), End: (12.91556, 77.48833)
+Travel Distance: 0.64m, Straight Distance: 0.09m
+==================================================
+Checking 46 -> 61: Travel = 0.67m, Straight = 0.12m
+Checking 46 -> 62: Travel = 0.71m, Straight = 0.16m
+Checking 46 -> 63: Travel = 0.76m, Straight = 0.21m
+Checking 46 -> 64: Travel = 0.83m, Straight = 0.28m
+Checking 46 -> 65: Travel = 0.85m, Straight = 0.30m
+Checking 46 -> 66: Travel = 0.89m, Straight = 0.29m
+Checking 46 -> 67: Travel = 0.99m, Straight = 0.26m
+Checking 46 -> 68: Travel = 0.99m, Straight = 0.26m
+Checking 46 -> 69: Travel = 1.00m, Straight = 0.26m
+Checking 46 -> 70: Travel = 1.00m, Straight = 0.25m
+Checking 46 -> 71: Travel = 1.04m, Straight = 0.21m
+Checking 46 -> 72: Travel = 1.09m, Straight = 0.22m
+Checking 47 -> 57: Travel = 0.47m, Straight = 0.05m
+Merging pain points 60 -> 47
+PAIN POINT DETECTED at 47 -> 57
+Start: (12.91643, 77.48944), End: (12.91609, 77.48913)
+Travel Distance: 0.47m, Straight Distance: 0.05m
+==================================================
+Checking 47 -> 58: Travel = 0.52m, Straight = 0.10m
+Merging pain points 57 -> 47
+PAIN POINT DETECTED at 47 -> 58
+Start: (12.91643, 77.48944), End: (12.91584, 77.48876)
+Travel Distance: 0.52m, Straight Distance: 0.10m
+==================================================
+Checking 47 -> 59: Travel = 0.54m, Straight = 0.13m
+Checking 47 -> 60: Travel = 0.57m, Straight = 0.15m
+Checking 47 -> 61: Travel = 0.61m, Straight = 0.19m
+Checking 47 -> 62: Travel = 0.65m, Straight = 0.23m
+Checking 47 -> 63: Travel = 0.69m, Straight = 0.27m
+Checking 47 -> 64: Travel = 0.77m, Straight = 0.35m
+Checking 47 -> 65: Travel = 0.79m, Straight = 0.37m
+Checking 47 -> 66: Travel = 0.83m, Straight = 0.35m
+Checking 47 -> 67: Travel = 0.92m, Straight = 0.32m
+Checking 47 -> 68: Travel = 0.93m, Straight = 0.32m
+Checking 47 -> 69: Travel = 0.93m, Straight = 0.31m
+Checking 47 -> 70: Travel = 0.93m, Straight = 0.31m
+Checking 47 -> 71: Travel = 0.98m, Straight = 0.27m
+Checking 47 -> 72: Travel = 1.03m, Straight = 0.28m
+Checking 48 -> 58: Travel = 0.44m, Straight = 0.18m
+Checking 48 -> 59: Travel = 0.46m, Straight = 0.21m
+Checking 48 -> 60: Travel = 0.49m, Straight = 0.23m
+Checking 48 -> 61: Travel = 0.53m, Straight = 0.27m
+Checking 48 -> 62: Travel = 0.57m, Straight = 0.31m
+Checking 48 -> 63: Travel = 0.61m, Straight = 0.35m
+Checking 48 -> 64: Travel = 0.69m, Straight = 0.43m
+Checking 48 -> 65: Travel = 0.71m, Straight = 0.45m
+Checking 48 -> 66: Travel = 0.75m, Straight = 0.43m
+Checking 48 -> 67: Travel = 0.84m, Straight = 0.40m
+Checking 48 -> 68: Travel = 0.85m, Straight = 0.39m
+Checking 48 -> 69: Travel = 0.85m, Straight = 0.39m
+Checking 48 -> 70: Travel = 0.86m, Straight = 0.39m
+Checking 48 -> 71: Travel = 0.90m, Straight = 0.34m
+Checking 48 -> 72: Travel = 0.95m, Straight = 0.36m
+Checking 49 -> 59: Travel = 0.36m, Straight = 0.31m
+Checking 49 -> 60: Travel = 0.39m, Straight = 0.33m
+Checking 49 -> 61: Travel = 0.42m, Straight = 0.37m
+Checking 49 -> 62: Travel = 0.46m, Straight = 0.41m
+Checking 49 -> 63: Travel = 0.51m, Straight = 0.45m
+Checking 49 -> 64: Travel = 0.59m, Straight = 0.53m
+Checking 49 -> 65: Travel = 0.60m, Straight = 0.55m
+Checking 49 -> 66: Travel = 0.65m, Straight = 0.53m
+Checking 49 -> 67: Travel = 0.74m, Straight = 0.50m
+Checking 49 -> 68: Travel = 0.74m, Straight = 0.50m
+Checking 49 -> 69: Travel = 0.75m, Straight = 0.49m
+Checking 49 -> 70: Travel = 0.75m, Straight = 0.49m
+Checking 49 -> 71: Travel = 0.80m, Straight = 0.45m
+Checking 49 -> 72: Travel = 0.85m, Straight = 0.46m
+Checking 50 -> 60: Travel = 0.38m, Straight = 0.35m
+Checking 50 -> 61: Travel = 0.41m, Straight = 0.38m
+Checking 50 -> 62: Travel = 0.45m, Straight = 0.42m
+Checking 50 -> 63: Travel = 0.50m, Straight = 0.47m
+Checking 50 -> 64: Travel = 0.57m, Straight = 0.54m
+Checking 50 -> 65: Travel = 0.59m, Straight = 0.56m
+Checking 50 -> 66: Travel = 0.63m, Straight = 0.55m
+Checking 50 -> 67: Travel = 0.73m, Straight = 0.51m
+Checking 50 -> 68: Travel = 0.73m, Straight = 0.51m
+Checking 50 -> 69: Travel = 0.73m, Straight = 0.50m
+Checking 50 -> 70: Travel = 0.74m, Straight = 0.50m
+Checking 50 -> 71: Travel = 0.78m, Straight = 0.46m
+Checking 50 -> 72: Travel = 0.83m, Straight = 0.48m
+Checking 51 -> 61: Travel = 0.39m, Straight = 0.39m
+Checking 51 -> 62: Travel = 0.43m, Straight = 0.43m
+Checking 51 -> 63: Travel = 0.48m, Straight = 0.48m
+Checking 51 -> 64: Travel = 0.55m, Straight = 0.55m
+Checking 51 -> 65: Travel = 0.57m, Straight = 0.57m
+Checking 51 -> 66: Travel = 0.62m, Straight = 0.56m
+Checking 51 -> 67: Travel = 0.71m, Straight = 0.51m
+Checking 51 -> 68: Travel = 0.71m, Straight = 0.51m
+Checking 51 -> 69: Travel = 0.72m, Straight = 0.51m
+Checking 51 -> 70: Travel = 0.72m, Straight = 0.50m
+Checking 51 -> 71: Travel = 0.76m, Straight = 0.46m
+Checking 51 -> 72: Travel = 0.82m, Straight = 0.48m
+Checking 52 -> 62: Travel = 0.36m, Straight = 0.36m
+Checking 52 -> 63: Travel = 0.41m, Straight = 0.40m
+Checking 52 -> 64: Travel = 0.48m, Straight = 0.48m
+Checking 52 -> 65: Travel = 0.50m, Straight = 0.49m
+Checking 52 -> 66: Travel = 0.54m, Straight = 0.48m
+Checking 52 -> 67: Travel = 0.64m, Straight = 0.44m
+Checking 52 -> 68: Travel = 0.64m, Straight = 0.44m
+Checking 52 -> 69: Travel = 0.64m, Straight = 0.43m
+Checking 52 -> 70: Travel = 0.65m, Straight = 0.43m
+Checking 52 -> 71: Travel = 0.69m, Straight = 0.39m
+Checking 52 -> 72: Travel = 0.74m, Straight = 0.41m
+Checking 53 -> 63: Travel = 0.35m, Straight = 0.35m
+Checking 53 -> 64: Travel = 0.43m, Straight = 0.43m
+Checking 53 -> 65: Travel = 0.45m, Straight = 0.44m
+Checking 53 -> 66: Travel = 0.49m, Straight = 0.43m
+Checking 53 -> 67: Travel = 0.58m, Straight = 0.39m
+Checking 53 -> 68: Travel = 0.59m, Straight = 0.39m
+Checking 53 -> 69: Travel = 0.59m, Straight = 0.38m
+Checking 53 -> 70: Travel = 0.60m, Straight = 0.38m
+Checking 53 -> 71: Travel = 0.64m, Straight = 0.34m
+Checking 53 -> 72: Travel = 0.69m, Straight = 0.36m
+Checking 54 -> 64: Travel = 0.39m, Straight = 0.39m
+Checking 54 -> 65: Travel = 0.41m, Straight = 0.40m
+Checking 54 -> 66: Travel = 0.45m, Straight = 0.39m
+Checking 54 -> 67: Travel = 0.54m, Straight = 0.35m
+Checking 54 -> 68: Travel = 0.55m, Straight = 0.35m
+Checking 54 -> 69: Travel = 0.55m, Straight = 0.34m
+Checking 54 -> 70: Travel = 0.56m, Straight = 0.34m
+Checking 54 -> 71: Travel = 0.60m, Straight = 0.30m
+Checking 54 -> 72: Travel = 0.65m, Straight = 0.32m
+Checking 55 -> 65: Travel = 0.39m, Straight = 0.39m
+Checking 55 -> 66: Travel = 0.44m, Straight = 0.38m
+Checking 55 -> 67: Travel = 0.53m, Straight = 0.34m
+Checking 55 -> 68: Travel = 0.53m, Straight = 0.34m
+Checking 55 -> 69: Travel = 0.54m, Straight = 0.33m
+Checking 55 -> 70: Travel = 0.54m, Straight = 0.33m
+Checking 55 -> 71: Travel = 0.58m, Straight = 0.29m
+Checking 55 -> 72: Travel = 0.64m, Straight = 0.31m
+Checking 56 -> 66: Travel = 0.42m, Straight = 0.36m
+Checking 56 -> 67: Travel = 0.52m, Straight = 0.32m
+Checking 56 -> 68: Travel = 0.52m, Straight = 0.32m
+Checking 56 -> 69: Travel = 0.52m, Straight = 0.32m
+Checking 56 -> 70: Travel = 0.53m, Straight = 0.31m
+Checking 56 -> 71: Travel = 0.57m, Straight = 0.27m
+Checking 56 -> 72: Travel = 0.62m, Straight = 0.29m
+Checking 57 -> 67: Travel = 0.45m, Straight = 0.27m
+Checking 57 -> 68: Travel = 0.46m, Straight = 0.27m
+Checking 57 -> 69: Travel = 0.46m, Straight = 0.26m
+Checking 57 -> 70: Travel = 0.47m, Straight = 0.26m
+Checking 57 -> 71: Travel = 0.51m, Straight = 0.22m
+Checking 57 -> 72: Travel = 0.56m, Straight = 0.23m
+Checking 58 -> 68: Travel = 0.41m, Straight = 0.23m
+Checking 58 -> 69: Travel = 0.41m, Straight = 0.22m
+Checking 58 -> 70: Travel = 0.42m, Straight = 0.22m
+Checking 58 -> 71: Travel = 0.46m, Straight = 0.18m
+Checking 58 -> 72: Travel = 0.51m, Straight = 0.19m
+Checking 59 -> 69: Travel = 0.39m, Straight = 0.20m
+Checking 59 -> 70: Travel = 0.39m, Straight = 0.20m
+Checking 59 -> 71: Travel = 0.43m, Straight = 0.16m
+Checking 59 -> 72: Travel = 0.48m, Straight = 0.16m
+Checking 60 -> 70: Travel = 0.36m, Straight = 0.18m
+Checking 60 -> 71: Travel = 0.40m, Straight = 0.14m
+Checking 60 -> 72: Travel = 0.46m, Straight = 0.14m
+Checking 61 -> 71: Travel = 0.37m, Straight = 0.12m
+Checking 61 -> 72: Travel = 0.42m, Straight = 0.11m
+Checking 62 -> 72: Travel = 0.38m, Straight = 0.08m
+Merging pain points 58 -> 62
+PAIN POINT DETECTED at 62 -> 72
+Start: (12.9152, 77.48777), End: (12.91445, 77.4878)
+Travel Distance: 0.38m, Straight Distance: 0.08m
+==================================================

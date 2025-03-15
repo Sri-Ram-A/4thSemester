@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Yatri</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide-icons@0.171.0/dist/umd/lucide.min.js"></script>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ::-webkit-scrollbar {
+        display: none;
+        }
+        * {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Custom styling */
+        .phone-container {
+            aspect-ratio: 9/16;
+            max-height: 100vh;
+            width: auto;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #71717a;
+            padding: 0.5rem;
+        }
+        
+        .nav-item.active {
+            color: #000;
+        }
+        
+        .badge-new {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #f43f5e;
+            color: white;
+            font-size: 0.6rem;
+            padding: 0.1rem 0.3rem;
+            border-radius: 10px;
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            background-color: #f1f5f9;
+            background-image: url('https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/77.5946,12.9716,14,0/360x400?access_token=pk.eyJ1IjoiZGVtb21hcCIsImEiOiJja3hwcno3eTAxOGF2MnZvZnU2NmM5bGhxIn0.tRdEuRBIqwGEYovSWdvpIQ');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+<body class="bg-black">
+    <div class="h-screen w-screen flex items-center justify-center">
+        <!-- Phone Frame Container -->
+        <div class="phone-container bg-white relative rounded-2xl shadow-2xl overflow-hidden">
+            <!-- Content -->
+            <div class="h-[calc(100%-64px)] overflow-y-auto">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+
+{% extends "rider/base.html" %}
+
+{% block content %}
+<!-- Map View With Back Button -->
+<div class="map-container h-[60vh] relative">
+    <!-- Back Button -->
+    <a href="{{ url_for('search') }}" class="absolute top-4 left-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </a>
+    
+    <!-- Green Location Pin -->
+    <div class="absolute top-1/3 left-1/4">
+        <div class="h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
+    </div>
+    
+    <!-- Blue Location Pin -->
+    <div class="absolute right-1/3 bottom-1/3">
+        <div class="h-5 w-5 bg-blue-500 rounded-full border-2 border-white"></div>
+    </div>
+    
+    <!-- Center Pin (Main Pickup Location) -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="h-8 w-8 rounded-full flex items-center justify-center">
+            <div class="h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
+        </div>
+    </div>
+    
+    <!-- Compass -->
+    <div class="absolute bottom-4 right-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+    </div>
+</div>
+
+<!-- Bottom Sheet -->
+<div class="bg-white rounded-t-3xl -mt-6 relative z-10 shadow-lg">
+    <!-- Blue Info Banner -->
+    <div class="bg-blue-500 text-white py-3 px-6 text-center rounded-t-3xl">
+        <p class="flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            Select a popular spot for hassle free pickup
+        </p>
+    </div>
+    
+    <div class="p-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Confirm Pickup Location</h2>
+        
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex justify-between items-center mb-6">
+            <div class="flex items-center">
+                <div class="h-6 w-6 bg-green-500 rounded-full mr-3"></div>
+                <span class="text-lg">Details</span>
+                <h2>Pickup:{{pickup}}</h2>
+                <br>
+                <h2>Destination:{{destination}}</h2>
+            </div>
+            <button class="btn btn-outline btn-sm rounded-full">Edit</button>
+        </div>
+        <button onclick="sendRideRequest()">
+        <a href="{{ url_for('ride_confirmed') }}" class="btn bg-gray-800 text-yellow-500 hover:bg-gray-700 w-full py-4 text-lg font-bold rounded-xl">
+            Confirm Location
+        </a>
+        </button>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+                            <script>
+                                const socket = io();
+                                socket.emit('register_rider', { rider_id: 'rider001' });
+                        
+                                function sendRideRequest() {
+                                    const data = {
+                                        pickup: "{{pickup}}",
+                                        drop: "{{destination}}",
+                                        rider_id: "{{rider_id}}"
+                                    };
+                                    socket.emit('rider/send_request', data);
+                                }
+                        
+                                socket.on('driver_response', (data) => {
+                                    console.log("Driver responded:", data);
+                                    document.getElementById('response').innerText = "Driver Accepted Ride!";
+                                });
+                            </script>
+    </div>
+</div>
+{% endblock %}

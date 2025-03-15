@@ -1,6 +1,6 @@
 import eventlet
 eventlet.monkey_patch()
-from flask import Flask, render_template, request, session, flash, redirect, url_for
+from flask import Flask, render_template, request, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_socketio import SocketIO, emit, join_room
 from pymongo.mongo_client import MongoClient
@@ -11,9 +11,12 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes and origins
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet')  # Configure SocketIO with CORS
 
+
 # MongoDB connection setup
 uri = "mongodb+srv://sriramaai23:sriramaai23@namma-yatri-cluster.o9bxu.mongodb.net/?retryWrites=true&w=majority&appName=namma-yatri-cluster"
 client = MongoClient(uri, server_api=ServerApi('1'))
+# Global variable to store current ride information
+active_rides = {}
 
 # Send a ping to confirm a successful connection
 try:
@@ -22,9 +25,6 @@ try:
     db = client['namma-yatri-database']  # Replace with your database name
 except Exception as e:
     print(e)
-
-# Global variable to store current ride information
-active_rides = {}
 
 # ---------- LOGIN ROUTES ----------
 # 🟢 Route for Driver Login
@@ -115,7 +115,8 @@ def driver_register():
             "vehicle_no": vehicle_no,
             "city": city,
             "password": hashed_password,
-            'profile':profile
+            'profile':profile,
+            'rate':"rate"
         }
         db.drivers.insert_one(driver_data)
 
@@ -204,7 +205,33 @@ def confirm_location():
 
 @app.route("/rider/ride_confirmed")
 def ride_confirmed():
-    return render_template("rider/ride_confirmed.html")
+    rider_id = None
+    driver_data = None
+    
+    # Get the logged-in rider's email from session
+    if "user" in session:
+        user_email = session["user"]
+        rider = db.riders.find_one({"email": user_email})
+        if rider:
+            rider_id = str(rider.get("_id"))
+            
+            # Check if there's an active ride for this rider
+            if rider_id in active_rides:
+                driver_email = active_rides[rider_id].get('driver_email')
+                if driver_email:
+                    # Fetch driver details from MongoDB
+                    driver = db.drivers.find_one({"email": driver_email})
+                    if driver:
+                        driver_data = {
+                            "name": driver.get("name", "Driver"),
+                            "vehicle_no": driver.get("vehicle_no", "Unknown"),
+                            "phone": driver.get("phone", ""),
+                            "profile": driver.get("profile", ""),
+                            "rate": driver.get("rate", "100"),  # Default rate if not provided
+                            "rating": "4.83",  # You could calculate this from ratings collection
+                        }
+    
+    return render_template("rider/ride_confirmed.html", driver=driver_data)
 
 # ---------- DRIVER ROUTES ----------
 @app.route("/driver")
@@ -261,6 +288,14 @@ def handle_disconnect():
 def handle_register_driver(data):
     print("Driver registered:", data)
     join_room('drivers')  # Add to drivers room
+    
+    # Store driver's socket id and email for later use
+    driver_id = data.get('driver_id')
+    if "driver" in session:
+        driver_email = session["driver"]
+        # You could store this mapping in a dictionary or database
+        print(f"Registered driver {driver_email} with socket ID {request.sid}")
+
 
 @socketio.on('register_rider')
 def handle_register_rider(data):
@@ -305,13 +340,56 @@ def handle_send_request(data):
     except Exception as e:
         print("Error in handle_send_request:", str(e))
 
-
 @socketio.on('driver/accept_request')
 def handle_accept_request(data):
     print("Driver accepted the ride:", data)
-    # Forward to rider side (if you know rider SID or use a room)
-    socketio.emit('driver_response', data, room='riders')
-
+    
+    driver_id = data.get('driver_id')
+    ride_id = data.get('ride_id')
+    rider_id = data.get('rider_id')
+    
+    # Get the logged-in driver's email from session or data
+    driver_email = None
+    if "driver" in session:
+        driver_email = session["driver"]
+    else:
+        # Try to get driver email from the data if not in session
+        driver_email = data.get('driver_email')
+    
+    if driver_email and rider_id:
+        # Fetch driver details from MongoDB
+        driver = db.drivers.find_one({"email": driver_email})
+        
+        if driver:
+            # Store driver details in the active_rides dictionary
+            active_rides[rider_id] = {
+                'driver_email': driver_email,
+                'ride_id': ride_id,
+                'driver_id': driver_id,
+                'status': 'accepted'
+            }
+            
+            # Add driver details to the response
+            response_data = {
+                'driver_id': driver_id,
+                'ride_id': ride_id,
+                'status': 'accepted',
+                'driver_name': driver.get('name', 'Driver'),
+                'driver_phone': driver.get('phone', ''),
+                'vehicle_no': driver.get('vehicle_no', ''),
+                'driver_profile': driver.get('profile', ''),
+                'rider_id': rider_id,
+                'rate': driver.get('rate', '100')  # Include the rate in the response
+            }
+            
+            # Forward to rider side
+            socketio.emit('driver_response', response_data, room='riders')
+        else:
+            print("Driver not found in database")
+    else:
+        print("Missing driver_email or rider_id in accept_request")
+        # Still emit the original data if we couldn't enhance it
+        socketio.emit('driver_response', data, room='riders')
 @socketio.on('driver_response')
 def handle_driver_response(data):
     print("Driver response acknowledged by server:", data)
@@ -321,3 +399,4 @@ def handle_driver_response(data):
 if __name__ == '__main__':
     app.secret_key='sriramaai23'
     socketio.run(app, port=5000, debug=True)
+
