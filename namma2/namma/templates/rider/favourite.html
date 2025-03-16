@@ -1,0 +1,223 @@
+{% extends "rider/base.html" %}
+
+{% block content %}
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="py-6">
+      <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Your Favorite Drivers</h2>
+     
+      <div class="relative">
+        <!-- Driver Circles -->
+        <div class="flex justify-center mb-8">
+          <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-xl">
+            <!-- Driver 1 -->
+            <div class="flex justify-center">
+              <button
+                onclick="showDriverDetails(1)"
+                class="relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 ring-2 ring-gray-200"
+                id="driver-btn-1"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                  alt="Rajesh Kumar"
+                  class="h-full w-full object-cover"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 py-1 text-xs text-white truncate px-1">
+                  Rajesh Kumar
+                </div>
+              </button>
+            </div>
+           
+            <!-- Driver 2 -->
+            <div class="flex justify-center">
+              <button
+                onclick="showDriverDetails(2)"
+                class="relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 ring-2 ring-gray-200"
+                id="driver-btn-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                  alt="Priya Singh"
+                  class="h-full w-full object-cover"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 py-1 text-xs text-white truncate px-1">
+                  Priya Singh
+                </div>
+              </button>
+            </div>
+           
+            <!-- Driver 3 -->
+            <div class="flex justify-center">
+              <button
+                onclick="showDriverDetails(3)"
+                class="relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 ring-2 ring-gray-200"
+                id="driver-btn-3"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                  alt="Mohan Reddy"
+                  class="h-full w-full object-cover"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 py-1 text-xs text-white truncate px-1">
+                  Mohan Reddy
+                </div>
+              </button>
+            </div>
+           
+            <!-- Driver 4 -->
+            <div class="flex justify-center">
+              <button
+                onclick="showDriverDetails(4)"
+                class="relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 ring-2 ring-gray-200"
+                id="driver-btn-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                  alt="Ananya Sharma"
+                  class="h-full w-full object-cover"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 py-1 text-xs text-white truncate px-1">
+                  Ananya Sharma
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Driver Details Card (Hidden by default) -->
+        <div id="driver-details" class="hidden bg-white rounded-lg shadow-lg p-4 max-w-md mx-auto transition-all duration-300 animate-fade-in">
+          <!-- Driver details will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Driver data
+    const drivers = [
+      {
+        id: 1,
+        name: "Rajesh Kumar",
+        vehicleNumber: "KA 01 AB 1234",
+        mobile: "+91 98765 43210",
+        lastRide: "Yesterday, 5:30 PM",
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+      },
+      {
+        id: 2,
+        name: "Priya Singh",
+        vehicleNumber: "KA 05 CD 5678",
+        mobile: "+91 87654 32109",
+        lastRide: "Today, 10:15 AM",
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+      },
+      {
+        id: 3,
+        name: "Mohan Reddy",
+        vehicleNumber: "KA 03 EF 9012",
+        mobile: "+91 76543 21098",
+        lastRide: "3 days ago",
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+      },
+      {
+        id: 4,
+        name: "Ananya Sharma",
+        vehicleNumber: "KA 02 GH 3456",
+        mobile: "+91 65432 10987",
+        lastRide: "Last week",
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+      }
+    ];
+
+    let selectedDriverId = null;
+
+    function showDriverDetails(driverId) {
+      const detailsContainer = document.getElementById('driver-details');
+      const driver = drivers.find(d => d.id === driverId);
+     
+      // Toggle selection
+      if (selectedDriverId === driverId) {
+        detailsContainer.classList.add('hidden');
+        document.getElementById(`driver-btn-${driverId}`).classList.remove('ring-4', 'ring-purple-500', 'scale-105');
+        document.getElementById(`driver-btn-${driverId}`).classList.add('ring-2', 'ring-gray-200');
+        selectedDriverId = null;
+        return;
+      }
+     
+      // Reset previous selection
+      if (selectedDriverId) {
+        document.getElementById(`driver-btn-${selectedDriverId}`).classList.remove('ring-4', 'ring-purple-500', 'scale-105');
+        document.getElementById(`driver-btn-${selectedDriverId}`).classList.add('ring-2', 'ring-gray-200');
+      }
+     
+      // Set new selection
+      document.getElementById(`driver-btn-${driverId}`).classList.remove('ring-2', 'ring-gray-200');
+      document.getElementById(`driver-btn-${driverId}`).classList.add('ring-4', 'ring-purple-500', 'scale-105');
+      selectedDriverId = driverId;
+     
+      // Generate stars for rating
+      let starsHtml = '';
+      for (let i = 0; i < 5; i++) {
+        starsHtml += `<span class="${i < Math.floor(driver.rating) ? 'text-yellow-500' : 'text-gray-300'}">★</span>`;
+      }
+     
+      // Update details content
+      detailsContainer.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <div class="h-24 w-24 rounded-full overflow-hidden flex-shrink-0 border-2 border-purple-200">
+            <img
+              src="${driver.image}"
+              alt="${driver.name}"
+              class="h-full w-full object-cover"
+            />
+          </div>
+         
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-gray-800 text-center md:text-left">${driver.name}</h3>
+           
+            <div class="mt-3 space-y-2 text-sm md:text-base">
+              <div class="flex justify-between border-b pb-2">
+                <span class="text-gray-600 font-medium">Vehicle Number:</span>
+                <span class="text-gray-900">${driver.vehicleNumber}</span>
+              </div>
+             
+              <div class="flex justify-between border-b pb-2">
+                <span class="text-gray-600 font-medium">Mobile:</span>
+                <span class="text-gray-900">${driver.mobile}</span>
+              </div>
+             
+              <div class="flex justify-between pb-2">
+                <span class="text-gray-600 font-medium">Last Ride:</span>
+                <span class="text-gray-900">${driver.lastRide}</span>
+              </div>
+
+              <div class="flex justify-between pb-2">
+                <span class="text-gray-600 font-medium">Rating:</span>
+                <div class="flex items-center">
+                  <span class="text-gray-900 mr-1">${driver.rating}</span>
+                  <div class="flex">${starsHtml}</div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="flex gap-2 mt-4">
+              <button class="flex-1 py-2 px-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                Book Now
+              </button>
+              <button class="py-2 px-4 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
+                Call
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+     
+      // Show details
+      detailsContainer.classList.remove('hidden');
+    }
+  </script>
+{% endblock %}

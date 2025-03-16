@@ -139,11 +139,12 @@
                 </div>
                 <h3 class="font-semibold mb-2">Book a Driver</h3>
                 <p class="text-sm text-gray-600 mb-3">Standard ride with one driver</p>
+                
+                    <i data-lucide="car" class="mr-2"></i>
                 <a 
-                    href="/rider/ride_confirmed" 
+                    href="{{ url_for('ride_confirmed') }}" 
                     class="w-full bg-gray-800 text-yellow-500 py-2 rounded-lg flex items-center justify-center"
                 >
-                    <i data-lucide="car" class="mr-2"></i>
                     {{predicted_fare}}
                 </a>
             </div>

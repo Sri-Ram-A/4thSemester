@@ -8,6 +8,7 @@ from pymongo.server_api import ServerApi
 from flask_cors import CORS  # Import CORS
 eventlet.monkey_patch()
 from junctions import gcfa, get_intermediate_junctions
+from cost import get_price
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes and origins
@@ -315,7 +316,7 @@ def confirm_location():
         destination = request.form.get('destination')
         print("Pickup:", pickup)
         print("Destination:", destination)
-        # predicted_fare=get_price(pickup,destination)
+        predicted_fare=get_price(pickup,destination)
         pickup_coordinates = gcfa(pickup)
         drop_coords = gcfa(destination)
         session['coordinates']={"source_coordinates":pickup_coordinates,"destination_coordinates":drop_coords,pickup:session["pickup"]}
@@ -388,7 +389,9 @@ def split_ride_confirmed():
 
     jns = get_intermediate_junctions(session["pickup"], session["destination"])
     if jns:
-        return render_template("rider/split_ride_confirmed.html", jns=jns, driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'), pickup_location=session["pickup"], destination_location = session["destination"],source_coordinates=session["coordinates"]["source_coordinates"],destination_coordinates=session["coordinates"]["destination_coordinates"])
+        jns['start_location'] = list(jns['start_location'])
+        jns['end_location'] = list(jns['end_location'])
+        return render_template("rider/split_ride_confirmed.html", jns=jns, driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'), pickup_location=gcfa(session["pickup"]), destination = gcfa(session["destination"]),source_coordinates=session["coordinates"]["source_coordinates"],destination_coordinates=session["coordinates"]["destination_coordinates"])
     else:
         return render_template("rider/ride_confirmed.html", driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'),source_coordinates=session["coordinates"]["source_coordinates"],destination_coordinates=session["coordinates"]["destination_coordinates"])
 
@@ -462,6 +465,13 @@ def graphs():
                          actual_fares=actual_fares,
                          predicted_fares=predicted_fares,
                          dataset_number=dataset_number)
+
+
+
+@app.route('/rider/favourite')
+def favourite():
+    return render_template('rider/favourite.html')
+
 
 # ---------- API ENDPOINTS ----------
 @app.route('/driver/receive_request', methods=['POST'])
