@@ -7,7 +7,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_cors import CORS  # Import CORS
 eventlet.monkey_patch()
-from junctions import gcfa
+from junctions import gcfa, get_intermediate_junctions
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes and origins
@@ -18,16 +18,19 @@ socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet')  # Con
 uri = "mongodb+srv://sriramaai23:sriramaai23@namma-yatri-cluster.o9bxu.mongodb.net/?retryWrites=true&w=majority&appName=namma-yatri-cluster"
 client = MongoClient(uri, server_api=ServerApi('1'))
 # Global variable to store current ride information
+
+from dotenv import load_dotenv
+load_dotenv()
+
 active_rides = {}
 import requests
-import folium
+import os
 from geopy.geocoders import Nominatim
 
 # Your TomTom API Key
-API_KEY = "MexiPby9cseRStOBWLta27NtzUcGwwFV"
+API_KEY=os.getenv('TOMTOM_API_KEY')
 
 def get_coordinates(location):
-    """Convert place names to latitude & longitude."""
     geolocator = Nominatim(user_agent="geoapi")
     location_data = geolocator.geocode(location)
     if location_data:
@@ -308,10 +311,15 @@ def confirm_location():
 
     if request.method == 'POST':
         pickup = request.form.get('pickup')
+        session["pickup"]= pickup
         destination = request.form.get('destination')
         print("Pickup:", pickup)
         print("Destination:", destination)
-        predicted_fare=get_price(pickup,destination)
+        # predicted_fare=get_price(pickup,destination)
+        pickup_coordinates = gcfa(pickup)
+        drop_coords = gcfa(destination)
+        session['coordinates']={"source_coordinates":pickup_coordinates,"destination_coordinates":drop_coords,pickup:session["pickup"]}
+        session['destination'] = destination        
 
     return render_template('rider/confirm_location.html', pickup=pickup, destination=destination, rider_id=rider_id,predicted_fare=predicted_fare, pickup_coordinates = gcfa(pickup), drop_coords = gcfa(destination))
 
@@ -342,8 +350,48 @@ def ride_confirmed():
                             "rate": driver.get("rate", "python"),  # Default rate if not provided
                             "rating": "4.83",  # You could calculate this from ratings collection
                         }
+    if "coordinates" in session:
+        source_coordinates=session["coordinates"]["source_coordinates"]
+        destination_coordinates=session["coordinates"]["destination_coordinates"]
     
-    return render_template("rider/ride_confirmed.html", driver=driver_data)
+    return render_template("rider/ride_confirmed.html", driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'),source_coordinates=source_coordinates,destination_coordinates=destination_coordinates)
+
+@app.route("/rider/split_ride_confirmed")
+def split_ride_confirmed():
+    rider_id = None
+    driver_data = None
+    
+    # Get the logged-in rider's email from session
+    if "user" in session:
+        user_email = session["user"]
+        rider = db.riders.find_one({"email": user_email})
+       
+        if rider:
+            rider_id = str(rider.get("_id"))
+            
+            # Check if there's an active ride for this rider
+            if rider_id in active_rides:
+                driver_email = active_rides[rider_id].get('driver_email')
+                if driver_email:
+                    # Fetch driver details from MongoDB
+                    driver = db.drivers.find_one({"email": driver_email})
+                    if driver:
+                        driver_data = {
+                            "name": driver.get("name", "Driver"),
+                            "vehicle_no": driver.get("vehicle_no", "Unknown"),
+                            "phone": driver.get("phone", ""),
+                            "profile": driver.get("profile", ""),
+                            "rate": driver.get("rate", "python"),  # Default rate if not provided
+                            "rating": "4.83",  # You could calculate this from ratings collection
+                        }
+    
+
+    jns = get_intermediate_junctions(session["pickup"], session["destination"])
+    if jns:
+        return render_template("rider/split_ride_confirmed.html", jns=jns, driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'), pickup_location=session["pickup"], destination_location = session["destination"],source_coordinates=session["coordinates"]["source_coordinates"],destination_coordinates=session["coordinates"]["destination_coordinates"])
+    else:
+        return render_template("rider/ride_confirmed.html", driver=driver_data, MAPBOX_API=os.getenv('MAPBOX'),source_coordinates=session["coordinates"]["source_coordinates"],destination_coordinates=session["coordinates"]["destination_coordinates"])
+
 
 # ---------- DRIVER ROUTES ----------
 @app.route("/driver")
@@ -372,11 +420,48 @@ def booking_preferences():
 
 @app.route("/driver/leaderboard")
 def leaderboard():
-    return render_template("driver/leaderboard.html")
+    # Example dynamic data (replace with data from your database)
+    drivers = [
+        {"name": "RideMaster", "rides": 42, "points": 1245, "change": "+5"},
+        {"name": "SpeedDemon", "rides": 38, "points": 1145, "change": "+3"},
+        {"name": "NightRider", "rides": 35, "points": 1050, "change": "+1"},
+        {"name": "RoadWarrior", "rides": 32, "points": 990, "change": "-2"},
+        {"name": "UrbanRider", "rides": 30, "points": 956, "change": "+2"},
+        {"name": "CitySlicker", "rides": 28, "points": 910, "change": "0"},
+        {"name": "MountainKing", "rides": 27, "points": 876, "change": "+3"},
+        {"name": "HighRoller", "rides": 25, "points": 840, "change": "-1"},
+        {"name": "EcoRider", "rides": 23, "points": 795, "change": "+4"},
+        {"name": "RushHour", "rides": 21, "points": 760, "change": "-2"},
+    ]
 
+    # Sort drivers by points in descending order
+    drivers_sorted = sorted(drivers, key=lambda x: x["points"], reverse=True)
+
+    return render_template("driver/leaderboard.html", drivers=drivers_sorted)
 @app.route("/driver/hello")
 def hello():
     return render_template("driver/hello.html")
+
+
+@app.route('/driver/graphs', methods=['GET', 'POST'])
+def graphs():
+    import pandas as pd
+    dataset_number = request.args.get('dataset', default=1, type=int)
+    
+    # Load the selected dataset
+    actual_df = pd.read_csv(f'dataset/actual_fare_costs{dataset_number}.csv')
+    predicted_df = pd.read_csv(f'dataset/predicted_fare_costs{dataset_number}.csv')
+    
+    # Convert timestamps and get the data
+    timestamps = actual_df['timestamp'].tolist()
+    actual_fares = actual_df['actual_fare'].tolist()
+    predicted_fares = predicted_df['predicted_fare'].tolist()
+    
+    return render_template('driver/graphs.html',
+                         timestamps=timestamps,
+                         actual_fares=actual_fares,
+                         predicted_fares=predicted_fares,
+                         dataset_number=dataset_number)
 
 # ---------- API ENDPOINTS ----------
 @app.route('/driver/receive_request', methods=['POST'])
@@ -507,11 +592,23 @@ def handle_driver_response(data):
     print("Driver response acknowledged by server:", data)
     socketio.emit('show_driver_response', data, room='riders')
 
-@app.route('/confirm_location', methods=['POST'])
+@app.route('/confirm_location', methods=['GET','POST'])
 def confirm():
+    source_coordinates=None
+    destination_coordinates=None
     pickup = request.form['pickup']
     destination = request.form['destination']
-    return render_template('rider/confirm_location.html', pickup_location=pickup, destination_location=destination)
+    if "coordinates" in session:
+        source_coordinates=session["coordinates"]["source_coordinates"]
+        destination_coordinates=session["coordinates"]["destination_coordinates"]
+        print(source_coordinates)
+        print(destination_coordinates)
+
+    session["pickup"] = pickup
+    session["destination_location"]=destination
+
+    
+#     return render_template('rider/confirm_location.html', pickup_location=pickup, destination_location=destination,source_coordinates=source_coordinates,destination_coordinates=destination_coordinates)
 
 # ---------- MAIN ----------
 if __name__ == '__main__':

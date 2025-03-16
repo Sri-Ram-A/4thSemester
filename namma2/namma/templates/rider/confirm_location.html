@@ -40,7 +40,7 @@
 
         try {
           const query = await fetch(
-            `https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[0]},${pickup[1]};${drop[0]},${drop[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+            `https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[1]},${pickup[0]};${drop[1]},${drop[0]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
           );
           const json = await query.json();
           
@@ -160,7 +160,7 @@
                 <h3 class="font-semibold mb-2">Take 2 Drivers</h3>
                 <p class="text-sm text-gray-600 mb-3">Premium ride with two drivers</p>
                 <a 
-                    href="/rider/ride_confirmed" 
+                    href="/rider/split_ride_confirmed" 
                     class="w-full bg-gray-800 text-yellow-500 py-2 rounded-lg flex items-center justify-center"
                 >
                     <i data-lucide="car" class="mr-2"></i>

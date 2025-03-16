@@ -4,21 +4,26 @@
 <!-- Map With Location -->
 <div class="map-container h-[55vh] relative">
     <!-- Mapbox CSS -->
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
 
-<!-- Map container -->
-<div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
+    <!-- Map container -->
+    <div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
 
     <!-- Mapbox JS -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
     <script>
     // Replace with your actual token
-    mapboxgl.accessToken = 'pk.eyJ1IjoicHJhdGhhbS1haTIzIiwiYSI6ImNtOGFwNWVpZTE3ZHkybHE0a3g4enllMDEifQ.kWbrlLAyv1HcKa3PIGInVw';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3JpcmFtYWFpMjMiLCJhIjoiY204YWN4eDI5MGdlNjJqbXgwcTM5ZjNraSJ9.mYoKrMKmtarz5NOmriP5kw';
 
-    // Pickup and Drop coordinates
-    const pickup = {{source_coordinates}}; // San Francisco
-    const drop = {{destination_coordinates}};   // Oakland
+    // Pickup, waypoints and drop coordinates
+    const pickup = {{pickup_location}}; // San Francisco
+    const waypoint1 = {{jns.start_location}} // Treasure Island
+    const waypoint2 = {{jns.end_location}}; // Emeryville
+    const drop = {{destination_location}};   // Oakland
+
+    // Combine all coordinates for the route
+    const allPoints = [pickup, waypoint1, waypoint2, drop];
 
     // Initialize map
     const map = new mapboxgl.Map({
@@ -36,43 +41,50 @@
         // Add pickup marker (green)
         new mapboxgl.Marker({ color: 'green' }).setLngLat(pickup).addTo(map);
 
+        // Add waypoint markers (blue)
+        new mapboxgl.Marker({ color: 'blue' }).setLngLat(waypoint1).addTo(map);
+        new mapboxgl.Marker({ color: 'blue' }).setLngLat(waypoint2).addTo(map);
+
         // Add drop marker (red)
         new mapboxgl.Marker({ color: 'red' }).setLngLat(drop).addTo(map);
 
-        // Get directions from Mapbox Directions API
+        // Format coordinates for the Directions API
+        const coordinatesString = allPoints.map(point => point.join(',')).join(';');
+
+        // Get directions from Mapbox Directions API with all waypoints
         const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/driving/${pickup[1]},${pickup[0]};${drop[1]},${drop[0]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+            `https://api.mapbox.com/directions/v5/mapbox/driving/${coordinatesString}?geometries=geojson&access_token=${mapboxgl.accessToken}`
         );
         const json = await query.json();
         const route = json.routes[0].geometry.coordinates;
 
         // Add route as GeoJSON source
         map.addSource('route', {
-        type: 'geojson',
-        data: {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-            type: 'LineString',
-            coordinates: route
+            type: 'geojson',
+            data: {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                    type: 'LineString',
+                    coordinates: route
+                }
             }
-        }
         });
 
         // Add route as a styled layer
         map.addLayer({
-        id: 'route',
-        type: 'line',
-        source: 'route',
-        layout: {
-            'line-join': 'round',
-            'line-cap': 'round'
-        },
-        paint: {
-            'line-color': '#1db954',
-            'line-width': 5,
-            'line-opacity': 0.85
-        }
+            id: 'route',
+            type: 'line',
+            source: 'route',
+            layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            paint: {
+                'line-color': '#1db954',
+                'line-width': 5,
+                'line-opacity': 0.85
+            }
         });
 
         // Fit bounds to route
@@ -81,6 +93,7 @@
         map.fitBounds(bounds, { padding: 60 });
     });
     </script>
+<!-- </div> -->
 
 <!-- Compass (bottom-right) -->
     <div class="absolute bottom-4 right-4 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-md">

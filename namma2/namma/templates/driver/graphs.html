@@ -1,0 +1,290 @@
+{% extends "driver/base.html" %}
+
+{% block content %}
+<div class="p-4">
+    <h2 class="text-2xl font-bold mb-4">Fare Analysis</h2>
+    
+    <!-- Dataset Selection Buttons - Now Vertical with Gradients and Images -->
+    <div class="flex flex-col space-y-4 mb-4">
+        <button 
+            onclick="loadDataset(1)"
+            class="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-20"
+            style="background: linear-gradient(to right, #4158D0, #C850C0);"
+        >
+            <div class="absolute inset-0 flex items-center justify-between p-4">
+                <span class="text-white font-bold text-lg z-10">Dataset 1</span>
+                <img src="/static/images/dataset1.png" alt="Dataset 1" class="h-16 w-16 object-contain z-10" onerror="this.src='/static/images/placeholder.png'">
+            </div>
+        </button>
+        <button 
+            onclick="loadDataset(2)"
+            class="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-20"
+            style="background: linear-gradient(to right, #00B4DB, #0083B0);"
+        >
+            <div class="absolute inset-0 flex items-center justify-between p-4">
+                <span class="text-white font-bold text-lg z-10">Dataset 2</span>
+                <img src="/static/images/dataset2.png" alt="Dataset 2" class="h-16 w-16 object-contain z-10" onerror="this.src='/static/images/placeholder.png'">
+            </div>
+        </button>
+        <button 
+            onclick="loadDataset(3)"
+            class="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-20"
+            style="background: linear-gradient(to right, #FF416C, #FF4B2B);"
+        >
+            <div class="absolute inset-0 flex items-center justify-between p-4">
+                <span class="text-white font-bold text-lg z-10">Dataset 3</span>
+                <img src="/static/images/dataset3.png" alt="Dataset 3" class="h-16 w-16 object-contain z-10" onerror="this.src='/static/images/placeholder.png'">
+            </div>
+        </button>
+        <button 
+            onclick="loadDataset(4)"
+            class="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-20"
+            style="background: linear-gradient(to right, #11998e, #38ef7d);"
+        >
+            <div class="absolute inset-0 flex items-center justify-between p-4">
+                <span class="text-white font-bold text-lg z-10">Dataset 4</span>
+                <img src="/static/images/dataset4.png" alt="Dataset 4" class="h-16 w-16 object-contain z-10" onerror="this.src='/static/images/placeholder.png'">
+            </div>
+        </button>
+    </div>
+
+    <!-- View Graph Button -->
+    <button 
+        onclick="document.getElementById('graphPopover').classList.remove('hidden'); startSimulation();"
+        class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg shadow-md hover:from-purple-700 hover:to-indigo-700 transition-colors flex items-center justify-center space-x-2 mb-4"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="20" x2="12" y2="10"></line>
+            <line x1="18" y1="20" x2="18" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="16"></line>
+        </svg>
+        <span>View Live Forecast</span>
+    </button>
+
+    <!-- Graph Popover -->
+    <div id="graphPopover" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl shadow-2xl w-[90%] max-w-4xl">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold">Live Fare Forecast</h3>
+                <button 
+                    onclick="document.getElementById('graphPopover').classList.add('hidden'); stopSimulation();"
+                    class="text-gray-500 hover:text-gray-700"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Graph Container (16:9 aspect ratio) -->
+            <div class="relative" style="padding-top: 56.25%">
+                <div class="absolute inset-0 p-4">
+                    <canvas id="fareChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadDataset(datasetNumber) {
+        window.location.href = `/driver/graphs?dataset=${datasetNumber}`;
+    }
+
+    let simulationInterval;
+    let isSimulationRunning = false;
+
+    function stopSimulation() {
+        if (simulationInterval) {
+            clearInterval(simulationInterval);
+            isSimulationRunning = false;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('fareChart').getContext('2d');
+        
+        // Get data from Flask
+        const timestamps = {{ timestamps|tojson }};
+        const actualFares = {{ actual_fares|tojson }};
+        const predictedFares = {{ predicted_fares|tojson }};
+        
+        // Initialize data arrays
+        const dataPoints = timestamps.length;
+        const initialActualFares = Array(dataPoints).fill(null);
+        const initialPredictedFares = Array(dataPoints).fill(null);
+        
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: timestamps,
+                datasets: [{
+                    label: 'Actual Fare',
+                    data: initialActualFares,
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#10B981'
+                },
+                {
+                    label: 'Predicted Fare',
+                    data: initialPredictedFares,
+                    borderColor: '#F43F5E',
+                    backgroundColor: 'rgba(244, 63, 94, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#F43F5E'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: {
+                    duration: 1000,
+                    easing: 'easeInOutQuart'
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '₹' + value;
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 5
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        callbacks: {
+                            label: function(context) {
+                                if (context.parsed.y !== null) {
+                                    return context.dataset.label + ': ₹' + context.parsed.y.toFixed(2);
+                                }
+                                return context.dataset.label + ': No data';
+                            },
+                            title: function(context) {
+                                return 'Time: ' + context[0].label;
+                            }
+                        },
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 13
+                        },
+                        padding: 12,
+                        displayColors: true,
+                        borderColor: 'rgba(255,255,255,0.2)',
+                        borderWidth: 1
+                    },
+                    crosshair: {
+                        line: {
+                            color: 'rgba(0,0,0,0.2)',
+                            width: 1,
+                            dashPattern: [5, 5]
+                        }
+                    }
+                },
+                hover: {
+                    mode: 'index',
+                    intersect: false
+                }
+            }
+        });
+
+        // Function to start the simultaneous animation of both actual and predicted fares
+        window.startSimulation = function() {
+            if (isSimulationRunning) return;
+            
+            isSimulationRunning = true;
+            
+            // Reset data
+            chart.data.datasets[0].data = Array(dataPoints).fill(null);
+            chart.data.datasets[1].data = Array(dataPoints).fill(null);
+            chart.update('none');
+            
+            let currentIndex = 0;
+            
+            simulationInterval = setInterval(() => {
+                if (currentIndex < actualFares.length) {
+                    // Update both actual and predicted values simultaneously
+                    chart.data.datasets[0].data[currentIndex] = actualFares[currentIndex];
+                    chart.data.datasets[1].data[currentIndex] = predictedFares[currentIndex];
+                    
+                    currentIndex++;
+                    chart.update('none');
+                    
+                    // Auto-scroll the chart to follow the data
+                    if (currentIndex > 10) {
+                        chart.options.scales.x.min = timestamps[currentIndex - 10];
+                        chart.options.scales.x.max = timestamps[Math.min(currentIndex + 5, timestamps.length - 1)];
+                    }
+                } else {
+                    clearInterval(simulationInterval);
+                    isSimulationRunning = false;
+                }
+            }, 300); // Speed of animation
+        };
+
+        // Add vertical line on hover
+        chart.canvas.addEventListener('mousemove', (e) => {
+            const points = chart.getElementsAtEventForMode(e, 'index', { intersect: false });
+            
+            if (points.length) {
+                const firstPoint = points[0];
+                const xPos = chart.scales.x.getPixelForValue(firstPoint.index);
+                
+                chart.options.plugins.crosshair = {
+                    line: {
+                        color: 'rgba(0,0,0,0.2)',
+                        width: 1
+                    }
+                };
+                
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(xPos, chart.chartArea.top);
+                ctx.lineTo(xPos, chart.chartArea.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = 'rgba(0,0,0,0.2)';
+                ctx.stroke();
+                ctx.restore();
+            }
+        });
+    });
+</script>
+{% endblock %}

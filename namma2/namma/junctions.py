@@ -7,16 +7,22 @@ from geopy.geocoders import Nominatim
 
 geolocator = Nominatim(user_agent="geoapi")
 
-def get_coordinates_from_address(address):
-    location = geolocator.geocode(address)
-    if location:
-        return location.latitude, location.longitude
-    return None
-
-def gcfa(address):
-    location = geolocator.geocode(address)
-    if location:
-        return list((location.latitude, location.longitude))
+def get_coordinates(address):
+    base_url = "https://api.opencagedata.com/geocode/v1/json"
+    params = {
+        "q": address,
+        "key": "aedbf6e3ec284f75a00c1adaf622b1cf",
+        "limit": 1
+    }
+    
+    response = requests.get(base_url, params=params)
+    
+    if response.status_code == 200:
+        data = response.json()
+        if data["results"]:
+            location = data["results"][0]["geometry"]
+            return location["lat"], location["lng"]
+    
     return None
 
 def distance(coord1, coord2):
@@ -39,6 +45,11 @@ def get_bearing(coord1, coord2):
     
     return (atan2(x, y) * 180 / 3.141592653589793 + 360) % 360
 
+def gcfa(address):
+    location = geolocator.geocode(address)
+    if location:
+        return list((location.latitude, location.longitude))
+    return None
 
 def detect_painful_u_turns(coordinates):
     pain_points = []
@@ -60,7 +71,7 @@ def detect_painful_u_turns(coordinates):
                              f"Straight = {straight_distance:.2f}m\n")
                 log_file.write(log_entry)
 
-                if travel_distance >= 4*straight_distance and straight_distance < 0.1:
+                if travel_distance >= 4*straight_distance and straight_distance < 0.1 and travel_distance >= 1.25:
                     new_pain_point = {
                         'start_index': i,
                         'end_index': j,
@@ -81,6 +92,8 @@ def detect_painful_u_turns(coordinates):
                     log_file.write(f"Start: {coordinates[i]}, End: {coordinates[j]}\n")
                     log_file.write(f"Travel Distance: {travel_distance:.2f}m, Straight Distance: {straight_distance:.2f}m\n")
                     log_file.write("=" * 50 + "\n")
+
+    print(pain_points)
     return pain_points
 
 
@@ -109,14 +122,14 @@ def getDifferences(coordinates):
                         file.write(s)
 
 
-def main(source_address, dest_address):
+def get_intermediate_junctions(source_address, dest_address):
     route_map = None
     total_distance = None
     pain_points = []
 
 
-    source_coords = get_coordinates_from_address(source_address)
-    dest_coords = get_coordinates_from_address(dest_address)
+    source_coords = get_coordinates(source_address)
+    dest_coords = get_coordinates(dest_address)
 
     if source_coords and dest_coords:
             start = f"{source_coords[1]},{source_coords[0]}"
@@ -132,17 +145,17 @@ def main(source_address, dest_address):
                 geometry = routejson['routes'][0]['geometry']
                 coordinates = polyline.decode(geometry)
 
-                pain_points = detect_painful_u_turns(coordinates)[0]
+                pain_points = detect_painful_u_turns(coordinates) 
 
-    travel = {}
-    travel["start"] = source_coords
-    travel["end"]  = dest_coords
-    travel["first_drop"] = pain_points["start_location"]
-    travel["second_pick_up"] = pain_points["end_location"]
-    travel["distance_saved"] = pain_points["travel_distance"]
-    travel["to_be_walked"] = pain_points["straight_distance"]
-    return travel
+                max_pain_point = None
+                if pain_points:
+                    max_pain_point = max(pain_points, key=lambda x: x['travel_distance'] - x['straight_distance'])   
+
+    if max_pain_point:
+        return max_pain_point
+    else:
+        return None
 
 
 if __name__ == "__main__" :
-    print(main(source_address="Kengeri", dest_address="Kengeri Bus Terminal"))
+    print(main(source_address="Kengeri Upanagara Bus Stand, Bangalore", dest_address="Kengeri Bus Terminal"))
